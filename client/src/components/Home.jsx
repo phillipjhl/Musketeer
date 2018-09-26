@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
 
-class HelloWorld extends Component {
+class Home extends Component {
 
     constructor(props) {
         super(props);
@@ -12,4 +11,4 @@ class HelloWorld extends Component {
     }
 }
 
-export default HelloWorld;
+export default Home;
