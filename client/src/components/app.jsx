@@ -4,6 +4,10 @@ import NavBar from './NavBar';
 import Home from './Home';
 import BlogInput from './BlogInput';
 import BlogFull from './BlogFull';
+import PrivateRoute from './auth/privateRoute';
+import Login from './auth/login';
+import Logout from './auth/logout';
+import AuthButton from './auth/authButton';
 
 class Navigation extends Component {
 
