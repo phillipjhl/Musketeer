@@ -25,7 +25,7 @@ class BlogList extends Component {
                         content: blog.content,
                         date: blog._created
                     }
-                    updatedblogs.push(data);
+                    updatedblogs.unshift(data);
                 });
                 this.setState({
                     blogList: updatedblogs
@@ -40,7 +40,6 @@ class BlogList extends Component {
             (blog) => {
                 return <BlogShort key={blog.id} data={blog} />
             });
-            console.log(blogs);
         return blogs;
     }
 
