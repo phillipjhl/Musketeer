@@ -10,13 +10,13 @@ class BlogList extends Component {
             //list of blog data
             blogList: []
         }
+        this.createBlogs = this.createBlogs.bind(this);
     }
 
     componentDidMount() {
         fetch("http://localhost:3000/api/blogs")
             .then(res => res.json())
             .then(blogs => {
-                console.log(blogs);
                 let updatedblogs = [];
                 blogs.forEach(blog => {
                     let data = {
@@ -34,11 +34,21 @@ class BlogList extends Component {
             .catch(err => console.log(err));
     }
 
+    createBlogs() {
+        //maps over the state.blogList array to produce a list of blogshort Components
+        let blogs = this.state.blogList.map(
+            (blog) => {
+                return <BlogShort key={blog.id} data={blog} />
+            });
+            console.log(blogs);
+        return blogs;
+    }
+
     render() {
         return (
             <Fragment>
                 <aside className="col-md-8 blog-main">
-                    <BlogShort />
+                    {this.createBlogs()}
                 </aside>
             </Fragment>
         );
