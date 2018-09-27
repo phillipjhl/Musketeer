@@ -50,11 +50,12 @@ class BlogInput extends Component {
 
     render() {
         return (
-            <form className="form-group" onSubmit={this.handlePost} >
-                <div className="input-group">
+            <div className="container">
+                <form className="form-group col-md-10 bg-light p-2" onSubmit={this.handlePost} >
+
                     <input
                         type="text"
-                        className="form-control"
+                        className="form-control my-4"
                         id="blog-title"
                         name="title"
                         value={this.state.title}
@@ -63,18 +64,17 @@ class BlogInput extends Component {
                     />
                     <input
                         type="text-area"
-                        className="form-control"
+                        className="form-control my-4"
                         id="blog-content"
                         name="content"
                         value={this.state.content}
                         onChange={this.handleChange}
                         placeholder="Content"
                     />
-                    <div className="input-group-append">
-                        <button type="button" onClick={this.handlePost} className="btn btn-secondary" >Post</button>
-                    </div>
-                </div>
-            </form>
+                    <button type="button" onClick={this.handlePost} className="btn btn-secondary my-2" >Post</button>
+
+                </form>
+            </div>
         );
     }
 }
