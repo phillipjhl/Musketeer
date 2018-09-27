@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import NavBar from './NavBar';
 import Home from './Home';
-import GoodbyeWorld from './goodbye';
+import BlogInput from './BlogInput';
 
 class Navigation extends Component {
 
@@ -13,7 +13,7 @@ class Navigation extends Component {
                     <NavBar />
                     <Switch>
                         <Route exact path="/" component={Home} />
-                        <Route path="/goodbye" component={GoodbyeWorld} />
+                        <Route path ="/blog/input" component={BlogInput} />
                     </Switch>
                 </Fragment>
             </Router>
