@@ -1,6 +1,7 @@
 //Component for User Input
 
 import React, { Component } from 'react';
+import { insert } from '../services/blogs';
 
 class BlogInput extends Component {
     constructor(props) {
@@ -38,14 +39,7 @@ class BlogInput extends Component {
             title: "",
             content: ""
         });
-        // this.props.onPost();
-        fetch("http://localhost:3000/api/blogs", {
-            method: 'POST',
-            body: JSON.stringify(blogData),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }).catch(err => console.log(err));
+        insert(blogData);
     };
 
     render() {
