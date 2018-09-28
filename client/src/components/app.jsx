@@ -7,7 +7,7 @@ import BlogFull from './BlogFull';
 import PrivateRoute from './auth/privateRoute';
 import Login from './auth/login';
 import Logout from './auth/logout';
-import AuthButton from './auth/authButton';
+import AdminPage from './AdminPage';
 
 class Navigation extends Component {
 
@@ -18,8 +18,11 @@ class Navigation extends Component {
                     <NavBar />
                     <Switch>
                         <Route exact path="/" component={Home} />
-                        <Route path ="/blog/input" component={BlogInput} />
+                        <Route path="/login" component={Login} />
+                        <Route path="/logout" component={Logout} />
                         <Route path ="/blogs/:id" component={BlogFull} />
+                        <PrivateRoute path ="/input" component={BlogInput} />
+                        <PrivateRoute path ="/admin" component={AdminPage} /> 
                     </Switch>
                 </Fragment>
             </Router>
