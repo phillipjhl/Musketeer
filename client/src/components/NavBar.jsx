@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
+import AuthButton from './auth/authButton';
 
 function NavBar(props) {
     return (
@@ -9,8 +10,9 @@ function NavBar(props) {
                 <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div className="navbar-nav">
+                <div className="navbar-nav flex-row-reverse">
                     <Link to="/" className="nav-item nav-link" >Home <span className="sr-only">(current)</span></Link>
+                    <AuthButton />
                 </div>
             </div>
         </nav>
