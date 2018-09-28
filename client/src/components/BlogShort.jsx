@@ -1,9 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import NextArrow from './documents/next_arrow.png';
 import ImageHead from './documents/header.jpg';
 
 function BlogShort(props) {
+    
     return (
         <div className="card border-0 mb-3">
             <img className="card-img-top" src={ImageHead} alt="Card image cap" className="img-fluid" />
