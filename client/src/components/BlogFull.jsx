@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ImageHead from './documents/header.jpg';
+import { Link } from 'react-router-dom';
 
 class BlogFull extends Component {
     constructor(props) {
@@ -32,6 +33,7 @@ class BlogFull extends Component {
                     <h5 className="card-title">{this.state.data.title}</h5>
                     <p className="card-text">{this.state.data.content}</p>
                     <p className="card-text">{this.state.data.date}</p>
+                    <Link to={`/blog/${this.props.match.params.id}/edit`}>Edit</Link>
                 </div>
             </div>
         );
