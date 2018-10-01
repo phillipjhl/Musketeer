@@ -6,7 +6,9 @@ class AdminEdit extends Component {
         super(props);
 
         this.state = {
-            data: {}
+            title: "",
+            content: "",
+            date: ""
         };
 
         this.handleUpdate = this.handleUpdate.bind(this);
@@ -17,29 +19,27 @@ class AdminEdit extends Component {
         one(this.props.match.params.id)
         .then(blog => {
             this.setState({
-                data: {
                     title: blog.title,
                     content: blog.content,
                     date: blog._created
-                }
             });
-            console.log(this.state.data);
         });
     }
 
     handleTextChange(e) {
         this.setState({
-            data: {
-                name: this.state.data.name,
-                text: e.target.value
-            }
+            content: e.target.value
         })
     };
 
     handleUpdate(e) {
         e.preventDefault();
+        let data = {
+            title: this.state.title,
+            content: this.state.content,
+        };
         update(this.props.match.params.id, data);
-        this.props.history.replace('/');
+        this.props.history.replace(`/blogs/${this.props.match.params.id}`);
     }
 
     render() {
@@ -54,7 +54,7 @@ class AdminEdit extends Component {
 
                 <div className="container">
                     <form className="sm-10" onSubmit={this.handleUpdate}>
-                        <h3>{this.state.data.title}</h3>
+                        <h3>{this.state.title}</h3>
 
                         <div className="form-group" >
                             <input
@@ -63,8 +63,8 @@ class AdminEdit extends Component {
                                 className="form-control"
                                 id="content"
                                 onChange={this.handleTextChange}
-                                val={`${this.state.data.content}`}
-                                placeholder={`${this.state.data.content}`}>
+                                val={`${this.state.content}`}
+                                placeholder={`${this.state.content}`}>
                             </input>
                         </div>
 
