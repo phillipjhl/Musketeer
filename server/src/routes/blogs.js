@@ -33,4 +33,13 @@ router.post('/', (req, res)=>{
     });
 });
 
+router.put('/:id', (req, res) => {
+    let id = req.params.id;
+    let blog = req.body;
+    console.log(blog);
+    blogs.update(id, blog)
+    .then(res.sendStatus(200))
+    .catch(err=>console.log(err));
+});
+
 export default router;
