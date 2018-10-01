@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import { insert } from '../services/blogs';
 
-class BlogInput extends Component {
+class AdminInput extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -73,4 +73,4 @@ class BlogInput extends Component {
     }
 }
 
-export default BlogInput;
+export default AdminInput;

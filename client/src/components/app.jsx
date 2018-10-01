@@ -2,12 +2,12 @@ import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import NavBar from './NavBar';
 import Home from './Home';
-import BlogInput from './BlogInput';
+import AdminInput from './AdminInput';
 import BlogFull from './BlogFull';
 import PrivateRoute from './auth/privateRoute';
 import Login from './auth/login';
 import Logout from './auth/logout';
-import AdminPage from './AdminPage';
+import AdminEdit from './AdminEdit';
 
 class Navigation extends Component {
 
@@ -21,8 +21,8 @@ class Navigation extends Component {
                         <Route path="/login" component={Login} />
                         <Route path="/logout" component={Logout} />
                         <Route path ="/blogs/:id" component={BlogFull} />
-                        <PrivateRoute path ="/input" component={BlogInput} />
-                        <PrivateRoute path ="/admin" component={AdminPage} /> 
+                        <PrivateRoute path="/admin" component={AdminInput} />
+                        <PrivateRoute exact path="/blog/:id/edit" component={AdminEdit} />
                     </Switch>
                 </Fragment>
             </Router>
