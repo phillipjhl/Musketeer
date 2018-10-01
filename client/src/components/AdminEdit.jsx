@@ -13,6 +13,7 @@ class AdminEdit extends Component {
 
         this.handleUpdate = this.handleUpdate.bind(this);
         this.handleTextChange = this.handleTextChange.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
     }
 
     componentWillMount() {
@@ -42,6 +43,11 @@ class AdminEdit extends Component {
         this.props.history.replace(`/blogs/${this.props.match.params.id}`);
     }
 
+    handleDelete() {
+        destroy(this.props.match.params.id);
+        this.props.history.replace('/');
+    }
+
     render() {
         return (
             <Fragment>
@@ -69,6 +75,7 @@ class AdminEdit extends Component {
                         </div>
 
                         <button className="btn btn-primary" onClick={this.handleUpdate}>Update</button>
+                        <button type="button" className="btn btn-danger" onClick={this.handleDelete} aria-label="Close">Delete</button>
 
                     </form>
                 </div>
