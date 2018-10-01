@@ -36,8 +36,14 @@ router.post('/', (req, res)=>{
 router.put('/:id', (req, res) => {
     let id = req.params.id;
     let blog = req.body;
-    console.log(blog);
     blogs.update(id, blog)
+    .then(res.sendStatus(200))
+    .catch(err=>console.log(err));
+});
+
+router.delete('/:id', (req, res) => {
+    let id = req.params.id;
+    blogs.delete(id)
     .then(res.sendStatus(200))
     .catch(err=>console.log(err));
 });
