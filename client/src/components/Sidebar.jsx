@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { Link } from "react-router-dom";
 
 class Sidebar extends Component {
 
@@ -27,8 +28,10 @@ class Sidebar extends Component {
                         </div>
                         <div>
                             <ul className="list mb-0">
-                                <li><a href="#">Weddings</a></li>
-                                <li><a href="#">Engagements</a></li>
+                                <li>
+                                    <Link to="/admin">Create New Blogs</Link>
+                                </li>
+                                <li><a href="#">Active</a></li>
                                 <li><a href="#">Personal</a></li>
                             </ul>
                         </div>
