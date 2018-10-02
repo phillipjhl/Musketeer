@@ -1,10 +1,13 @@
 import mysql from 'mysql';
+import { config } from './index';
+
+const password = config.DB_BLOG_KEY;
 
 let pool = mysql.createPool({
     connectionLimit: 10,
     host: 'localhost',
     user: 'blogapp',
-    password: 'blogauthentication',
+    password: password,
     database: 'blog'
 });
 
