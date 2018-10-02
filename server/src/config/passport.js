@@ -3,6 +3,7 @@ import { Strategy as LocalStrategy } from 'passport-local';
 import { Strategy as BearerStrategy } from 'passport-http-bearer';
 import Table from '../table';
 import { encode, decode } from '../utils/tokens';
+import { generateHash, checkPassword } from '../utils/security';
 
 let usersTable = new Table('Authors');
 let tokensTable = new Table('Tokens');
@@ -17,12 +18,24 @@ function configurePassport(app) {
             // array destructuring. find() will return an array of results.
             // destructuring the first (and hopefully only) result into the user variable
             let [user] = await usersTable.find({ email });
-            if (user && user.password && user.password === password) {
-                let idObj = await tokensTable.insert({
-                    authorid: user.id
-                });
-                let token = encode(idObj.id);
-                return done(null, { token });
+            if (user && user.hash) {
+                checkPassword(password, user.hash)
+                .then((matches) => {
+                    //password is correct
+                    if (matches) {
+                        let idObj = tokensTable.insert({
+                            authorid: user.id
+                        });
+                        let token = encode(idObj.id);
+                        return done(null, { token });
+                    } else {
+                        //password is incorrect
+                        return done(null, false, { message: 'Invalid credentials' });
+                    }
+                })
+                .catch((err)=> {
+                    throw err;
+                })
             } else {
                 return done(null, false, { message: 'Invalid credentials' });
             }
