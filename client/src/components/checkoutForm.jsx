@@ -19,8 +19,9 @@ class CheckoutForm extends Component {
     async handleSubmit(e) {
         e.preventDefault();
         try {
-            let token = await this.props.stripe.createToken({name: this.state.customerName });
-            await postCharge({ id: token.id, amount: 10 });
+            let token = await this.props.stripe.createToken({ name: this.state.customerName });
+            console.log(token.token.id);
+            await postCharge({ id: token.token.id, amount: 10 });
         } catch (e) {
             console.log(e);
         }
@@ -32,11 +33,13 @@ class CheckoutForm extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <input onChange={this.handleNameInput} placeholder="Name" htmlFor="name" id="name" />
-                <CardSection />
-                <button>SUBMIT</button>
-            </form>
+            <div className="container">
+                <form className="form-group col-sm-9" onSubmit={this.handleSubmit}>
+                    <input className="form-control my-1" onChange={this.handleNameInput} placeholder="Name" htmlFor="name" id="name" />
+                    <CardSection />
+                    <button className="btn btn-success my-1" >SUBMIT</button>
+                </form>
+            </div>
         );
     }
 }
