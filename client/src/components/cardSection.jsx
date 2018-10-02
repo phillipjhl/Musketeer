@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { CardElement } from 'react-stripe-elements';
 
-class CardSection extends React.Component {
+class CardSection extends Component {
     render() {
         return (
-            <CardElement />
+            <CardElement style={{base: {fontSize: '18px'}}} />
         );
     }
 };
