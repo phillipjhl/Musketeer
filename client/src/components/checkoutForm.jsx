@@ -33,8 +33,9 @@ class CheckoutForm extends Component {
 
     render() {
         return (
-            <div className="container">
-                <form className="form-group col-sm-9" onSubmit={this.handleSubmit}>
+            <div className="container bg-light text-center shadow-lg">
+                <h1 className="text-success my-2">Donate</h1>
+                <form className="form-group col-sm-9 mx-auto" onSubmit={this.handleSubmit}>
                     <input className="form-control my-1" onChange={this.handleNameInput} placeholder="Name" htmlFor="name" id="name" />
                     <CardSection />
                     <button className="btn btn-success my-1" >SUBMIT</button>
