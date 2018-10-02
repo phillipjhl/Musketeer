@@ -4,6 +4,9 @@ import { StripeProvider, Elements } from 'react-stripe-elements';
 import InjectedCheckoutForm from './checkoutForm'; // must be a child of Elements wrapper
 
 class Donate extends Component {
+    constructor(props) {
+        super(props);
+    }
 
     render() {
         return (
