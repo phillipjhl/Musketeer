@@ -12,7 +12,7 @@
         "dev": "npm run clean && npm run build:server && concurrently -r -k \"npm run watch:client\" \"npm run watch:server\" \"nodemon --watch server/lib --delay 1\"",
         "start": "npm run clean && npm run build:client && npm run build:server && npm run start:server",
         "start:server": "node server/lib/index.js",
-        "watch:client": "webpack --watch",
+        "watch:client": "webpack --mode development --watch",
         "watch:server": "babel ./server/src -w -d ./server/lib"
     },
     "author": "Covalence",
@@ -29,6 +29,7 @@
         "express": "^4.16.3",
         "file-loader": "^2.0.0",
         "isomorphic-fetch": "^2.2.1",
+        "mailgun-js": "^0.21.0",
         "morgan": "^1.9.1",
         "mysql": "^2.16.0",
         "passport": "^0.4.0",

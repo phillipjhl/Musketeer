@@ -11,6 +11,7 @@ function NavBar(props) {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div className="navbar-nav flex-row-reverse">
+                    <Link to="/contact" className="nav-item nav-link">Contact</Link>
                     <Link to="/donate" className="nav-item nav-link">Donate</Link>
                     <Link to="/" className="nav-item nav-link" >Home <span className="sr-only">(current)</span></Link>
                     <AuthButton />
