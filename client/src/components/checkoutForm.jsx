@@ -33,7 +33,7 @@ class CheckoutForm extends Component {
 
     render() {
         return (
-            <div className="container bg-light text-center shadow-lg">
+            <div className="container bg-light text-center">
                 <h1 className="text-success my-2">Donate</h1>
                 <form className="form-group col-sm-9 mx-auto" onSubmit={this.handleSubmit}>
                     <input className="form-control my-1" onChange={this.handleNameInput} placeholder="Name" htmlFor="name" id="name" />
@@ -42,7 +42,7 @@ class CheckoutForm extends Component {
                 </form>
             </div>
         );
+        }
     }
-}
 
-export default injectStripe(CheckoutForm);
+export default CheckoutForm;
