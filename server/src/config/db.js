@@ -1,7 +1,7 @@
 import mysql from 'mysql';
 import { config } from './index';
 
-const password = config.DB_BLOG_KEY;
+const password = config.DB_PASS;
 
 let pool = mysql.createPool({
     connectionLimit: 10,
@@ -18,7 +18,7 @@ async function executeQuery(sql, args = []) {
 
 function callProcedure(procedureName, args = []) {
     let placeholders = generatePlaceholders(args);
-    let callString = `CALL ${procedureName}(${placeholders});`; // CALL GetChirps();, or CALL InsertChirp(?,?,?);
+    let callString = `CALL ${procedureName}(${placeholders});`;
     return executeQuery(callString, args);
 }
 
