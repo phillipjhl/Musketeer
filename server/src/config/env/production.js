@@ -4,7 +4,7 @@
 let cfg = {
     MAILGUN_API_KEY: process.env.MAILGUN_API_KEY,
     STRIPE_SK: process.env.STRIPE_SK,
-    DB_BLOG_KEY: process.env.DB_BLOG_KEY
+    DB_PASS: process.env.DB_PASS
 };
 
 export { cfg };
