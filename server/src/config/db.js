@@ -65,10 +65,14 @@ function getConnection() {
 function sendQueryToDB(connection, sql, args = []) {
     return new Promise((resolve, reject) => {
         connection.query(sql, args, (err, result) => {
+            console.log(sql);
+            console.log(args);
             connection.release();
             if (err) {
+                console.log('error here');         
                 reject(err);
             } else {
+                console.log('success here');
                 resolve(result);
             }
         });
