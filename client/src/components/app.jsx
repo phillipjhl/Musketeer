@@ -12,7 +12,7 @@ import AdminEdit from './AdminEdit';
 import Donate from './donate';
 import Contact from './contact';
 
-class Navigation extends Component {
+class App extends Component {
 
     render() {
         return (
@@ -35,4 +35,4 @@ class Navigation extends Component {
     }
 }
 
-export default Navigation;
+export default App;

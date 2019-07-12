@@ -11,7 +11,7 @@ class CheckoutForm extends Component {
         this.state = {
             customerName: ''
         }
-
+        console.log(this.props);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleNameInput = this.handleNameInput.bind(this);
     }
@@ -45,4 +45,4 @@ class CheckoutForm extends Component {
         }
     }
 
-export default CheckoutForm;
+export default injectStripe(CheckoutForm);
