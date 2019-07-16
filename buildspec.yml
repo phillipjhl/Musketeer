@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm install
+      - npm run build:prod
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Building docker image...
+      - $(aws ecr get-login --no-include-email --region us-east-2)
+      - docker build -t 646113229744.dkr.ecr.us-east-2.amazonaws.com/apps/blog:1
+      - docker push 646113229744.dkr.ecr.us-east-2.amazonaws.com/apps/blog:1

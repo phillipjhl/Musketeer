@@ -6,7 +6,7 @@ const password = config.DB_PASS;
 let pool = mysql.createPool({
     connectionLimit: 10,
     host: 'localhost',
-    user: 'blogapp',
+    user: 'app',
     password: password,
     database: 'blog'
 });
