@@ -1,0 +1,4 @@
+[submodule "musketeer-api"]
+	path = musketeer-api
+	url = git@github.com:phillipjhl/musketeer-api.git
+	branch = master
