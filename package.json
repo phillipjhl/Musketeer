@@ -2,7 +2,7 @@
     "name": "musketeer",
     "version": "0.1.1",
     "description": "Site with marketing, blog, payments, and contact all in one.",
-    "main": "server/lib/index.js",
+    "main": "musketeer-api/server/lib/index.js",
     "private": true,
     "engines": {
         "node": ">= 8.16.0",
@@ -11,15 +11,15 @@
     "scripts": {
         "test": "jest",
         "build:client": "webpack",
-        "build:server": "babel ./server/src -d ./server/lib",
+        "build:server": "babel ./musketeer-api/server/src -d ./musketeer-api/server/lib",
         "clean": "npm run clean:client && npm run clean:server",
         "clean:client": "rimraf ./client/dist",
-        "clean:server": "rimraf ./server/lib",
-        "dev": "npm run clean && npm run build:server && concurrently -r -k \"npm run watch:client\" \"npm run watch:server\" \"nodemon --watch server/lib --delay 1\"",
+        "clean:server": "rimraf ./musketeer-api/server/lib",
+        "dev": "npm run clean && npm run build:server && concurrently -r -k \"npm run watch:client\" \"npm run watch:server\" \"nodemon --watch musketeer-api/server/lib --delay 1\"",
         "start": "npm run clean && npm run build:client && npm run build:server && npm run start:server",
-        "start:server": "node server/lib/index.js",
+        "start:server": "node musketeer-api/server/lib/index.js",
         "watch:client": "webpack --mode development --watch",
-        "watch:server": "babel ./server/src -w -d ./server/lib",
+        "watch:server": "babel ./musketeer-api/server/src -w -d ./musketeer-api/server/lib",
         "build:prod": "npm run clean && npm run build:client -p && npm run build:server"
     },
     "author": {
@@ -55,7 +55,11 @@
     },
     "devDependencies": {
         "concurrently": "^4.0.1",
+        "extract-text-webpack-plugin": "^3.0.2",
+        "node-sass": "^4.12.0",
         "nodemon": "^1.18.4",
+        "sass-loader": "^7.1.0",
+        "style-loader": "^0.23.1",
         "webpack-cli": "^3.3.6"
     }
 }
