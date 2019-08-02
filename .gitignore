@@ -1,7 +1,6 @@
 node_modules
-client/dist
-musketeer/server/lib
-_build
+client/dist/
+server/lib/
 **/*/ENV_VAR
 ENV_VAR
 **/env/development.js

@@ -7,7 +7,7 @@ class AdminInput extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            authorid: 1,
+            authorId: 1,
             title: "",
             content: ""
         }
@@ -27,11 +27,10 @@ class AdminInput extends Component {
     }
 
     //method to handle the submission of the text input
-    //uses parent-sent property "onPost" to send userChirpInfo to Home.handlePost() method
     handlePost(e) {
         e.preventDefault();
         let blogData = {
-            authorid: this.state.authorid,
+            author_id: this.state.authorId,
             title: this.state.title,
             content: this.state.content
         }
