@@ -51,5 +51,7 @@ module.exports = {
   resolve: {
     extensions: [".js", ".jsx"]
   },
-  plugins: [new ExtractTextPlugin("styles.css")]
+  plugins: [
+    new ExtractTextPlugin({ filename: "css/styles.css", allChunks: true })
+  ]
 };
