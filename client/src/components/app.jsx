@@ -18,22 +18,24 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      user: undefined
+    };
   }
 
   componentDidMount() {
     checkLogin()
-      .then(resp => {
-        console.log(resp);
+      .then(loggedIn => {
+        this.setState({ user });
       })
-      .catch(err => console.log(err));
+      .catch(err => console.error(err));
   }
 
   render() {
     return (
       <Router>
         <Fragment>
-          <NavBar />
+          <NavBar user={this.state.user} />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/login" component={Login} />
@@ -42,7 +44,11 @@ class App extends Component {
             <Route path="/donate" component={Donate} />
             <Route path="/contact" component={Contact} />
             <Route path="/blogs" component={Home} />
-            <PrivateRoute path="/admin" component={AdminPage} />
+            <PrivateRoute
+              path="/admin"
+              component={AdminPage}
+              user={this.state.user}
+            />
             <PrivateRoute exact path="/blog/:id/edit" component={AdminEdit} />
           </Switch>
         </Fragment>

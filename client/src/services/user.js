@@ -6,18 +6,22 @@ function isLoggedIn() {
   return loggedIn;
 }
 
+function getUser() {
+  return me();
+}
+
 function checkLogin() {
   if (loggedIn) {
     return Promise.resolve(true);
   } else {
     baseService.populateAuthToken();
     return me()
-      .then(user => {
+      .then(() => {
         loggedIn = true;
         return Promise.resolve(true);
       })
       .catch(() => {
-        return Promise.resolve(false);
+        return Promise.resolve(false)
       });
   }
 }
@@ -54,4 +58,4 @@ function me() {
   return baseService.get("/api/users/me");
 }
 
-export { isLoggedIn, checkLogin, login, logout };
+export { isLoggedIn, checkLogin, login, logout, getUser };

@@ -8,9 +8,9 @@ import AdminInput from "./AdminInput";
 
 class AdminPage extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
-      data: {}
+      user: props.user
     };
   }
 
