@@ -23,7 +23,7 @@ class App extends Component {
       user: 'guest'
     };
   }
-  // static contextType = UserContext;
+  static contextType = UserContext;
 
   componentDidMount() {
     checkLogin()
