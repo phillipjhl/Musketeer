@@ -13,14 +13,14 @@ import Login from "./auth/login";
 import Logout from "./auth/logout";
 import Donate from "./donate";
 import Contact from "./contact";
-import UserContext from '../services/context';
+import UserContext from "../services/context";
 // export const UserContext = React.createContext("guest");
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      user: 'guest'
+      user: "guest"
     };
   }
   static contextType = UserContext;
@@ -41,6 +41,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state);
     return (
       <UserContext.Provider value={this.state.user}>
         <Router>

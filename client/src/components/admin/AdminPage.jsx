@@ -8,9 +8,7 @@ import AdminInput from "./AdminInput";
 class AdminPage extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      user: this.context
-    };
+    this.state = {};
   }
 
   static contextType = UserContext;
@@ -20,7 +18,9 @@ class AdminPage extends Component {
     return (
       <Fragment>
         <div className="container-fluid">
-          <h1>{`Hello there, ${this.context.first_name}`}</h1>
+          <h1>{`Hello there, ${
+            this.context.first_name ? this.context.first_name : this.context
+          }`}</h1>
           <AdminInput />
         </div>
       </Fragment>

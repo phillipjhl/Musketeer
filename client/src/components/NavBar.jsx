@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import AuthButton from "./auth/authButton";
-import UserContext from "../services/context"; 
+import UserContext from "../services/context";
 
 class NavBar extends Component {
   constructor(props) {
@@ -28,7 +28,9 @@ class NavBar extends Component {
         >
           <span className="navbar-toggler-icon" />
         </button>
-        {`Welcome, ${this.context.first_name}`}
+        {`Welcome, ${
+          this.context.first_name ? this.context.first_name : this.context
+        }`}
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav flex-row">
             <AuthButton />
