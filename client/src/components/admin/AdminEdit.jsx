@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { all, one, insert, update, destroy } from '../services/blogs';
+import { all, one, insert, update, destroy } from '../../services/blogs';
 
 class AdminEdit extends Component {
     constructor(props) {

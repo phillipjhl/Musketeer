@@ -1,3 +1,10 @@
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
+@import './scss//sidebar';
+@import './scss//blogs';
+
+.row {
+    margin: 0;
+}
+
 @import './scss/variables';
