@@ -44,9 +44,10 @@ class BlogList extends Component {
     }
 
     render() {
+        let widthClass = this.props.widthClass;
         return (
             <Fragment>
-                <main className="col-md-8 blog-main">
+                <main className={`${widthClass} blog-main`}>
                     {this.createBlogs()}
                 </main>
             </Fragment>

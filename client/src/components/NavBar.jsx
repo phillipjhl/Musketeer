@@ -12,8 +12,16 @@ class NavBar extends Component {
   static contextType = UserContext;
 
   render() {
+    let style =
+      this.props.sticky === true
+        ? { position: "sticky", top: 0, zIndex: 100 }
+        : null;
+
     return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav
+        className="navbar navbar-expand-lg navbar-dark bg-dark"
+        style={style}
+      >
         <Link to="/" className="navbar-brand">
           Home
         </Link>
@@ -21,19 +29,15 @@ class NavBar extends Component {
           className="navbar-toggler"
           type="button"
           data-toggle="collapse"
-          data-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
+          data-target="#top-Nav"
+          aria-controls="top-Nav"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon" />
         </button>
-        {`Welcome, ${
-          this.context.first_name ? this.context.first_name : this.context
-        }`}
-        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div className="collapse navbar-collapse" id="top-Nav">
           <div className="navbar-nav flex-row">
-            <AuthButton />
             <Link to="/blogs" className="nav-item nav-link">
               Blog <span className="sr-only">(current)</span>
             </Link>
@@ -43,6 +47,14 @@ class NavBar extends Component {
             <Link to="/donate" className="nav-item nav-link">
               Donate
             </Link>
+            <AuthButton />
+          </div>
+          <div className="flex-row navbar-right">
+            <span className="nav-item navbar-message">
+              {`Welcome, ${
+                this.context.first_name ? this.context.first_name : this.context
+              }`}
+            </span>
           </div>
         </div>
       </nav>
