@@ -3,5 +3,6 @@ client/dist/
 server/lib/
 **/*/ENV_VAR
 ENV_VAR
+*.log
 **/env/development.js
 development.js

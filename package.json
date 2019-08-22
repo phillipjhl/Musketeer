@@ -17,7 +17,7 @@
         "clean:server": "rimraf ./musketeer-api/server/lib",
         "dev": "npm run clean && npm run build:server && concurrently -r -k \"npm run watch:client\" \"npm run watch:server\" \"nodemon --watch musketeer-api/server/lib --delay 1\"",
         "start": "npm run clean && npm run build:client && npm run build:server && npm run start:server",
-        "start:server": "node musketeer-api/server/lib/index.js",
+        "start:server": "node --require appmetrics/start musketeer-api/server/lib/index.js",
         "watch:client": "webpack --mode development --watch",
         "watch:server": "babel ./musketeer-api/server/src -w -d ./musketeer-api/server/lib",
         "build:prod": "npm run clean && npm run build:client -p && npm run build:server"
@@ -32,6 +32,8 @@
         "@babel/polyfill": "^7.0.0",
         "@babel/preset-env": "^7.5.5",
         "@babel/preset-react": "^7.0.0",
+        "appmetrics": "^5.0.3",
+        "appmetrics-dash": "^5.0.0",
         "babel-loader": "^8.0.2",
         "bcrypt": "^3.0.1",
         "bootstrap": "^4.3.1",
