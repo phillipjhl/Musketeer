@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import Jumbotron from "../Jumbotron";
 
 export default class Home extends Component {
     constructor(props) {
@@ -9,7 +10,10 @@ export default class Home extends Component {
         return (
             <Fragment>
                 <main>
-                    Home Page
+                    <Jumbotron title="KATRINA LANGLAND" subtitle="brand and lifestyle photography" class="jumbotron-full" />
+                    <div>
+                        Hello there...
+                    </div>
                 </main>
             </Fragment>
         );

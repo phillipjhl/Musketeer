@@ -1,8 +1,12 @@
 node_modules
 client/dist/
 server/lib/
+
 **/*/ENV_VAR
 ENV_VAR
+
 *.log
+*.heapsnapshot
+
 **/env/development.js
 development.js

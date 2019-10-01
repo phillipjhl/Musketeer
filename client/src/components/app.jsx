@@ -31,7 +31,6 @@ class App extends Component {
       .then(loggedIn => {
         getUser()
           .then(user => {
-            console.log(user);
             this.setState({ user });
           })
           .catch(err => {
@@ -41,13 +40,17 @@ class App extends Component {
       .catch(err => console.error(err));
   }
 
+  componentDidUpdate() {
+    console.log("update");
+  }
+
   render() {
     console.log(this.state);
     return (
       <UserContext.Provider value={this.state.user}>
         <Router>
           <Fragment>
-            <NavBar user={this.state.user} sticky={true}/>
+            <NavBar user={this.state.user} sticky={true} />
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/login" component={Login} />
