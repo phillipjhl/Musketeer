@@ -11,7 +11,7 @@ const ASSET_PATH =
 module.exports = {
   entry: ["@babel/polyfill", "./client/src/index.js"],
   output: {
-    filename: "[name].[contenthash].js",
+    filename: "[name].js",
     path: CLIENT_DEST,
     publicPath: ASSET_PATH
   },
