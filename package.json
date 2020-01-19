@@ -23,7 +23,7 @@
         "start:server": "node --require appmetrics/start musketeer-api/server/lib/index.js",
         "watch:client": "webpack --mode development --watch",
         "watch:server": "babel ./musketeer-api/server/src -w -d ./musketeer-api/server/lib",
-        "build:prod": "npm run clean:prod && npm run build:client -p && npm run build:server:prod"
+        "build:prod": "npm run clean:prod && npm run build:client:prod && npm run build:server:prod"
     },
     "author": {
         "name": "Phillip Langland"
@@ -31,15 +31,14 @@
     "license": "ISC",
     "dependencies": {
         "@babel/cli": "^7.5.5",
-        "@babel/core": "^7.5.5",
         "@babel/polyfill": "^7.0.0",
-        "@babel/preset-env": "^7.5.5",
         "@babel/preset-react": "^7.0.0",
         "appmetrics": "^5.0.3",
         "appmetrics-dash": "^5.0.0",
         "babel-loader": "^8.0.2",
         "bcrypt": "^3.0.1",
         "bootstrap": "^4.3.1",
+        "esm": "^3.2.25",
         "express": "^4.16.3",
         "file-loader": "^2.0.0",
         "isomorphic-fetch": "^2.2.1",
@@ -59,7 +58,10 @@
         "webpack": "^4.37.0"
     },
     "devDependencies": {
+        "@babel/core": "^7.8.3",
         "@babel/plugin-proposal-class-properties": "^7.5.5",
+        "@babel/preset-env": "^7.8.3",
+        "@babel/register": "^7.8.3",
         "concurrently": "^4.0.1",
         "css-loader": "^1.0.1",
         "extract-text-webpack-plugin": "^4.0.0-beta.0",
