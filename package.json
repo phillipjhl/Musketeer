@@ -11,16 +11,19 @@
     "scripts": {
         "test": "jest",
         "build:client": "webpack",
+        "build:client:prod": "webpack --env production --mode production",
         "build:server": "babel ./musketeer-api/server/src -d ./musketeer-api/server/lib",
+        "build:server:prod": "babel ./musketeer-api/server/src -d ./build/server/lib",
         "clean": "npm run clean:client && npm run clean:server",
         "clean:client": "rimraf ./client/dist",
         "clean:server": "rimraf ./musketeer-api/server/lib",
+        "clean:prod": "rimraf ./build",
         "dev": "npm run clean && npm run build:server && concurrently -r -k \"npm run watch:client\" \"npm run watch:server\" \"nodemon --watch musketeer-api/server/lib --delay 1\"",
         "start": "npm run clean && npm run build:client && npm run build:server && npm run start:server",
-        "start:server": "node musketeer-api/server/lib/index.js",
+        "start:server": "node --require appmetrics/start musketeer-api/server/lib/index.js",
         "watch:client": "webpack --mode development --watch",
         "watch:server": "babel ./musketeer-api/server/src -w -d ./musketeer-api/server/lib",
-        "build:prod": "npm run clean && npm run build:client -p && npm run build:server"
+        "build:prod": "npm run clean:prod && npm run build:client:prod && npm run build:server:prod"
     },
     "author": {
         "name": "Phillip Langland"
@@ -28,17 +31,17 @@
     "license": "ISC",
     "dependencies": {
         "@babel/cli": "^7.5.5",
-        "@babel/core": "^7.5.5",
-        "@babel/plugin-proposal-class-properties": "^7.5.5",
         "@babel/polyfill": "^7.0.0",
-        "@babel/preset-env": "^7.5.5",
         "@babel/preset-react": "^7.0.0",
+        "appmetrics": "^5.0.3",
+        "appmetrics-dash": "^5.0.0",
         "babel-loader": "^8.0.2",
-        "bcrypt": "^3.0.1",
+        "bcrypt": "^5.0.0",
         "bootstrap": "^4.3.1",
+        "esm": "^3.2.25",
         "express": "^4.16.3",
         "file-loader": "^2.0.0",
-        "isomorphic-fetch": "^2.2.1",
+        "isomorphic-fetch": "^3.0.0",
         "mailgun-js": "^0.21.0",
         "morgan": "^1.9.1",
         "mysql": "^2.16.0",
@@ -51,17 +54,21 @@
         "react-stripe-elements": "^2.0.1",
         "rimraf": "^2.6.2",
         "stripe": "^6.12.1",
-        "uuid": "^3.3.2",
-        "webpack": "^4.37.0"
+        "uuid": "^3.3.2"
     },
     "devDependencies": {
-        "concurrently": "^4.0.1",
+        "@babel/core": "^7.8.3",
+        "@babel/plugin-proposal-class-properties": "^7.5.5",
+        "@babel/preset-env": "^7.8.3",
+        "@babel/register": "^7.8.3",
+        "concurrently": "^5.3.0",
         "css-loader": "^1.0.1",
         "extract-text-webpack-plugin": "^4.0.0-beta.0",
-        "node-sass": "^4.12.0",
-        "nodemon": "^1.18.4",
+        "node-sass": "^4.14.1",
+        "nodemon": "^2.0.4",
         "sass-loader": "^7.1.0",
         "style-loader": "^0.23.1",
+        "webpack": "^4.37.0",
         "webpack-cli": "^3.3.6"
     }
 }

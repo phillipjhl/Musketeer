@@ -29,7 +29,8 @@ class Contact extends Component {
     handleSubmit(e) {
         e.preventDefault();
         sendContactEmail(this.state.name, this.state.email, this.state.message)
-        .then(() => {
+        .then((resp) => {
+            console.log(resp);
             //redirect to homepage
             //display thank you modal
             this.props.history.push('/');

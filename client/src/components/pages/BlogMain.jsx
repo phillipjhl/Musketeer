@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react';
-import Jumbotron from './Jumbotron';
-import Sidebar from './Sidebar';
-import BlogLists from './BlogList';
+import Jumbotron from '../Jumbotron';
+import Sidebar from '../Sidebar';
+import BlogLists from '../BlogList';
 
-class Home extends Component {
+class BlogMain extends Component {
 
     constructor(props) {
         super(props);
@@ -14,12 +14,12 @@ class Home extends Component {
                 <Fragment>
                     <Jumbotron />
                     <div className="row">
-                        <BlogLists />
-                        <Sidebar />
+                        <BlogLists widthClass="col-md-7"/>
+                        <Sidebar widthClass="col-md-3"/>
                     </div>
                 </Fragment>
             );
     }
 }
 
-export default Home;
+export default BlogMain;

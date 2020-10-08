@@ -14,7 +14,7 @@ class BlogList extends Component {
     }
 
     componentDidMount() {
-        fetch("http://localhost:3000/api/blogs")
+        fetch("/api/blogs")
             .then(res => res.json())
             .then(blogs => {
                 let updatedblogs = [];
@@ -44,11 +44,12 @@ class BlogList extends Component {
     }
 
     render() {
+        let widthClass = this.props.widthClass;
         return (
             <Fragment>
-                <aside className="col-md-8 blog-main">
+                <main className={`${widthClass} blog-main`}>
                     {this.createBlogs()}
-                </aside>
+                </main>
             </Fragment>
         );
     }

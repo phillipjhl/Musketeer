@@ -5,9 +5,12 @@ class Sidebar extends Component {
 
     constructor(props) {
         super(props);
+
+        this.state = {}
     }
 
     render() {
+        let size = this.props.widthClass;
         return (
             //sidebar
             //-about author
@@ -17,7 +20,7 @@ class Sidebar extends Component {
             //---engagements
             //---personal
             <Fragment>
-                <aside className="pl-0 col-md-4 blog-sidebar bg-light">
+                <aside className={`${size} sidebar bg-light`}>
                     <div className="p-3 mb-3 bg-light rounded">
                         <h4 className="font-italic">About</h4>
                         <p className="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
