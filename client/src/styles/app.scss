@@ -1,12 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Old+Standard+TT|Raleway&display=swap');
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
-@import './scss//sidebar';
-@import './scss//blogs';
-@import './scss/navbar';
-@import './scss/jumbotron';
+@import "./scss/variables";
+@import "./scss//sidebar";
+@import "./scss//blogs";
+@import "./scss/navbar";
+@import "./scss/jumbotron";
+@import "./scss/home";
 
-.row {
-    margin: 0;
+body {
+  background: $light-grey;
+  font-family: "Old Standard TT", sans-serif;
+  & p {
+    font-family: "Raleway", sans-serif;
+  }
 }
 
-@import './scss/variables';
+.row {
+  margin: 0;
+}

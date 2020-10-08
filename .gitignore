@@ -1,7 +1,7 @@
 node_modules
-client/dist/
-server/lib/
-build/
+client/dist
+server/lib
+build
 
 **/*/ENV_VAR
 ENV_VAR

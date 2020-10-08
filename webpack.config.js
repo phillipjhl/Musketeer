@@ -1,7 +1,7 @@
 const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-const CLIENT_DEST = process.env.NODE_ENV === "production" ? path.join(__dirname, "./build") : path.join(__dirname, "./client/dist");
+const CLIENT_DEST = process.env.NODE_ENV === "production" ? path.join(__dirname, "./build/client/dist") : path.join(__dirname, "./client/dist");
 
 const ASSET_PATH =
   process.env.NODE_ENV === "production" && process.env.ASSET_PATH
