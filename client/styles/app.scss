@@ -1,0 +1,29 @@
+// @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Old+Standard+TT|Raleway&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap");
+
+@import "./scss/bootstrap/custom-bs.scss";
+
+@import "./scss/sidebar";
+@import "./scss//blogs";
+@import "./scss/navbar";
+@import "./scss/jumbotron";
+@import "./scss/home";
+
+body {
+  // background: $light-grey;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #0E0E0E
+
+  & p {
+    // font-family: "Raleway", sans-serif;
+  }
+}
+
+.text-size-large {
+  font-size: 32px;
+}
+
+.row {
+  margin: 0;
+}

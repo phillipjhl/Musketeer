@@ -1,0 +1,33 @@
+// @import "node_modules/bootstrap/scss/functions";
+// @import "node_modules/bootstrap/scss/variables";
+// @import "node_modules/bootstrap/scss/mixins";
+
+// Custom Variables
+@import "./variables";
+
+// Bootsrtap scss
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Beginning of Overrides
+
+.border {
+  border: 2px solid $primary !important;
+}
+
+.btn {
+  border-radius: 0;
+
+  &.btn-lg {
+    min-width: 242px;
+    min-height: 55px;
+  }
+
+//   &.btn-secondary.btn-outline {
+//     color: color($secondary);
+
+//     &:hover {
+//       color: #fff;
+//       background-color: color($secondary);
+//     }
+//   }
+}

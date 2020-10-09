@@ -1,0 +1,29 @@
+.navbar {
+  padding: 1rem 2rem;
+
+  .nav-link {
+    text-transform: uppercase;
+  }
+
+  .navbar-brand {
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  .navbar-right {
+    margin-left: auto;
+  }
+
+  .navbar-message {
+    color: #fff;
+    float: right;
+  }
+}
+
+.navbar.navbar-white {
+  color: #000000;
+
+  a {
+    color: #000000;
+  }
+}

@@ -1,19 +1,20 @@
 const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 
-const CLIENT_DEST = process.env.NODE_ENV === "production" ? path.join(__dirname, "./build/client/dist") : path.join(__dirname, "./client/dist");
+const CLIENT_DEST = path.join(__dirname, "./build/public");
 
 const ASSET_PATH =
   process.env.NODE_ENV === "production" && process.env.ASSET_PATH
     ? process.env.ASSET_PATH
-    : '/dist/';
+    : "/public/";
 
 module.exports = {
-  entry: ["@babel/polyfill", "./client/src/index.js"],
+  entry: ["@babel/polyfill", "./client/index.js"],
   output: {
-    filename: "[name].js",
-    path: CLIENT_DEST,
-    publicPath: ASSET_PATH
+    filename: "js/[name].js",
+    path: CLIENT_DEST
+    // publicPath: ASSET_PATH
   },
   mode: "development",
   devtool:
@@ -47,8 +48,9 @@ module.exports = {
         use: {
           loader: "file-loader",
           options: {
-            publicPath: "/dist/images",
-            outputPath: "images"
+            filename: "[name].[ext]",
+            // publicPath: ASSET_PATH,
+            outputPath: "assets"
           }
         }
       },
@@ -64,10 +66,18 @@ module.exports = {
         use: {
           loader: "file-loader",
           options: {
-            publicPath: "/dist/docs",
+            // publicPath: ASSET_PATH,
             outputPath: "docs"
           }
         }
+      },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: "html-loader"
+          }
+        ]
       }
     ]
   },
@@ -75,9 +85,21 @@ module.exports = {
     extensions: [".js", ".jsx"]
   },
   plugins: [
-    new ExtractTextPlugin({ filename: "css/styles.css", allChunks: true }),
+    new HtmlWebPackPlugin({
+      template: "./client/index.html",
+      filename: "index.html"
+    }),
+    new ExtractTextPlugin({
+      filename: "css/styles.css",
+      allChunks: true
+      // publicPath: ASSET_PATH
+    })
     // new webpack.DefinePlugin({
     //   "process.env.ASSET_PATH": JSON.stringify(ASSET_PATH)
     // })
-  ]
+  ],
+  externals: {
+    jquery: "jQuery",
+    popper: "popper.js"
+  }
 };
