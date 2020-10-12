@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NextArrow from './documents/next_arrow.png';
-import ImageHead from './documents/header.jpg';
+import NextArrow from '../assets/documents/next_arrow.png';
+import ImageHead from '../assets/documents/header.jpg';
 
 function BlogShort(props) {
     

@@ -10,24 +10,141 @@
 
 // Beginning of Overrides
 
+@media (min-width: 1200px) {
+  .container,
+  .container-sm,
+  .container-md,
+  .container-lg,
+  .container-xl {
+    max-width: 1400px !important;
+  }
+}
+
+.m-lg {
+  margin: $large-margin;
+}
+.my-lg {
+  margin-top: $large-margin;
+  margin-bottom: $large-margin;
+}
+.mx-lg {
+  margin-left: $large-margin;
+  margin-right: $large-margin;
+}
+.ml-lg {
+  margin-left: $large-margin;
+}
+.mr-lg {
+  margin-right: $large-margin;
+}
+.mb-lg {
+  margin-bottom: $large-margin;
+}
+
 .border {
   border: 2px solid $primary !important;
 }
 
+.rounded {
+  border-radius: 20px !important;
+}
+
 .btn {
+  letter-spacing: 4px;
   border-radius: 0;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  border: 3px solid;
+  color: #000;
+  transition: 0.3s all ease;
 
   &.btn-lg {
     min-width: 242px;
     min-height: 55px;
   }
 
-//   &.btn-secondary.btn-outline {
-//     color: color($secondary);
+  //   &.btn-secondary.btn-outline {
+  //     color: color($secondary);
 
-//     &:hover {
-//       color: #fff;
-//       background-color: color($secondary);
-//     }
-//   }
+  //     &:hover {
+  //       color: #fff;
+  //       background-color: color($secondary);
+  //     }
+  //   }
+}
+
+.text-hollow {
+  color: white;
+  text-shadow: -1px -1px 0 $primary, 1px -1px 0 $primary, -1px 1px 0 $primary,
+    1px 1px 0 $primary;
+}
+
+@each $color, $hex in $theme-colors {
+  .text-hollow-#{$color} {
+    color: white;
+    text-shadow: -1px -1px 0 $hex, 1px -1px 0 $hex, -1px 1px 0 $hex,
+      1px 1px 0 $hex;
+  }
+}
+
+@each $color in $theme-colors {
+  .bg-#{$color}.--opaque {
+    opacity: 0.9;
+  }
+}
+
+.opaque--8 {
+  opacity: 0.8;
+}
+.opaque--65 {
+  opacity: 0.65;
+}
+
+.text-subtitle {
+  letter-spacing: 4px;
+  font-size: 14px;
+  line-height: 48px;
+  font-weight: 400;
+}
+
+.text-title {
+  font-size: 32px;
+  line-height: 48px;
+}
+
+p {
+  line-height: 28px;
+}
+
+a.underline {
+  font-weight: 500;
+  transition: all 0.3s ease;
+
+  span {
+    position: relative;
+  }
+
+  span:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    bottom: -3px;
+    background-color: #fff;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: 0%;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:hover span:before {
+    text-decoration: none;
+    transform: scaleX(1);
+    visibility: visible;
+  }
 }

@@ -56,7 +56,7 @@ class AdminInput extends Component {
       <div className="container">
         <h4>Create a new blog here:</h4>
         <form
-          className="form-group col-md-10 bg-light p-2"
+          className="form-group col bg-light p-2"
           onSubmit={this.handlePost}
         >
           <input
@@ -79,19 +79,21 @@ class AdminInput extends Component {
             placeholder="Subtitle"
           />
 
-          <input
+          <textarea
             type="text-area"
             className="form-control my-4"
+            rows={20}
+            maxLength={2000}
             id="blog-content"
             name="content"
             value={this.state.content}
             onChange={this.handleChange}
-            placeholder="Content"
+            placeholder="Blog Content"
           />
           <button
             type="button"
             onClick={this.handlePost}
-            className="btn btn-secondary my-2"
+            className="btn btn-outline-secondary my-2"
           >
             Post
           </button>

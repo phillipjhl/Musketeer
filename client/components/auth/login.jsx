@@ -62,7 +62,7 @@ class Login extends Component {
     }
 
     return (
-      <Fragment>
+      <section className="container my-lg">
         <p>You must be logged in to view this page.</p>
         <form onSubmit={e => this.login(e)}>
           <div className="form-group">
@@ -88,9 +88,9 @@ class Login extends Component {
           {this.state.feedbackMessage ? (
             <p>{this.state.feedbackMessage}</p>
           ) : null}
-          <input type="submit" value="Login" className="btn btn-primary" />
+          <input type="submit" value="Login" className="btn btn-outline-primary" />
         </form>
-      </Fragment>
+      </section>
     );
   }
 }

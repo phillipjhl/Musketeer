@@ -1,0 +1,55 @@
+.timeline {
+  & .timeline__line {
+    background-color: $primary;
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 2px);
+    z-index: 0;
+  }
+
+  &__box {
+    position: relative;
+    &__arrow {
+      border-color: $primary;
+      &--left {
+        width: 0;
+        height: 0;
+        position: absolute;
+        right: 0;
+        top: 65px;
+        border-top: 10px solid transparent;
+        border-right: 20px solid $primary;
+        border-bottom: 10px solid transparent;
+      }
+
+      &--right {
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: 0;
+        top: 65px;
+        border-top: 10px solid transparent;
+        border-left: 20px solid $primary;
+        border-bottom: 10px solid transparent;
+      }
+    }
+  }
+}
+
+.grid-sizer {
+  width: 50%;
+}
+// .gutter-sizer {
+//   width: 5%;
+// }
+.grid-item {
+  width: 50%;
+}
+.grid-item--width2 {
+  width: 400px;
+}
+.grid-item--width50 {
+  width: 50%;
+}

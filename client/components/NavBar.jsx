@@ -13,17 +13,17 @@ class NavBar extends Component {
   static contextType = UserContext;
 
   render() {
-    let style =
-      this.props.sticky === true
-        ? { position: "sticky", top: 0, zIndex: 100 }
-        : null;
+    let style = {}
+      // this.props.sticky === true
+      //   ? { position: "sticky", top: 0, zIndex: 100 }
+      //   : {};
 
     let styleMode = this.props.styleMode;
 
     let homeLinkText = this.props.homeLinkText && this.props.homeLinkText;
 
     const linksConfig = [
-      { route: "/home", label: "Home" },
+      { route: "/home", label: "Work" },
       { route: "/about", label: "About" },
       { route: "/contact", label: "Contact" },
       { route: "/resume", label: "Resume" }
@@ -45,7 +45,7 @@ class NavBar extends Component {
     return (
       <Fragment>
         <nav
-          className={`navbar navbar-expand-lg navbar-${styleMode} bg-${styleMode} px-5`}
+          className={`navbar navbar-expand-lg fixed-top navbar-${styleMode} bg-${styleMode} px-lg-5`}
           style={style}
         >
           <Link to="/" className="navbar-brand">
@@ -62,6 +62,8 @@ class NavBar extends Component {
           >
             <span className="navbar-toggler-icon" />
           </button>
+
+
           <div className="collapse navbar-collapse" id="top-Nav">
             <div className="ml-auto navbar-nav flex-row">
               {links}

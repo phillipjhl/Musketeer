@@ -1,28 +1,30 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class IndeterminateProgress extends Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    let message = this.props.message;
+
+    if (!message) {
+      message = "Loading";
     }
 
-    render() {
-        let message = this.props.message;
-
-        if (!message) {
-            message = 'Loading...';
-        }
-
-        return (
-            <div className="card mx-auto" style={{ width: '400px' }}>
-                <div className="card-body">
-                    <p className="card-text text-center">{ message }</p>
-                    <div className="progress">
-                        <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style={{ width: '100%' }}></div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+    return (
+      <div className="mx-auto" style={{ width: "400px" }}>
+        <div className="card-body">
+          <p className="card-text text-center">{message}</p>
+          <div className="indeterminate-loading">
+            <div className="line" />
+            <div className="subline inc" />
+            <div className="subline dec" />
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default IndeterminateProgress;

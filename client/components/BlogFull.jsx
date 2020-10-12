@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ImageHead from './documents/header.jpg';
+import ImageHead from '../assets/documents/header.jpg';
 import { Link } from 'react-router-dom';
 
 class BlogFull extends Component {

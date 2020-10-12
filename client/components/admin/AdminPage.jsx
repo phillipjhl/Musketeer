@@ -16,14 +16,14 @@ class AdminPage extends Component {
   render() {
     console.log(this.context);
     return (
-      <Fragment>
+      <section className="container my-lg">
         <div className="container-fluid">
           <h1>{`Hello there, ${
             this.context.first_name ? this.context.first_name : this.context
           }`}</h1>
           <AdminInput />
         </div>
-      </Fragment>
+      </section>
     );
   }
 }

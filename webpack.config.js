@@ -1,6 +1,10 @@
 const path = require("path");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const TerserJSPlugin = require("terser-webpack-plugin");
+
+const devMode = process.env.NODE_ENV !== "production";
 
 const CLIENT_DEST = path.join(__dirname, "./build/public");
 
@@ -20,15 +24,17 @@ module.exports = {
   devtool:
     process.env.NODE_ENV === "production" ? "source-map" : "inline-source-map",
   optimization: {
+    minimizer: [new TerserJSPlugin({})],
     moduleIds: "hashed",
     splitChunks: {
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: "vendors",
-          chunks: "all"
-        }
-      }
+      chunks: "all"
+      // cacheGroups: {
+      //   vendor: {
+      //     test: /[\\/]node_modules[\\/]/,
+      //     name: "vendors",
+      //     chunks: "all"
+      //   }
+      // }
     }
   },
   module: {
@@ -44,7 +50,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(png|jpg|svg|gif)$/,
+        test: /\.(png|jpg|gif)$/,
         use: {
           loader: "file-loader",
           options: {
@@ -55,11 +61,25 @@ module.exports = {
         }
       },
       {
+        test: /\.svg$/,
+        use: ["@svgr/webpack"]
+      },
+      {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: "css-loader!sass-loader"
-        })
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true
+            }
+          },
+          "sass-loader"
+        ]
+      },
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader"]
       },
       {
         test: /\.(pdf)$/,
@@ -89,17 +109,17 @@ module.exports = {
       template: "./client/index.html",
       filename: "index.html"
     }),
-    new ExtractTextPlugin({
-      filename: "css/styles.css",
-      allChunks: true
+    new MiniCssExtractPlugin({
+      filename: devMode ? "css/[name].css" : "css/[name].[contenthash].css",
+      chunkFilename: devMode ? "css/[id].css" : "css/[id].[contenthash].css"
       // publicPath: ASSET_PATH
     })
     // new webpack.DefinePlugin({
     //   "process.env.ASSET_PATH": JSON.stringify(ASSET_PATH)
     // })
-  ],
-  externals: {
-    jquery: "jQuery",
-    popper: "popper.js"
-  }
+  ]
+  // externals: {
+  //   jquery: "jQuery",
+  //   popper: "popper.js"
+  // }
 };

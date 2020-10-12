@@ -1,0 +1,9 @@
+.dash {
+  .dash-item {
+    height: 660px;
+
+    &__content {
+      box-shadow: 3px 5px 10px -2px rgba(89, 89, 89, 0.65);
+    }
+  }
+}
