@@ -1,5 +1,5 @@
 config:
-  target: 'http://localhost:4000'
+  target: 'http://localhost:3000'
   phases:
     - duration: 60
       arrivalRate: 5
@@ -17,25 +17,42 @@ config:
     p95: 300
     maxErrorRate: 1
 scenarios:
-  - name: "Page progression"
-    weight: 3
+  # - name: "Page progression"
+  #   weight: 3
+  #   flow:
+  #     - get:
+  #         url: "/api/blogs"
+  # - name: "User Login"
+  #   weight: 1
+  #   flow:
+  #     - get:
+  #         url: "/"
+  #     - post:
+  #         url: "/api/auth/login"
+  #         json:
+  #           email: "admin@test.com"
+  #           password: "admin"
+  #         capture:
+  #           json: "$.token"
+  #           as: "token"
+  #     - get:
+  #         url: "/api/users/me"
+  #         headers:
+  #           authorization: "Bearer {{ token }}"
+  - name: "No Login"
+    weight: 5
     flow:
       - get:
-          url: "/api/blogs"
-  - name: "User Login"
-    weight: 1
-    flow:
+          url: "/home"
       - get:
-          url: "/"
-      - post:
-          url: "/api/auth/login"
-          json:
-            email: "admin@test.com"
-            password: "admin"
-          capture:
-            json: "$.token"
-            as: "token"
+          url: "/css/main.css"
       - get:
-          url: "/api/users/me"
-          headers:
-            authorization: "Bearer {{ token }}"
+          url: "/js/vendors~main.js"
+      - get:
+          url: "/js/main.js"
+      - get:
+          url: "/casestudy"
+      - get:
+          url: "/about"
+      - get:
+          url: "/contact"

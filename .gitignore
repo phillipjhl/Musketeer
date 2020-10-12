@@ -13,3 +13,9 @@ env.sh
 
 **/env/development.js
 development.js
+
+.elasticbeanstalk/
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

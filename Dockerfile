@@ -1,14 +1,24 @@
-FROM node:10
+FROM node:12-alpine as builder
+
+## Install build toolchain, install node deps and compile native add-ons
+RUN apk add --no-cache python make g++
+
+COPY package*.json ./
+
+RUN npm ci --only=production
+
+FROM node:12-alpine as app
+RUN apk add --no-cache tini
+USER node
+WORKDIR /usr/src/musketeer
+## Copy built node modules and binaries without including the toolchain
+COPY --from=builder node_modules node_modules
 
 ENV NODE_ENV=production
-ENV PORT 4000
+ENV PORT 8080
 
-EXPOSE 4000
+COPY --chown=node:node ./build/ ./build/
 
-RUN apt-get update && apt-get upgrade -y
+EXPOSE 8080 3001
 
-COPY ./client/dist/ ./client/dist/
-COPY ./musketeer-api/node_modules ./build/node_modules
-COPY ./build/server/lib ./build/server/lib
-
-CMD [ "node", "./build/server/lib/index.js" ]
+CMD [ "/sbin/tini", "--", "node", "./build/musketeer-api/index.js" ]
