@@ -1,12 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function JumboTitle(props) {
-  const handleLinkClick = e => {
-    e.preventDefault();
-
-    location.href = "/about";
-    return;
-  };
 
   return (
     <div className="jumbotron-textbox">
@@ -14,23 +9,21 @@ export default function JumboTitle(props) {
         {props.subtitleTop}
       </h4>
       <h2 className="font-weight-bold text-size-large mb-4">
-        I am a Birmingham-based{" "}
-        <span className="text-primary">product designer</span> <br />
-        with three years of design experience and a <br />
-        <span className="text-primary">passion</span> for solving problems
-        through simple
-        <br />
-        and intuitive <span className="text-primary">user-centeric</span>{" "}
-        designs.
+        I am a Birmingham-based
+        <span className="text-primary"> product designer </span>
+        with three years of design experience and a
+        <span className="text-primary"> passion </span> for solving problems
+        through simple and intuitive
+        <span className="text-primary"> user-centeric </span> designs.
       </h2>
       {props.ctaText && (
-        <button
-          type="button"
-          onClick={e => handleLinkClick()}
+        <Link
+          to={"/contact"}
+          title={props.ctaText}
           className="btn btn-md btn-outline-secondary font-weight-bold"
         >
           {props.ctaText}
-        </button>
+        </Link>
       )}
     </div>
   );

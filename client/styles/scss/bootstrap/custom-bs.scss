@@ -131,8 +131,7 @@ a.underline {
     width: 100%;
     left: 0;
     bottom: -3px;
-    background-color: #fff;
-    visibility: hidden;
+    background-color: $dark;
     transition: all 0.3s ease-in-out;
     transform: scaleX(0);
     transform-origin: 0%;
@@ -145,6 +144,5 @@ a.underline {
   &:hover span:before {
     text-decoration: none;
     transform: scaleX(1);
-    visibility: visible;
   }
 }

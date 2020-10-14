@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserJSPlugin = require("terser-webpack-plugin");
+const CompressionPlugin = require('compression-webpack-plugin');
 
 const devMode = process.env.NODE_ENV !== "production";
 
@@ -14,9 +15,10 @@ const ASSET_PATH =
     : "/public/";
 
 module.exports = {
-  entry: ["@babel/polyfill", "./client/index.js"],
+  entry: ["@babel/polyfill", "./client/index.js", "bootstrap"],
   output: {
     filename: "js/[name].js",
+    chunkFilename: "js/[id].[contenthash].js",
     path: CLIENT_DEST
     // publicPath: ASSET_PATH
   },
@@ -50,11 +52,22 @@ module.exports = {
         }
       },
       {
+        test: /\.(pdf)$/,
+        use: {
+          loader: "file-loader",
+          options: {
+            filename: "[name].pdf",
+            chunkFilename: "[name].pdf",
+            outputPath: "assets"
+          }
+        }
+      },
+      {
         test: /\.(png|jpg|gif)$/,
         use: {
           loader: "file-loader",
           options: {
-            filename: "[name].[ext]",
+            filename: "[contenthash].[ext]",
             // publicPath: ASSET_PATH,
             outputPath: "assets"
           }
@@ -82,16 +95,6 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader"]
       },
       {
-        test: /\.(pdf)$/,
-        use: {
-          loader: "file-loader",
-          options: {
-            // publicPath: ASSET_PATH,
-            outputPath: "docs"
-          }
-        }
-      },
-      {
         test: /\.html$/,
         use: [
           {
@@ -107,16 +110,20 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: "./client/index.html",
-      filename: "index.html"
+      filename: "index.html",
+      favicon: "./client/assets/images/logos/favicon.png"
     }),
     new MiniCssExtractPlugin({
       filename: devMode ? "css/[name].css" : "css/[name].[contenthash].css",
       chunkFilename: devMode ? "css/[id].css" : "css/[id].[contenthash].css"
-      // publicPath: ASSET_PATH
+    }),
+    new CompressionPlugin({
+        filename: '[path][base].gz',
+        algorithm: 'gzip',
+        test: /\.(jpg|js|css|html|svg)$/,
+        // threshold: 10240,
+        minRatio: 0.8,
     })
-    // new webpack.DefinePlugin({
-    //   "process.env.ASSET_PATH": JSON.stringify(ASSET_PATH)
-    // })
   ]
   // externals: {
   //   jquery: "jQuery",

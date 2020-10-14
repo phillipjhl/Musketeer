@@ -1,3 +1,16 @@
+@media (max-width: 768px) {
+  .casestudy-top {
+    background-position: 100% 50%;
+    background-size: contain;
+  }
+}
+
+// for iframe
+.embed_documentation_footer--documentationFooterLeft--rcexg {
+  display: none !important;
+  visibility: hidden !important;
+}
+
 .casestudy-top-banner {
   position: relative;
 

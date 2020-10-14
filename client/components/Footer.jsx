@@ -1,6 +1,7 @@
 import React from "react";
 import WhiteLogo from "../assets/images/logos/Sub-Logo.svg";
-// import ResumeLink from "../assets/documents/KatrinaLanglandResume.pdf";
+import { Link } from "react-router-dom";
+import Resume from "../assets/documents/KatrinaLanglandResume.pdf";
 
 export default function Footer(props) {
   return (
@@ -10,18 +11,16 @@ export default function Footer(props) {
           <div className="col col-2 ml-auto text-right d-flex flex-column justify-content-center align-items-end footer-list">
             <span className="border-bottom footer-list__title">MENU</span>
             <nav className="d-flex flex-column justify-content-end">
-              <a href="/home" role="link">
-                Work
-              </a>
-              <a href="/about" role="link">
-                About
-              </a>
-              <a href="/contact" role="link">
-                Contact
-              </a>
-              <a href="/resume" role="link">
+              <Link to={"/home"}>Work</Link>
+              <Link to={"/about"}>About</Link>
+              <Link to={"/contact"}>Contact</Link>
+              <Link
+                // download="Katrina_Langland_Resume"
+                target="_blank"
+                to={Resume}
+              >
                 Resume
-              </a>
+              </Link>
             </nav>
           </div>
 
@@ -29,7 +28,7 @@ export default function Footer(props) {
             <WhiteLogo />
             <div className="mt-3 text-center" style={{ fontSize: "14px" }}>
               <p className="mb-0">Birmingham, AL</p>
-              <p className="mb-0">Seekig Opportunities</p>
+              <p className="mb-0">Seeking Opportunities</p>
             </div>
           </div>
 
@@ -38,13 +37,18 @@ export default function Footer(props) {
               CONNECT
             </span>
             <nav className="d-flex flex-column justify-content-end">
-              <a href="mailto:katrina@katrinalangland.com" role="link" target="_blank" title="Email Me">
+              <a
+                href="mailto:katrina@katrinalangland.com"
+                role="link"
+                target="_blank"
+                title="Email Me"
+              >
                 Email
               </a>
-              <a href="" role="link" target="_blank" title="Instagram">
+              <a href="https://instagram.com/katrinalangland" role="link" target="_blank" title="Instagram">
                 Instagram
               </a>
-              <a href="" role="link" target="_blank" title="LinkedIn">
+              <a href="https://linkedin.com/in/katrinalangland" role="link" target="_blank" title="LinkedIn">
                 LinkedIn
               </a>
               <a

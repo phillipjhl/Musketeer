@@ -43,9 +43,9 @@ export default function Dash(props) {
 
   const dashItems = dashItemConfigs.map((item, i) => {
     return (
-      <div key={`${item.title}-${i}`} className="col-sm-4 dash-item p-4">
+      <div key={`${item.title}-${i}`} className="col-lg-4 dash-item p-4">
         <div className="d-flex h-100" style={item.style}>
-          <div className="dash-item__content p-5 d-flex flex-grow-1 flex-column justify-content-end bg-black opaque--65 rounded text-white">
+          <div className="dash-item__content p-5 d-flex flex-grow-1 flex-column justify-content-end rounded">
             <h6 className="mb-0">{item.subtitle}</h6>
             <h2 className="">{item.title}</h2>
             <p className="">{item.description}</p>
@@ -53,7 +53,7 @@ export default function Dash(props) {
               href={item.ctaLink}
               role="link"
               title={item.cta}
-              className="text-white underline"
+              className="text-dark underline"
             >
               <span>{item.cta}</span>
             </a>

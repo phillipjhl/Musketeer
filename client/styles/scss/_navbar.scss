@@ -1,15 +1,23 @@
 .navbar {
   padding: 1rem 2rem;
 
+  &.navbar-light .navbar-toggler {
+    color: $dark;
+    border: none;
+  }
+
   .nav-link {
     text-transform: uppercase;
-    font-weight: 500;
+    color: $dark;
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: 4px;
+    text-align: right;
   }
 
   .navbar-brand {
     font-weight: bold;
     letter-spacing: 4px;
+    font-size: 1rem;
   }
 
   .navbar-right {
@@ -23,15 +31,16 @@
 }
 
 .navbar.navbar-white {
-  color: #000000;
+  color: $dark !important;
 
   a {
-    color: #000000;
+    color: $dark !important;
   }
 }
 
 @media (min-width: 768px) {
   .navbar .navbar-brand {
-    font-size: 32px;
+    font-size: 24px;
+    font-size: bold;
   }
 }

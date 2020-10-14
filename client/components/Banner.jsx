@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Resume from "../assets/documents/KatrinaLanglandResume.pdf";
 
 export default function Banner(props) {
   return (
@@ -18,13 +20,15 @@ export default function Banner(props) {
           </div>
         )}
         {props.cta && (
-          <button
-            className="btn btn-lg btn-outline-primary text-uppercase"
-            onClick={() => {}}
+          <Link
+            // download="Katrina_Langland_Resume"
+            target="_blank"
+            className="btn btn-outline-primary text-uppercase"
+            to={Resume}
             title="Download Now"
           >
             {props.cta}
-          </button>
+          </Link>
         )}
       </div>
     </section>

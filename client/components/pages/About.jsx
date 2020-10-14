@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "../Banner";
-import JumboTitle from "../blocks/JumboTitle";
+// import JumboTitle from "../blocks/JumboTitle";
 import Timeline from "../timeline";
 
 export default function AboutPage(props) {

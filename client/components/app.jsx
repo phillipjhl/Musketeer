@@ -1,16 +1,21 @@
-import React, { lazy, Component, Fragment, Suspense } from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import React, { lazy, useEffect, Component, Fragment, Suspense } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Link
+} from "react-router-dom";
 import { checkLogin, getUser } from "../services/user";
 
 import NavBar from "./NavBar";
-const BlogMain = lazy(() => import("./pages/BlogMain"));
-const AdminEdit = lazy(() => import("./admin/AdminEdit"));
-const AdminPage = lazy(() => import("./admin/AdminPage"));
-const BlogFull  = lazy(() => import("./BlogFull"));
+// const BlogMain = lazy(() => import("./pages/BlogMain"));
+// const AdminEdit = lazy(() => import("./admin/AdminEdit"));
+// const AdminPage = lazy(() => import("./admin/AdminPage"));
+// const BlogFull = lazy(() => import("./BlogFull"));
 import PrivateRoute from "./auth/privateRoute";
 const Login = lazy(() => import("./auth/login"));
 const Logout = lazy(() => import("./auth/logout"));
-import Donate from "./donate";
+// import Donate from "./donate";
 import UserContext from "../services/context";
 const Home = lazy(() => import("./pages/Home"));
 const AboutPage = lazy(() => import("./pages/About"));
@@ -19,7 +24,29 @@ import IndeterminateProgress from "./utilities/indeterminateProgress";
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const CaseStudyPage = lazy(() => import("./pages/CaseStudy"));
 // export const UserContext = React.createContext("guest");
-const FourZeroFour = lazy(() => import("./pages/FourZeroFour"));
+import FourZeroFour from "./pages/FourZeroFour";
+
+const withTitle = COMP => {
+  const wrappedPage = props => {
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+      document.title = props.title ?
+        `Katrina Langland | ${props.title}` :
+        "Katrina Langland | Product Designer";
+    }, [props.title]);
+
+    return <COMP {...props} />;
+  };
+
+  return wrappedPage;
+};
+
+const HomeHOC = withTitle(Home);
+const AboutHOC = withTitle(AboutPage);
+const CSStudyHOC = withTitle(CaseStudyPage);
+const ContactHOC = withTitle(ContactPage);
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -37,15 +64,9 @@ class App extends Component {
           .then(user => {
             this.setState({ user });
           })
-          .catch(err => {
-            throw err;
-          });
+          .catch(err => {});
       })
-      .catch();
-  }
-
-  componentDidUpdate() {
-    // console.log("update");
+      .catch(err => {});
   }
 
   render() {
@@ -62,23 +83,47 @@ class App extends Component {
             <main className="main">
               <Suspense fallback={<IndeterminateProgress />}>
                 <Switch>
-                  <Route exact path="/" component={Home} />
-                  <Route path="/home" component={Home} />
+                  <Route
+                    exact
+                    path="/"
+                    render={props => <HomeHOC {...props} />}
+                  />
+                  <Route
+                    path="/home"
+                    render={props => <HomeHOC {...props} />}
+                  />
                   <Route path="/login" component={Login} />
                   <Route path="/logout" component={Logout} />
-                  <Route path="/about" component={AboutPage} />
-                  <Route path="/casestudy" component={CaseStudyPage} />
-                  <Route path="/blogs/:id" component={BlogFull} />
+                  <Route
+                    path="/about"
+                    render={props => <AboutHOC title="About" {...props} />}
+                  />
+                  <Route
+                    path="/casestudy/:id"
+                    render={props => (
+                      <CSStudyHOC title="Case Study" {...props} />
+                    )}
+                  />
+                  <Route
+                    path="/casestudy"
+                    render={props => (
+                      <CSStudyHOC title="Case Study" {...props} />
+                    )}
+                  />
+                  {/* <Route path="/blogs/:id" component={BlogFull} /> */}
                   {/* <Route path="/donate" component={Donate} /> */}
-                  <Route path="/contact" component={ContactPage} />
-                  <Route path="/blogs" component={BlogMain} />
-                  <PrivateRoute path="/admin" component={AdminPage} />
-                  <PrivateRoute path="/admin/*" component={AdminPage} />
-                  <PrivateRoute
+                  <Route
+                    path="/contact"
+                    render={props => <ContactHOC title="Contact Me" />}
+                  />
+                  {/* <Route path="/blogs" component={BlogMain} /> */}
+                  {/* <PrivateRoute path="/admin" component={AdminPage} />
+                  <PrivateRoute path="/admin/*" component={AdminPage} /> */}
+                  {/* <PrivateRoute
                     exact
                     path="/blog/:id/edit"
                     component={AdminEdit}
-                  />
+                  /> */}
                   <Route component={FourZeroFour} />
                 </Switch>
               </Suspense>

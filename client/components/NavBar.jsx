@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 import AuthButton from "./auth/authButton";
 import UserContext from "../services/context";
 import MessageBanner from "./message";
+import Resume from "../assets/documents/KatrinaLanglandResume.pdf";
 
 class NavBar extends Component {
   constructor(props) {
@@ -13,10 +14,10 @@ class NavBar extends Component {
   static contextType = UserContext;
 
   render() {
-    let style = {}
-      // this.props.sticky === true
-      //   ? { position: "sticky", top: 0, zIndex: 100 }
-      //   : {};
+    let style = {};
+    // this.props.sticky === true
+    //   ? { position: "sticky", top: 0, zIndex: 100 }
+    //   : {};
 
     let styleMode = this.props.styleMode;
 
@@ -25,8 +26,7 @@ class NavBar extends Component {
     const linksConfig = [
       { route: "/home", label: "Work" },
       { route: "/about", label: "About" },
-      { route: "/contact", label: "Contact" },
-      { route: "/resume", label: "Resume" }
+      { route: "/contact", label: "Contact" }
     ];
 
     let links = linksConfig.map((link, i) => {
@@ -45,7 +45,7 @@ class NavBar extends Component {
     return (
       <Fragment>
         <nav
-          className={`navbar navbar-expand-lg fixed-top navbar-${styleMode} bg-${styleMode} px-lg-5`}
+          className={`navbar navbar-expand-lg navbar-toggleable-sm navbar-light fixed-top navbar-${styleMode} bg-${styleMode} px-lg-5`}
           style={style}
         >
           <Link to="/" className="navbar-brand">
@@ -63,10 +63,17 @@ class NavBar extends Component {
             <span className="navbar-toggler-icon" />
           </button>
 
-
           <div className="collapse navbar-collapse" id="top-Nav">
-            <div className="ml-auto navbar-nav flex-row">
+            <div className="ml-auto navbar-nav">
               {links}
+              <Link
+                // download="Katrina_Langland_Resume"
+                target="_blank"
+                className="nav-item nav-link px-4"
+                to={Resume}
+              >
+                RESUME
+              </Link>
               {this.props.loginBtn && <AuthButton />}
             </div>
             {this.props.showUser && (

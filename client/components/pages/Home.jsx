@@ -18,11 +18,11 @@ export default function Home(props) {
         <Banner
           subtitle={"RESUME"}
           message={
-            <p>
+            <h2>
               Want to learn more about my
               <br />
               experience? Download my resume.
-            </p>
+            </h2>
           }
           cta={"DOWNLOAD NOW"}
         />
