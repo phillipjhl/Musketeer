@@ -7,7 +7,7 @@ export default function Footer(props) {
   return (
     <footer className="footer container-fluid w-100 text-white bg-secondary">
       <div className="h-100 d-flex justify-content-center align-items-center">
-        <div className="col-sm-6 row d-flex mx-auto">
+        <div className="col-md-6 row d-flex mx-auto">
           <div className="col col-2 ml-auto text-right d-flex flex-column justify-content-center align-items-end footer-list">
             <span className="border-bottom footer-list__title">MENU</span>
             <nav className="d-flex flex-column justify-content-end">

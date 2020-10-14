@@ -1,6 +1,6 @@
 {
     "name": "musketeer",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "description": "Site with marketing, blog, payments, and contact all in one.",
     "main": "build/musketeer-api/index.js",
     "private": true,

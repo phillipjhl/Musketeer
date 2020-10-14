@@ -117,13 +117,13 @@ module.exports = {
       filename: devMode ? "css/[name].css" : "css/[name].[contenthash].css",
       chunkFilename: devMode ? "css/[id].css" : "css/[id].[contenthash].css"
     }),
-    new CompressionPlugin({
-        filename: '[path][base].gz',
-        algorithm: 'gzip',
-        test: /\.(jpg|js|css|html|svg)$/,
-        // threshold: 10240,
-        minRatio: 0.8,
-    })
+    // new CompressionPlugin({
+    //     filename: '[path][base].gz',
+    //     algorithm: 'gzip',
+    //     test: /\.(jpg|js|css|html|svg)$/,
+    //     // threshold: 10240,
+    //     minRatio: 0.8,
+    // })
   ]
   // externals: {
   //   jquery: "jQuery",
