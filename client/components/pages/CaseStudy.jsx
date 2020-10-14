@@ -38,9 +38,7 @@ export default function CaseStudyPage(props) {
         style={{
           height: "758px",
           backgroundImage: `url(${HeroImg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "50% 50%",
-          margin: "1rem 3rem"
+
         }}
         className="bg-bright-green casestudy-top"
       >
