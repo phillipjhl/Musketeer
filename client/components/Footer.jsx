@@ -8,7 +8,7 @@ export default function Footer(props) {
     <footer className="footer container-fluid w-100 text-white bg-secondary">
       <div className="h-100 d-flex justify-content-center align-items-center">
         <div className="col-md-6 row d-flex mx-auto">
-          <div className="col col-2 ml-auto text-right d-flex flex-column justify-content-center align-items-end footer-list">
+          <div className="col col-3 col-sm-3 ml-md-auto text-right d-flex flex-column justify-content-center align-items-end footer-list">
             <span className="border-bottom footer-list__title">MENU</span>
             <nav className="d-flex flex-column justify-content-end">
               <Link to={"/home"}>Work</Link>
@@ -24,7 +24,7 @@ export default function Footer(props) {
             </nav>
           </div>
 
-          <div className="col col-4 text-center">
+          <div className="col col-6 col-sm-6 text-center">
             <Link to={"/"} >
               <WhiteLogo />
             </Link>
@@ -34,7 +34,7 @@ export default function Footer(props) {
             </div>
           </div>
 
-          <div className="col col-2 mr-auto text-left d-flex flex-column justify-content-center align-items-start footer-list">
+          <div className="col col-3 col-sm-2 mr-md-auto text-left d-flex flex-column justify-content-center align-items-start footer-list">
             <span className="border-bottom mr-auto footer-list__title">
               CONNECT
             </span>

@@ -9,10 +9,10 @@ export default function ContactPage(props) {
   return (
     <section className="container my-lg">
       <div className="row">
-        <div className="col-sm-6">
+        <div className="col-md-6">
             {/* <img src="" alt="" className=""/> */}
         </div>
-        <div className="col-sm-6">
+        <div className="col-md-6">
           <h1>Contact Me</h1>
           {props.message && <p>{props.message}</p>}
           <ContactForm />

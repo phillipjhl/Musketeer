@@ -28,6 +28,7 @@ import Sketches from "../../assets/images/ProductDesignSketches.png";
 import HFM from "../../assets/images/HighFidelityMockups.png";
 import FinalProd2 from "../../assets/images/Frame27.png";
 import FinalProd1 from "../../assets/images/Frame26.png";
+import UT from "../../assets/images/Usability-Testing-Findings.png";
 
 import Section from "../blocks/Section";
 
@@ -37,8 +38,7 @@ export default function CaseStudyPage(props) {
       <div
         style={{
           height: "758px",
-          backgroundImage: `url(${HeroImg})`,
-
+          backgroundImage: `url(${HeroImg})`
         }}
         className="bg-bright-green casestudy-top"
       >
@@ -118,28 +118,28 @@ export default function CaseStudyPage(props) {
 
       <section className="bg-bright-green text-uppercase text-white p-3 mx-5 mb-5">
         <div
-          className="row justify-content-center align-items-start py-5 w-75 mx-auto"
+          className="row justify-content-center align-items-start py-5 col-md-10 mx-auto"
           style={{ minHeight: "322px" }}
         >
           <div className="col-sm-4 text-right">
             <p className="text-bold">ROLE</p>
             <p className="mb-5">Sole UX/UI designer</p>
             <p className="text-bold">PURPOSE</p>
-            <p className="mb-5">
+            <p className="mb-0">
               Project designed for Springboard’s 6 Month UX/UI Design Program
             </p>
           </div>
           <div className="col-sm-3 mx-auto justify-content-center align-items-start opaque--8">
             <GroImg />
           </div>
-          <div className="col-sm-4 text-left">
+          <div className="col-sm-4 text-left align-items-center">
             <p className="text-bold">PROJECT</p>
             <p className="mb-5">3 Month Project</p>
             <p className="text-bold">TOOLS USED</p>
             <p className="m-0">Figma</p>
             <p className="m-0">Google Survey</p>
             <p className="m-0">Miro</p>
-            <p className="mb-5">Zoom</p>
+            <p className="mb-0">Zoom</p>
           </div>
         </div>
       </section>
@@ -153,9 +153,7 @@ export default function CaseStudyPage(props) {
                 gardening activities … many of these gardeners [want] gardening
                 apps.”
               </h1>
-              <footer className="blockquote-footer">
-                <cite title="Source Title">IAN BALWDIN, INDUSTRY ANALYST</cite>
-              </footer>
+              <h4>IAN BALWDIN, INDUSTRY ANALYST</h4>
             </blockquote>
           </div>
           <div className="col-sm-5 mx-auto">
@@ -242,7 +240,7 @@ export default function CaseStudyPage(props) {
 
       <section className="container mb-lg">
         <div className="row">
-          <div className="col-sm-6 mx-auto">
+          <div className="col-sm-12 mx-auto">
             <h5>INTERVIEWS - EMPATHY MAPS AND FINDINGS</h5>
             <h1>Users Want A Plan, Not Planning</h1>
             <div
@@ -263,7 +261,7 @@ export default function CaseStudyPage(props) {
               </p>
             </div>
           </div>
-          <div className="col-sm-5 mx-auto">
+          <div className="col-sm-12 mx-auto">
             <LazyLoad offset={100}>
               <img src={MapImg1} alt="" className="w-100" />
             </LazyLoad>
@@ -273,12 +271,12 @@ export default function CaseStudyPage(props) {
 
       <section className="container mb-lg">
         <div className="row">
-          <div className="col-sm-5 mx-auto">
+          <div className="col-sm-12 mx-auto">
             <LazyLoad offset={100}>
               <img src={AffinityMap} alt="" className="w-100" />
             </LazyLoad>
           </div>
-          <div className="col-sm-6 mx-auto">
+          <div className="col-sm-12 mx-auto">
             <h5>INTERVIEWS - Affinity MAPS AND FINDINGS</h5>
             <h1>
               Participants Had Difficulty Finding and Comprehending Plant
@@ -323,15 +321,14 @@ export default function CaseStudyPage(props) {
 
       <Section
         image={Persona1}
-        title="Downown Daniel"
+        title="Downtown Daniel"
         paragraphs={[
           <p>
             Daniel’s motivation for gardening is for its{" "}
             <b>mental health benefits</b> despite his limited space.
           </p>,
           <p>
-            He finds himself spending a lot of money replacing dead plants and
-            is{" "}
+            He finds himself spending a lot of money replacing dead plants and{" "}
             <b>
               feels frustrated when he cannot find reliable plant information.
             </b>
@@ -341,7 +338,7 @@ export default function CaseStudyPage(props) {
 
       <Section
         image={Persona2}
-        title="Idealisitc India"
+        title="Idealistic India"
         paragraphs={[
           <p>
             India gardens to <b>increase curb appeal</b> and to{" "}
@@ -461,6 +458,22 @@ export default function CaseStudyPage(props) {
         </div>
         <LazyLoad offset={100}>
           <img src={HFM} alt="" className="my-5 w-100" />
+        </LazyLoad>
+      </section>
+
+      <section className="container mb-lg">
+        <h2>USABILITY TESTING</h2>
+        <p>
+          After completing a high fidelity prototype of the app, it was time to
+          test it on a group of gardeners. I performed two rounds of usability
+          testing, with five participants each round. The first round of testing
+          was during the low-fidelity mockup stage while the second was using a
+          high-fidelity prototype. Each round of testing was followed by a
+          usability test report, solution ideation, and a new iteration of the
+          app.
+        </p>
+        <LazyLoad offset={100}>
+          <img src={UT} alt="" className="my-5 w-100" />
         </LazyLoad>
       </section>
 

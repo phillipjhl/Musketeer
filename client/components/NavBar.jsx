@@ -35,6 +35,8 @@ class NavBar extends Component {
           key={`${link.label}-${i}`}
           to={link.route}
           className="nav-item nav-link px-4"
+          data-toggle={"collapse"}
+          data-target={".navbar-collapse.show"}
         >
           {link.label}
           {i === 0 ? <span className="sr-only">(current)</span> : null}

@@ -8,7 +8,8 @@ class ContactForm extends Component {
     this.state = {
       name: "",
       email: "",
-      message: ""
+      message: "",
+      subject: ""
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,7 +28,7 @@ class ContactForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    sendContactEmail(this.state.name, this.state.email, this.state.message)
+    sendContactEmail(this.state.name, this.state.email, this.state.message, this.state.subject)
       .then(resp => {
         this.setState({
           successMessage: "Thank you for contacting me!",
@@ -71,6 +72,17 @@ class ContactForm extends Component {
               id="email"
               name="email"
               type="email"
+              className="form-control"
+              onChange={this.handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="subject">Subject</label>
+            <input
+              id="subject"
+              name="subject"
+              type="text"
               className="form-control"
               onChange={this.handleChange}
               required
