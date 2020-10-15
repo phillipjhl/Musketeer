@@ -122,20 +122,20 @@ export default function CaseStudyPage(props) {
           style={{ minHeight: "322px" }}
         >
           <div className="col-sm-4 text-right">
-            <h6 className="text-bold">ROLE</h6>
+            <p className="text-bold">ROLE</p>
             <p className="mb-5">Sole UX/UI designer</p>
-            <h6 className="text-bold">PURPOSE</h6>
+            <p className="text-bold">PURPOSE</p>
             <p className="mb-5">
-              Project designed for Springboard’s 6 Month UX/UI Design Program.
+              Project designed for Springboard’s 6 Month UX/UI Design Program
             </p>
           </div>
           <div className="col-sm-3 mx-auto justify-content-center align-items-start opaque--8">
             <GroImg />
           </div>
           <div className="col-sm-4 text-left">
-            <h6 className="text-bold">PROJECT</h6>
+            <p className="text-bold">PROJECT</p>
             <p className="mb-5">3 Month Project</p>
-            <h6 className="text-bold">TOOLS USED</h6>
+            <p className="text-bold">TOOLS USED</p>
             <p className="m-0">Figma</p>
             <p className="m-0">Google Survey</p>
             <p className="m-0">Miro</p>

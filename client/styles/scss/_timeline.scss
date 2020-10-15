@@ -6,11 +6,12 @@
     position: absolute;
     top: 0;
     left: calc(50% - 2px);
-    z-index: 0;
+    z-index: 10;
   }
 
   &__box {
     position: relative;
+
     &__arrow {
       border-color: $primary;
       &--left {
@@ -38,14 +39,28 @@
   }
 }
 
-.grid-sizer {
-  width: 50%;
+@media (max-width: 768px) {
+  .timeline__line {
+    z-index: 0 !important;
+    background-color: rgba($color: $primary, $alpha: 0.1) !important;
+  }
+  .grid-item--title {
+    text-align: center !important;
+    background-color: $white;
+  }
+  // .grid-item {
+  // }
 }
+
+// .grid-sizer {
+// width: 50%;
+// }
 // .gutter-sizer {
 //   width: 5%;
 // }
 .grid-item {
-  width: 50%;
+  // width: 50%;
+  transition: 0.3s ease;
 }
 .grid-item--width2 {
   width: 400px;

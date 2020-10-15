@@ -24,7 +24,7 @@ export default function Home(props) {
               experience? Download my resume.
             </h2>
           }
-          cta={"DOWNLOAD NOW"}
+          cta={"VIEW RESUME"}
         />
       </div>
     </main>

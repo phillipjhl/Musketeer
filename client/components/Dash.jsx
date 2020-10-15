@@ -6,7 +6,7 @@ export default function Dash(props) {
   const dashItemConfigs = [
     {
       subtitle: "UX/UI DESIGN",
-      title: "GRO Gardening App",
+      title: "GRO App",
       description:
         "Lead the research and design for a innovative gardening app to reimaginge how technology and gardening can be intertwined to create an enjoyable and intuitive experience.",
       cta: "SEE CASE STUDY",
@@ -20,7 +20,7 @@ export default function Dash(props) {
     },
     {
       subtitle: "DESIGN STUDIES",
-      title: "Mobile Applications",
+      title: "Mobile Apps",
       description: "",
       cta: "COMING SOON",
       imageUrl: `${GRO_APP_PNG}`,

@@ -25,7 +25,9 @@ export default function Footer(props) {
           </div>
 
           <div className="col col-4 text-center">
-            <WhiteLogo />
+            <Link to={"/"} >
+              <WhiteLogo />
+            </Link>
             <div className="mt-3 text-center" style={{ fontSize: "14px" }}>
               <p className="mb-0">Birmingham, AL</p>
               <p className="mb-0">Seeking Opportunities</p>
@@ -45,10 +47,20 @@ export default function Footer(props) {
               >
                 Email
               </a>
-              <a href="https://instagram.com/katrinalangland" role="link" target="_blank" title="Instagram">
+              <a
+                href="https://instagram.com/katrinalangland"
+                role="link"
+                target="_blank"
+                title="Instagram"
+              >
                 Instagram
               </a>
-              <a href="https://linkedin.com/in/katrinalangland" role="link" target="_blank" title="LinkedIn">
+              <a
+                href="https://linkedin.com/in/katrinalangland"
+                role="link"
+                target="_blank"
+                title="LinkedIn"
+              >
                 LinkedIn
               </a>
               <a

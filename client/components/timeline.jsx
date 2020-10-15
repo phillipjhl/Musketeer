@@ -7,7 +7,7 @@ export function TimelineBox(props) {
   return (
     <div
       id={props.id}
-      className={`timeline__box grid-item px-5 py-5 ${
+      className={`timeline__box col-md-6 grid-item px-5 py-5 ${
         position === "left" ? "text-right" : "text-left"
       }`}
     >
@@ -67,7 +67,7 @@ export default function Timeline(props) {
       yearFull: "Summer 2020",
       title: "STARTED UX/UI PROGRAM",
       text:
-        "While finishing school, I took on freelance design projects. I served small business clients through logo, print, and website design."
+        "In June of 2020, I committed to developing my User Experience and Interface skills. I joined the Springboard programthat included a 700+ hour curriculum along with expert mentorship. This opportunity has allowed me to successfully solve complex problems through simple, beautiful designs."
     }
   ];
 
@@ -77,7 +77,7 @@ export default function Timeline(props) {
       itemSelector: ".grid-item",
       percentPosition: true,
       horizontalOrder: true,
-      stagger: 1000
+      stagger: 200
     });
 
     msnry.layout();
@@ -91,10 +91,10 @@ export default function Timeline(props) {
 
   return (
     <div className="grid timeline">
-      <div className="grid-sizer"></div>
+      <div className="grid-sizer col-md-6"></div>
       <div className="timeline__line" />
       <div>
-        <h1 className="grid-item text-bold text-right px-5">
+        <h1 className="grid-item grid-item--title col-md-6 text-bold text-right px-5">
           A Brief Look at <br /> My Experience
         </h1>
       </div>

@@ -51,7 +51,7 @@ class ContactForm extends Component {
     return (
       <div className="col">
         <form
-          className={`form ${this.state.formClass}`}
+          className={`form needs-validation ${this.state.formClass}`}
           onSubmit={this.handleSubmit}
         >
           <div className="form-group">
@@ -92,7 +92,7 @@ class ContactForm extends Component {
             onClick={this.handleSubmit}
             className="btn btn-outline-secondary"
           >
-            Submit
+            CONTACT ME
           </button>
         </form>
         {this.state.successMessage && !this.state.error && (
