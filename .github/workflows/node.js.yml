@@ -24,8 +24,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+      env:
+        NODE_ENV: production
     - run: npm install
-    - run: npm run build:prod --if-present
+    - run: npm run build:prod
 
     - name: Configure AWS credentials
       id: login-aws
