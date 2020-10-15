@@ -5,7 +5,7 @@ import Resume from "../assets/documents/KatrinaLanglandResume.pdf";
 
 export default function Footer(props) {
   return (
-    <footer className="footer container-fluid w-100 text-white bg-secondary">
+    <footer className="footer container-fluid w-100 text-white bg-dark">
       <div className="h-100 d-flex justify-content-center align-items-center">
         <div className="col-md-6 row d-flex mx-auto">
           <div className="col col-3 col-sm-3 ml-md-auto text-right d-flex flex-column justify-content-center align-items-end footer-list">
@@ -34,7 +34,7 @@ export default function Footer(props) {
             </div>
           </div>
 
-          <div className="col col-3 col-sm-2 mr-md-auto text-left d-flex flex-column justify-content-center align-items-start footer-list">
+          <div className="col col-3 col-sm-3 mr-md-auto text-left d-flex flex-column justify-content-center align-items-start footer-list">
             <span className="border-bottom mr-auto footer-list__title">
               CONNECT
             </span>

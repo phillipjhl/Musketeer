@@ -22,10 +22,10 @@ export default function Banner(props) {
         {props.cta && (
           <Link
             // download="Katrina_Langland_Resume"
-            target="_blank"
+            target={props.target || "_blank"}
             className="btn btn-outline-primary text-uppercase"
-            to={Resume}
-            title="Download Now"
+            to={props.link || Resume}
+            title={props.cta}
           >
             {props.cta}
           </Link>

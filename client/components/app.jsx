@@ -1,10 +1,5 @@
 import React, { lazy, useEffect, Component, Fragment, Suspense } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Link
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import { checkLogin, getUser } from "../services/user";
 
 import NavBar from "./NavBar";
@@ -23,17 +18,18 @@ import Footer from "./Footer";
 import IndeterminateProgress from "./utilities/indeterminateProgress";
 const ContactPage = lazy(() => import("./pages/ContactPage"));
 const CaseStudyPage = lazy(() => import("./pages/CaseStudy"));
+const RunrPage = lazy(() => import("./pages/RunrPage"));
+const DesignSystem = lazy(() => import("./pages/DesignSystem"));
 // export const UserContext = React.createContext("guest");
 import FourZeroFour from "./pages/FourZeroFour";
 
 const withTitle = COMP => {
   const wrappedPage = props => {
-
     useEffect(() => {
       window.scrollTo(0, 0);
-      document.title = props.title ?
-        `Katrina Langland | ${props.title}` :
-        "Katrina Langland | Product Designer";
+      document.title = props.title
+        ? `Katrina Langland | ${props.title}`
+        : "Katrina Langland | Product Designer";
     }, [props.title]);
 
     return <COMP {...props} />;
@@ -45,6 +41,8 @@ const withTitle = COMP => {
 const HomeHOC = withTitle(Home);
 const AboutHOC = withTitle(AboutPage);
 const CSStudyHOC = withTitle(CaseStudyPage);
+const RunrPageHOC = withTitle(RunrPage);
+const DesignSystemHOC = withTitle(DesignSystem);
 const ContactHOC = withTitle(ContactPage);
 
 class App extends Component {
@@ -99,15 +97,21 @@ class App extends Component {
                     render={props => <AboutHOC title="About" {...props} />}
                   />
                   <Route
-                    path="/casestudy/:id"
+                    path="/casestudy/runr"
                     render={props => (
-                      <CSStudyHOC title="Case Study" {...props} />
+                      <RunrPageHOC title="Case Study - RUNR" {...props} />
                     )}
                   />
                   <Route
-                    path="/casestudy"
+                    path="/casestudy/gro"
                     render={props => (
-                      <CSStudyHOC title="Case Study" {...props} />
+                      <CSStudyHOC title="Case Study - GRO" {...props} />
+                    )}
+                  />
+                  <Route
+                    path="/casestudy/designstudy"
+                    render={props => (
+                      <DesignSystemHOC title="Design System - GRO" {...props} />
                     )}
                   />
                   {/* <Route path="/blogs/:id" component={BlogFull} /> */}

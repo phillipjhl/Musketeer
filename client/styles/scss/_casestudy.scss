@@ -1,71 +1,78 @@
-.casestudy-top {
-  margin: 1rem 3rem;
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
-
-@media (max-width: 768px) {
+.casestudy {
   .casestudy-top {
-    background-image: none !important;
-    margin: 1rem 0;
+    margin: 1rem 3rem;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
   }
-}
 
-// for iframe
-.embed_documentation_footer--documentationFooterLeft--rcexg {
-  display: none !important;
-  visibility: hidden !important;
-}
-
-.casestudy-top-banner {
-  position: relative;
-
-  .casestudy-top-banner__block {
-    // position: absolute;
-    // left: 32px;
-    // bottom: 40px;
+  @media (max-width: 768px) {
+    .casestudy-top {
+      background-image: none !important;
+      margin: 1rem 0;
+    }
   }
-}
 
-.GRO-logo {
-  img {
-    margin: auto;
+  // for iframe
+  .embed_documentation_footer--documentationFooterLeft--rcexg {
+    display: none !important;
+    visibility: hidden !important;
   }
-  span {
-    text-align: center;
+
+  .casestudy-top-banner {
+    position: relative;
+
+    .casestudy-top-banner__block {
+      // position: absolute;
+      // left: 32px;
+      // bottom: 40px;
+    }
+  }
+
+  .GRO-logo {
+    img {
+      margin: auto;
+    }
+    span {
+      text-align: center;
+      width: 100%;
+      font-size: 80px;
+      font-weight: bold;
+    }
+  }
+
+  .cs-img__block {
+    position: relative;
+    min-height: 600px;
     width: 100%;
-    font-size: 80px;
-    font-weight: bold;
-  }
-}
+    height: 100%;
 
-.cs-img__block {
-  position: relative;
-  min-height: 600px;
-  width: 100%;
-  height: 100%;
+    img.circle {
+      height: 200px;
+      width: 200px;
+    }
 
-  img.circle {
-    height: 200px;
-    width: 200px;
-  }
+    #circle1 {
+      position: absolute;
+      top: 25px;
+      left: 95px;
+    }
 
-  #circle1 {
-    position: absolute;
-    top: 25px;
-    left: 95px;
-  }
+    #circle2 {
+      position: absolute;
+      left: 325px;
+      top: 70px;
+    }
 
-  #circle2 {
-    position: absolute;
-    left: 325px;
-    top: 70px;
+    #circle3 {
+      position: absolute;
+      top: 250px;
+      left: 170px;
+    }
   }
 
-  #circle3 {
-    position: absolute;
-    top: 250px;
-    left: 170px;
-  }
+  // runr page 
+  // &--runr {
+
+  // }
 }

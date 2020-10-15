@@ -18,7 +18,7 @@ export default function JumboTitle(props) {
       </h2>
       {props.ctaText && (
         <Link
-          to={"/contact"}
+          to={"/about"}
           title={props.ctaText}
           className="btn btn-md btn-outline-secondary font-weight-bold"
         >

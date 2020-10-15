@@ -2,14 +2,18 @@ $theme-colors: (
   "primary": #788b99,
   "secondary": #33432f,
   "contrast": #0e0e0e,
-  "muted": #b1a296,
+  "muted": #ececec,
   "danger": #a81c21,
-  "success": #4D7A0A,
+  "success": #4d7a0a,
   "dark": #0e0e0e,
   "black": #000,
   "black-transp": #000000a6,
-  "bright-green": #4D7A0A
+  "bright-green": #4d7a0a,
+  "runr-blue": #22999A
 );
+
+$runr-blue: #22999A;
+$bright-green: #4d7a0a;
 
 $body-color: #000;
 
@@ -17,7 +21,7 @@ $primary: #788b99;
 $secondary: #33432f;
 
 $green: #33432f;
-
+$light-grey: #f9f9f9;
 $light: rgba(51, 67, 47, 0.03);
 $black: #000;
 $black-transp: #000000a6;

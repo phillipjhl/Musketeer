@@ -40,13 +40,30 @@
 }
 
 @media (max-width: 768px) {
-  .timeline__line {
-    z-index: 0 !important;
-    background-color: rgba($color: $primary, $alpha: 0.1) !important;
-  }
   .grid-item--title {
     text-align: center !important;
     background-color: $white;
+  }
+  .timeline {
+    .timeline__line {
+      z-index: 0 !important;
+      left: 0 !important;
+      background-color: rgba($color: $primary, $alpha: 0.1) !important;
+    }
+    &__box {
+      text-align: left !important;
+      &__arrow--left, &__arrow--right {
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: 0;
+        top: 65px;
+        border-top: 10px solid transparent;
+        border-left: 20px solid $primary;
+        border-bottom: 10px solid transparent;
+        border-right: none;
+      }
+    }
   }
   // .grid-item {
   // }

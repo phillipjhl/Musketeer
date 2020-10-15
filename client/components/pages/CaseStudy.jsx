@@ -1,7 +1,7 @@
 import React from "react";
 import LazyLoad from "react-lazyload";
 
-import HeroImg from "../../assets/images/GROHeroImage.png";
+import HeroImg from "../../assets/images/GRO-Hero-Image.png";
 import GroImg from "../../assets/images/Case-Study-GRO-App/GRO-Sub-Logo-White-01.svg";
 import Circle1 from "../../assets/images/DeadPlants-01.png";
 import Circle2 from "../../assets/images/HandsonKeyboard-01.png";
@@ -12,7 +12,7 @@ import MacImg from "../../assets/images/SurveyoniMac.png";
 
 import InterviewImg from "../../assets/images/Interviews-01.png";
 import MapImg1 from "../../assets/images/EmpathyMap-1.png";
-import AffinityMap from "../../assets/images/AffinityMap2.png";
+import AffinityMap from "../../assets/images/Affinity-Map-2.png";
 import Persona1 from "../../assets/images/Persona1.png";
 import Persona2 from "../../assets/images/Persona2.png";
 import Persona3 from "../../assets/images/Persona3.png";
@@ -28,7 +28,11 @@ import Sketches from "../../assets/images/ProductDesignSketches.png";
 import HFM from "../../assets/images/HighFidelityMockups.png";
 import FinalProd2 from "../../assets/images/Frame27.png";
 import FinalProd1 from "../../assets/images/Frame26.png";
-import UT from "../../assets/images/Usability-Testing-Findings.png";
+
+import UT1 from "../../assets/images/Frame-38.png";
+import UT2 from "../../assets/images/Frame-39.png";
+import UT3 from "../../assets/images/Frame-40.png";
+import UT4 from "../../assets/images/Frame-41.png";
 
 import Section from "../blocks/Section";
 
@@ -63,32 +67,55 @@ export default function CaseStudyPage(props) {
       </div>
 
       <section className="container pt-5">
-        <div className="row">
-          <div className="col-12 my-5">
+        <div className="row my-lg">
+          <div className="col-md-5 mx-auto">
             <h2>BACKGROUND</h2>
             <div>
               <p>
                 One of my favorite things to do growing up was help my
                 grandmother in her garden. I recall studying the plastic plant
                 tags as she planted bright pink petunias around her bird bath.
-                To my surpise, twenty years later when I began to buy plants for
-                my first garden, <b>the plant tags looked no different</b>. They
-                still have the sun icon to indicate the sun preferences, the
-                water droplets to show how often they need to be watered, and so
-                on.
+                To my surprise, twenty years later when I began to buy plants
+                for my first garden, <b>the plant tags looked no different</b>.
+                They still have the sun icon to indicate the sun preferences,
+                the water droplets to show how often they need to be watered,
+                and so on.
               </p>
 
               <p>
                 I quickly found that these plant tags{" "}
                 <b>left a lot of questions unanswered</b> so that{" "}
                 <b>caring for my plants still felt like a guessing game</b>. I
-                knew there had to be abetter way. This inspired the idea for my
+                knew there had to be a better way. This inspired the idea for my
                 project.
               </p>
             </div>
           </div>
 
-          <div className="col-sm-6 d-flex text-left flex-column justify-content-center align-items-start">
+          <div className="col-md-5 mx-auto pb-5">
+            <div
+              className="border-left border-bright-green pl-5"
+              style={{ borderLeftWidth: "3px" }}
+            >
+              <h6 className="mb-0">ROLE</h6>
+              <p className="mb-3">Sole Researcher and UX/UI Designer</p>
+              <h6 className="mb-0">PURPOSE</h6>
+              <p className="mb-3">
+                Project designed for Springboard’s 6 Month UX/UI Design Program
+              </p>
+              <h6 className="mb-0">PROJECT</h6>
+              <p className="mb-3">3 Month Project</p>
+              <h6 className="mb-0">TOOLS USED</h6>
+              <p className="mb-0">Figma</p>
+              <p className="mb-0">Google Survey</p>
+              <p className="mb-0">Miro</p>
+              <p className="mb-0">Zoom</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="row my-lg">
+          <div className="col-md-5 mx-auto d-flex text-left flex-column justify-content-center align-items-start">
             <h2 className="">PROBLEM</h2>
             <div>
               <p>
@@ -116,34 +143,6 @@ export default function CaseStudyPage(props) {
         </div>
       </section>
 
-      <section className="bg-bright-green text-uppercase text-white p-3 mx-5 mb-5">
-        <div
-          className="row justify-content-center align-items-start py-5 col-md-10 mx-auto"
-          style={{ minHeight: "322px" }}
-        >
-          <div className="col-sm-4 text-right">
-            <p className="text-bold">ROLE</p>
-            <p className="mb-5">Sole UX/UI designer</p>
-            <p className="text-bold">PURPOSE</p>
-            <p className="mb-0">
-              Project designed for Springboard’s 6 Month UX/UI Design Program
-            </p>
-          </div>
-          <div className="col-sm-3 mx-auto justify-content-center align-items-start opaque--8">
-            <GroImg />
-          </div>
-          <div className="col-sm-4 text-left align-items-center">
-            <p className="text-bold">PROJECT</p>
-            <p className="mb-5">3 Month Project</p>
-            <p className="text-bold">TOOLS USED</p>
-            <p className="m-0">Figma</p>
-            <p className="m-0">Google Survey</p>
-            <p className="m-0">Miro</p>
-            <p className="mb-0">Zoom</p>
-          </div>
-        </div>
-      </section>
-
       <section className="container text-dark my-lg">
         <div className="row">
           <div className="col-sm-5 mx-auto">
@@ -161,8 +160,8 @@ export default function CaseStudyPage(props) {
             <h3>Secondary Research</h3>
             <p>
               I began research by finding studies and journals published on
-              gardening, my goal during this stage was to see i
-              <b>f their was a market for this type of product.</b>
+              gardening, my goal during this stage was to see
+              <b>if there was a market for this type of product.</b>
             </p>
             <p>
               Once I found sufficient market research, I began to{" "}
@@ -240,8 +239,8 @@ export default function CaseStudyPage(props) {
 
       <section className="container mb-lg">
         <div className="row">
-          <div className="col-sm-12 mx-auto">
-            <h5>INTERVIEWS - EMPATHY MAPS AND FINDINGS</h5>
+          <div className="col-md-11 mx-auto">
+            <h5>EMPATHY MAP FINDINGS</h5>
             <h1>Users Want A Plan, Not Planning</h1>
             <div
               className="border-left border-bright-green pl-4"
@@ -261,7 +260,7 @@ export default function CaseStudyPage(props) {
               </p>
             </div>
           </div>
-          <div className="col-sm-12 mx-auto">
+          <div className="col-md-11 mx-auto">
             <LazyLoad offset={100}>
               <img src={MapImg1} alt="" className="w-100" />
             </LazyLoad>
@@ -271,12 +270,7 @@ export default function CaseStudyPage(props) {
 
       <section className="container mb-lg">
         <div className="row">
-          <div className="col-sm-12 mx-auto">
-            <LazyLoad offset={100}>
-              <img src={AffinityMap} alt="" className="w-100" />
-            </LazyLoad>
-          </div>
-          <div className="col-sm-12 mx-auto">
+          <div className="col-md-11 mx-auto mb-5">
             <h5>INTERVIEWS - Affinity MAPS AND FINDINGS</h5>
             <h1>
               Participants Had Difficulty Finding and Comprehending Plant
@@ -300,11 +294,16 @@ export default function CaseStudyPage(props) {
               </p>
             </div>
           </div>
+          <div className="col-md-11 mx-auto">
+            <LazyLoad offset={100}>
+              <img src={AffinityMap} alt="" className="w-100" />
+            </LazyLoad>
+          </div>
         </div>
       </section>
 
       <section className="container mb-lg">
-        <div className="col-12">
+        <div className="col-md-11 mx-auto">
           <h2>PERSONAS</h2>
           <div>
             <p>
@@ -390,12 +389,14 @@ export default function CaseStudyPage(props) {
       />
 
       <section className="container mb-lg">
-        <LazyLoad offset={100}>
-          <img src={SiteMap} alt="" className="w-100" />
-        </LazyLoad>
+        <div className="col-md-11 mx-auto">
+          <LazyLoad offset={100}>
+            <img src={SiteMap} alt="" className="w-100" />
+          </LazyLoad>
+        </div>
 
-        <div className="container mb-3">
-          <div className="col-12">
+        <div className="row mb-3">
+          <div className="col-md-11 mx-auto">
             <h2>USER FLOWS</h2>
             <div>
               <p>
@@ -406,23 +407,29 @@ export default function CaseStudyPage(props) {
               </p>
             </div>
           </div>
+
+          <div className="col-md-11 mx-auto">
+            <LazyLoad offset={100}>
+              <img src={UserFlow1} alt="" className="my-5 w-100" />
+            </LazyLoad>
+          </div>
+
+          <div className="col-md-11 mx-auto">
+            <LazyLoad offset={100}>
+              <img src={UserFlow2} alt="" className="my-5 w-100" />
+            </LazyLoad>
+          </div>
+
+          <div className="col-md-11 mx-auto">
+            <LazyLoad offset={100}>
+              <img src={UserFlow3} alt="" className="my-5 w-100" />
+            </LazyLoad>
+          </div>
         </div>
-
-        <LazyLoad offset={100}>
-          <img src={UserFlow1} alt="" className="my-5 w-100" />
-        </LazyLoad>
-
-        <LazyLoad offset={100}>
-          <img src={UserFlow2} alt="" className="my-5 w-100" />
-        </LazyLoad>
-
-        <LazyLoad offset={100}>
-          <img src={UserFlow3} alt="" className="my-5 w-100" />
-        </LazyLoad>
       </section>
 
       <section className="container my-lg">
-        <div className="col-12 mb-5">
+        <div className="col-md-11 mx-auto mb-5">
           <h2>DESIGN PROCESS</h2>
           <p>
             Having established three user flows, it was time to begin ideation.
@@ -432,54 +439,78 @@ export default function CaseStudyPage(props) {
           </p>
         </div>
 
-        <div className="col-12">
+        <div className="col-md-11 mx-auto">
           <h6>SKETCHES</h6>
+          <LazyLoad offset={100}>
+            <img src={Sketches} alt="" className="my-5 w-100" />
+          </LazyLoad>
         </div>
-        <LazyLoad offset={100}>
-          <img src={Sketches} alt="" className="my-5 w-100" />
-        </LazyLoad>
 
-        <div className="col-12">
+        <div className="col-md-11 mx-auto">
           <h6>LOW-FIDELITY MOCKUPS (ROUND ONE)</h6>
+          <LazyLoad offset={100}>
+            <img src={Round1} alt="" className="my-5 w-100" />
+          </LazyLoad>
         </div>
-        <LazyLoad offset={100}>
-          <img src={Round1} alt="" className="my-5 w-100" />
-        </LazyLoad>
 
-        <div className="col-12">
+        <div className="col-md-11 mx-auto">
           <h6>LOW-FIDELITY MOCKUPS (ROUND TWO)</h6>
+          <LazyLoad offset={100}>
+            <img src={Round2} alt="" className="my-5 w-100" />
+          </LazyLoad>
         </div>
-        <LazyLoad offset={100}>
-          <img src={Round2} alt="" className="my-5 w-100" />
-        </LazyLoad>
 
-        <div className="col-12">
+        <div className="col-md-11 mx-auto">
           <h6>HIGH-FIDELITY MOCKUPS</h6>
+          <LazyLoad offset={100}>
+            <img src={HFM} alt="" className="my-5 w-100" />
+          </LazyLoad>
         </div>
-        <LazyLoad offset={100}>
-          <img src={HFM} alt="" className="my-5 w-100" />
-        </LazyLoad>
-      </section>
-
-      <section className="container mb-lg">
-        <h2>USABILITY TESTING</h2>
-        <p>
-          After completing a high fidelity prototype of the app, it was time to
-          test it on a group of gardeners. I performed two rounds of usability
-          testing, with five participants each round. The first round of testing
-          was during the low-fidelity mockup stage while the second was using a
-          high-fidelity prototype. Each round of testing was followed by a
-          usability test report, solution ideation, and a new iteration of the
-          app.
-        </p>
-        <LazyLoad offset={100}>
-          <img src={UT} alt="" className="my-5 w-100" />
-        </LazyLoad>
       </section>
 
       <section className="container mb-lg">
         <div className="row">
-          <div className="col-12">
+          <div className="col-md-11 mx-auto">
+            <h2>USABILITY TESTING</h2>
+            <p>
+              After completing a high fidelity prototype of the app, it was time
+              to test it on a group of gardeners. I performed two rounds of
+              usability testing, with five participants each round. The first
+              round of testing was during the low-fidelity mockup stage while
+              the second was using a high-fidelity prototype. Each round of
+              testing was followed by a usability test report, solution
+              ideation, and a new iteration of the app.
+            </p>
+          </div>
+
+          <div className="row col-md-11 mx-auto">
+            <div className="col-sm-3">
+              <LazyLoad offset={100}>
+                <img src={UT1} alt="" className="my-5 w-100" />
+              </LazyLoad>
+            </div>
+            <div className="col-sm-3">
+              <LazyLoad offset={100}>
+                <img src={UT2} alt="" className="my-5 w-100" />
+              </LazyLoad>
+            </div>
+            <div className="col-sm-3">
+              <LazyLoad offset={100}>
+                <img src={UT3} alt="" className="my-5 w-100" />
+              </LazyLoad>
+            </div>
+            <div className="col-sm-3">
+              <LazyLoad offset={100}>
+                <img src={UT4} alt="" className="my-5 w-100" />
+              </LazyLoad>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="container mb-lg">
+        <div className="row">
+          <div className="col-md-11 mx-auto">
             <h2>FINAL PRODUCT</h2>
             <p>
               Below is a break down of the plant profile to show a brief
@@ -488,16 +519,18 @@ export default function CaseStudyPage(props) {
             </p>
           </div>
 
-          <div className="col-sm-6">
-            <LazyLoad offset={100}>
-              <img src={FinalProd1} alt="" className="my-5 w-100" />
-            </LazyLoad>
-          </div>
+          <div className="row col-md-11 mx-auto">
+            <div className="col-sm-6">
+              <LazyLoad offset={100}>
+                <img src={FinalProd1} alt="" className="my-5 w-100" />
+              </LazyLoad>
+            </div>
 
-          <div className="col-sm-6">
-            <LazyLoad offset={100}>
-              <img src={FinalProd2} alt="" className="my-5 w-100" />
-            </LazyLoad>
+            <div className="col-sm-6">
+              <LazyLoad offset={100}>
+                <img src={FinalProd2} alt="" className="my-5 w-100" />
+              </LazyLoad>
+            </div>
           </div>
         </div>
       </section>
@@ -516,15 +549,15 @@ export default function CaseStudyPage(props) {
       </section>
 
       <div className="container mb-lg">
-        <div className="col-12">
+        <div className="col-md-11 mx-auto">
           <h2>RETROSPECTIVE</h2>
           <div>
             <p>
               By completing this project, I enjoyed getting to work through the
-              entire end-to-end design process. With the magnitude of this
-              project was intimidating at first, but during the process I grew
-              as a designer by tackling ambiguities head-on and seeking advice
-              from peers and mentors. After completing this project, I feel more
+              entire end-to-end design process. The magnitude of this project
+              was intimidating at first, but during the process I grew as a
+              designer by tackling ambiguities head-on and seeking advice from
+              peers and mentors. After completing this project, I feel more
               confident in my abilities to advocate for users and develop simple
               and intuitive designs and went on to have the opportunity to
               present this project along with its research and design solutions.

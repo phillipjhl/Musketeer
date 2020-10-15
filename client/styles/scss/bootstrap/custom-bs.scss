@@ -24,8 +24,8 @@
   margin: $large-margin;
 }
 .my-lg {
-  margin-top: $large-margin;
-  margin-bottom: $large-margin;
+  margin-top: $large-margin !important;
+  margin-bottom: $large-margin !important;
 }
 .mx-lg {
   margin-left: $large-margin;
@@ -114,35 +114,4 @@
 
 p {
   line-height: 28px;
-}
-
-a.underline {
-  font-weight: 500;
-  transition: all 0.3s ease;
-
-  span {
-    position: relative;
-  }
-
-  span:before {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    left: 0;
-    bottom: -3px;
-    background-color: $dark;
-    transition: all 0.3s ease-in-out;
-    transform: scaleX(0);
-    transform-origin: 0%;
-  }
-
-  &:hover {
-    text-decoration: none;
-  }
-
-  &:hover span:before {
-    text-decoration: none;
-    transform: scaleX(1);
-  }
 }

@@ -1,11 +1,5 @@
 
 .round-img {
-
-    p {
-        max-width: 240px;
-        margin: auto;
-    }
-
     .round-img-wrapper {
         height: 240px;
         width: 240px;
@@ -16,4 +10,13 @@
         overflow: hidden;
         border-radius: 50%;
     }
+}
+
+.grey-bg-img {
+    background-color: $light-grey;
+    position: absolute;
+    z-index: -1;
+    top: 300px;
+    height: 840px;
+    width: 100%;
 }

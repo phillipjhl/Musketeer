@@ -95,7 +95,7 @@ export default function Timeline(props) {
       <div className="timeline__line" />
       <div>
         <h1 className="grid-item grid-item--title col-md-6 text-bold text-right px-5">
-          A Brief Look at <br /> My Experience
+          A Brief Look at My Experience
         </h1>
       </div>
       {items}

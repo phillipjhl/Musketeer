@@ -4,19 +4,20 @@ import Timeline from "../timeline";
 import LazyLoad from "react-lazyload";
 
 import AboutPhoto from "../../assets/images/AboutPhoto.png";
-import ChairImg from "../../assets/images/About/chair-office.jpg";
-import IcedCoffee from "../../assets/images/About/iced-coffee.jpg";
-import CorgiImg from "../../assets/images/About/Winston.jpg";
+import ChairImg from "../../assets/images/About/ChairOffice.png";
+import IcedCoffee from "../../assets/images/About/IcedCoffee.png";
+import CorgiImg from "../../assets/images/About/Winston.png";
 
 export default function AboutPage(props) {
   return (
     <div>
       <section className="container my-lg">
+        <div className="grey-bg-img"/>
         <div className="row">
           <div className="col-md-4 mx-auto">
             <img src={AboutPhoto} alt="" className="w-100 mx-auto" />
           </div>
-          <div className="col-12 my-lg text-center">
+          <div className="col-md-9 mx-auto my-lg text-center">
             <p>
               Coming from a diverse background of design, business, and
               photography allows me to have empathy towards many different
@@ -35,34 +36,27 @@ export default function AboutPage(props) {
               40 clients. I designed landing pages, social media ads, motion
               graphics, email campaigns that yielded positive results.
             </p>
-            {/* <p>When I am not designing some of my favorite things include:</p>
+            <p>When I am not designing some of my favorite things include:</p>
           </div>
-          <div className="col-md-4 p-3 round-img">
-            <div
-              className="round-img-wrapper"
-              style={{ backgroundImage: `url("${CorgiImg}")` }}
-            ></div>
-            <p>
-              Family park visits with our corgi, Winston, complete with frisbee
-              tosses.
-            </p>
-          </div>
-          <div className="col-md-4 p-3 round-img">
-            <div
-              className="round-img-wrapper"
-              style={{ backgroundImage: `url("${IcedCoffee}")` }}
-            ></div>
-            <p>
-              Still using my four years of barista experience to stay
-              caffeinated with iced coffee and matcha lattes.
-            </p>
-          </div>
-          <div className="col-md-4 p-3 round-img">
-            <div
-              className="round-img-wrapper"
-              style={{ backgroundImage: `url("${ChairImg}")` }}
-            ></div>
-            <p >Thinking of the next home project for our mid-century home.</p> */}
+          <div className="row col-md-9 mx-auto ">
+            <div className="col-md-4 p-3 round-img">
+              <img src={CorgiImg} alt="" className="w-100 mb-3" />
+              <p>
+                Family park visits with our corgi, Winston, complete with
+                frisbee tosses.
+              </p>
+            </div>
+            <div className="col-md-4 p-3 round-img">
+              <img src={IcedCoffee} alt="" className="w-100 mb-3" />
+              <p>
+                Still using my four years of barista experience to stay
+                caffeinated with iced coffee and matcha lattes.
+              </p>
+            </div>
+            <div className="col-md-4 p-3 round-img">
+              <img src={ChairImg} alt="" className="w-100 mb-3" />
+              <p>Thinking of the next home project for our mid-century home.</p>
+            </div>
           </div>
         </div>
       </section>

@@ -19,8 +19,8 @@ module.exports = {
   output: {
     filename: "js/[name].js",
     chunkFilename: "js/[id].[contenthash].js",
-    path: CLIENT_DEST
-    // publicPath: ASSET_PATH
+    path: CLIENT_DEST,
+    publicPath: ASSET_PATH
   },
   mode: "development",
   devtool:
