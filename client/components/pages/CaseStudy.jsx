@@ -1,5 +1,7 @@
 import React from "react";
 import LazyLoad from "react-lazyload";
+import Section from "../blocks/Section";
+import Banner from "../Banner";
 
 import HeroImg from "../../assets/images/GRO-Hero-Image.png";
 import GroImg from "../../assets/images/Case-Study-GRO-App/GRO-Sub-Logo-White-01.svg";
@@ -33,8 +35,6 @@ import UT1 from "../../assets/images/Frame-38.png";
 import UT2 from "../../assets/images/Frame-39.png";
 import UT3 from "../../assets/images/Frame-40.png";
 import UT4 from "../../assets/images/Frame-41.png";
-
-import Section from "../blocks/Section";
 
 export default function CaseStudyPage(props) {
   return (
@@ -72,22 +72,16 @@ export default function CaseStudyPage(props) {
             <h2>BACKGROUND</h2>
             <div>
               <p>
-                One of my favorite things to do growing up was help my
-                grandmother in her garden. I recall studying the plastic plant
-                tags as she planted bright pink petunias around her bird bath.
-                To my surprise, twenty years later when I began to buy plants
-                for my first garden, <b>the plant tags looked no different</b>.
-                They still have the sun icon to indicate the sun preferences,
-                the water droplets to show how often they need to be watered,
-                and so on.
+                The timely tasks required to have an adundant and healthy garden
+                can seem endless. Many gardeners struggle to know what all they
+                need to do in order to keep their plants from dying. Not to
+                mention, traditional gardening methods, such as garden center
+                plant tags, left a lot of questions unanswered so that caring
+                for plants felt like a guessing game.
               </p>
-
-              <p>
-                I quickly found that these plant tags{" "}
-                <b>left a lot of questions unanswered</b> so that{" "}
-                <b>caring for my plants still felt like a guessing game</b>. I
-                knew there had to be a better way. This inspired the idea for my
-                project.
+              <p className="text-bold">
+                The goal of this project was to find a new way technology could
+                innovate the way gardeners tend to their garden.
               </p>
             </div>
           </div>
@@ -118,18 +112,13 @@ export default function CaseStudyPage(props) {
           <div className="col-md-5 mx-auto d-flex text-left flex-column justify-content-center align-items-start">
             <h2 className="">PROBLEM</h2>
             <div>
-              <p>
-                Designing and maintaining a garden is challenging for new and
-                experienced gardeners alike. I wanted to explore ways to help
-                fellow gardeners navigate <b>the entire gardening process</b>,
-                from planning the garden, purchasing plants, and caring for
-                their plants.
-              </p>
-              <p>
-                The goal of this product is to make the act of gardening more
-                enjoyable, by finding solutions to{" "}
-                <b>improve users success in the garden.</b>
-              </p>
+              Gardeners struggled to keep their plants alive due to the absence
+              of tools that made plant information easy to understand and refer
+              back to.{" "}
+              <b>
+                This lack of information made creating and sticking to a garden
+                maintenance plan challenging for users.
+              </b>
             </div>
           </div>
 
@@ -159,17 +148,17 @@ export default function CaseStudyPage(props) {
             <h1>RESEARCH</h1>
             <h3>Secondary Research</h3>
             <p>
-              I began research by finding studies and journals published on
-              gardening, my goal during this stage was to see
+              Research began with finding studies and journals published to see
               <b>if there was a market for this type of product.</b>
             </p>
             <p>
-              Once I found sufficient market research, I began to{" "}
+              After completing sufficient market research, research was
+              conducted to learn various methods of{" "}
               <b>
-                discover what gardening systems and processes needed to be
-                improved
+                how users had gone about creating garden maintenance plans in
+                the past
               </b>
-              , so I knew what to look for in the next stage, surveys.
+              , before technology.
             </p>
           </div>
         </div>
@@ -181,15 +170,14 @@ export default function CaseStudyPage(props) {
             <h1>Screener Surveys</h1>
 
             <p>
-              I completed a screener survey using Google Forms and shared it on
-              various social and Slack channels to find potential interview
-              participants.
-            </p>
-            <p>
               The screener questions’ purpose was to find gardeners of{" "}
               <b>varying experience</b>, that were{" "}
-              <b>involved in the garden planning process</b>, and who{" "}
-              <b>use their smartphone regularly</b>.
+              <b>involved in the gardening process</b>, and{" "}
+              <b>use their smartphone regularly.</b>
+            </p>
+            <p>
+              Twenty-one people completed the survey, seven of which were a good
+              fit for interviews.
             </p>
             <p>
               Twenty-one people completed the survey, seven of which were a good
@@ -209,29 +197,21 @@ export default function CaseStudyPage(props) {
 
       <section className="container mb-lg">
         <div className="row">
-          <div className="col-sm-5 mx-auto">
+          <div className="col-sm-5 mx-auto text-center">
             <LazyLoad offset={100}>
-              <img src={InterviewImg} alt="" className="w-100" />
+              <img src={InterviewImg} alt="" className="w-75 mx-auto" />
             </LazyLoad>
           </div>
-          <div className="col-sm-5 mx-auto">
+          <div className="col-sm-5 mx-auto d-flex flex-column justify-content-center">
             <h1>Interviews</h1>
             <p>
               Five user interviews were conducted, majority of which were
-              virtual meetings conducted via Zoom.
+              virtual meetings via Zoom.
             </p>
             <p>
-              The goal of the interviews was to{" "}
-              <b>clarify specific pain points and challenges</b> that
-              contributed to past gardening failures.
-            </p>
-            <p>
-              Each interview began with questions to understand their gardening
-              experience and what type of gardening they do (vegetable, herb,
-              sensory, and so on). Once I had an idea of their experience, I
-              began to dig deeper into their process of gardening from planning
-              to purchasing plants to planting and maintaining their garden to
-              better understand each of their biggest problem areas.
+              The goal of the interviews was to clarify specific pain points and
+              challenges that contributed to users{" "}
+              <b>trouble sticking to maintenance plans in the past.</b>
             </p>
           </div>
         </div>
@@ -250,13 +230,12 @@ export default function CaseStudyPage(props) {
                 Garden design and layout planning was <b>not</b> a problem area.
               </p>
               <p>
-                Instead, users expressed difficulty <b>finding</b> and{" "}
-                <b>searching</b> for plants.
+                Instead, users expressed difficulty finding{" "}
+                <b>reliable and easy to refer back to plant information.</b>
               </p>
               <p>
-                Each participant desires to <b>create</b> a better{" "}
-                <b>maintenance plan</b>
-                for their garden.
+                Each participant expressed <b>difficulty remembering</b> when to
+                do tasks in the garden.
               </p>
             </div>
           </div>
@@ -282,15 +261,11 @@ export default function CaseStudyPage(props) {
             >
               <p>
                 All participants felt that{" "}
-                <b>plant tag information was inadequete.</b>
+                <b>plant tag information was difficult to understand.</b>
               </p>
               <p>
-                Each user found garden center staff generally{" "}
-                <b>lacked sufficient plant knowledge.</b>
-              </p>
-              <p>
-                Participants <b>felt the need to search online</b> to learn
-                information regarding a plant.
+                Once users found the information they were looking for, they{" "}
+                <b>had trouble later recalling it.</b>
               </p>
             </div>
           </div>
@@ -371,19 +346,18 @@ export default function CaseStudyPage(props) {
         textOrder="order-first"
         paragraphs={[
           <p>
-            By thinking through each persona’s journey, user stories and a site
-            map for the Minimum Viable Product were formed.
+            By working through each persona’s journey, user story and a site map
+            for the Minimum Viable Product was formed. The users’ desire for a
+            simple way to remember specific tasks was the top priority whiloe
+            designing.
           </p>,
           <p>
+            Because of this,{" "}
             <b>
-              The users’ desire for easy to find and comprehend plant
-              information was the priority
-            </b>{" "}
-            when designing the product.
-          </p>,
-          <p>
-            Because of this, we wanted to ensure that the search feature was
-            clear and convenient.
+              we wanted to ensure that users are able to easily add recommended
+              tasks for each plant then be notified when the task needed to be
+              completed.
+            </b>
           </p>
         ]}
       />
@@ -515,7 +489,10 @@ export default function CaseStudyPage(props) {
             <p>
               Below is a break down of the plant profile to show a brief
               explanation of how this product would be successful in helping
-              gardeners have more success gardening.
+              gardeners have more success understanding plant needs in order to
+              develop a maintenance plan. Once they add a plant to their “My
+              Plants” section, they are recommended tasks and give reminders
+              when they need to be completed.
             </p>
           </div>
 
@@ -572,6 +549,18 @@ export default function CaseStudyPage(props) {
           </div>
         </div>
       </div>
+
+      <Banner
+        cta={"VIEW CASE STUDY"}
+        subtitle={"WANT TO SEE MORE?"}
+        message={
+          <h2>
+            Check out the <br /> RUNR App Case Study
+          </h2>
+        }
+        link={"/casestudy/runr"}
+        target={"_self"}
+      />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import LazyLoad from "react-lazyload";
 import Section from "../blocks/Section";
+import Banner from "../Banner";
 
 import Circle1 from "../../assets/images/Case-Study-RUNR-App/Circle-1.png";
 import Circle2 from "../../assets/images/Case-Study-RUNR-App/Circle-2.png";
@@ -10,6 +11,9 @@ import Maddie from "../../assets/images/Case-Study-RUNR-App/Maddie.png";
 import Ashley from "../../assets/images/Case-Study-RUNR-App/Ashley.png";
 import RUNRLogo from "../../assets/images/Case-Study-RUNR-App/RUNR-logo.png";
 import AffinityMap from "../../assets/images/Case-Study-RUNR-App/Affinity-Map.png";
+import Sketches from "../../assets/images/Case-Study-RUNR-App/Sketches.png";
+import LowFidelity from "../../assets/images/Case-Study-RUNR-App/Low-Fidelity.png";
+import HighFidelity from "../../assets/images/Case-Study-RUNR-App/High-Fidelity.png";
 
 export default function RunrPage(props) {
   return (
@@ -41,9 +45,9 @@ export default function RunrPage(props) {
       </div>
 
       <section className="container pt-5">
-        <div className="row my-lg">
+        <div className="row mb-lg">
           <div className="col-md-5 mx-auto">
-            <h2>BACKGROUND AND PROBLEM</h2>
+            <h2>BACKGROUND</h2>
             <div>
               <p>
                 A health and fitness company, launched a{" "}
@@ -78,32 +82,40 @@ export default function RunrPage(props) {
           </div>
         </div>
 
-        <div className="row my-lg">
-          <div className="col-md-5 mx-auto d-flex text-left flex-column justify-content-center align-items-start">
-            <h2 className="">PROJECT GOALS</h2>
-            <p>
-              This projects goal was to design new messaging features that
-              create sustained engagement. I was asked to:
-            </p>
-            <div
-              className="border-left border-runr-blue pl-4"
-              style={{ borderLeftWidth: "3px" }}
-            >
-              <p>
-                Create the opportunity for{" "}
-                <b>
-                  users to message each other with health and fitness
-                  goals/achievements.
-                </b>
-              </p>
-              <p>
-                Create an <b>integrated messaging experience</b> throughout the
-                product that <b>drives engagement and repeat usage.</b>
-              </p>
+        <div className="row mb-lg">
+          <div className="row col-md-5 mx-auto">
+            <div className="col-12 mx-auto d-flex text-left flex-column justify-content-center align-items-start">
+              <h2 className="">PROBLEM</h2>
+              <div
+                className="border-left border-runr-blue pl-4"
+                style={{ borderLeftWidth: "3px" }}
+              >
+                <p>
+                  Users engagement in this app declined weeks after downloading
+                  the app{" "}
+                  <b>
+                    because they were unable to find other users who shared the
+                    same health and fitness goals.
+                  </b>
+                </p>
+              </div>
+            </div>
+
+            <div className="col-12 mx-auto d-flex text-left flex-column justify-content-center align-items-start">
+              <h2 className="">PROJECT GOALS</h2>
+              <div
+                className="border-left border-runr-blue pl-4"
+                style={{ borderLeftWidth: "3px" }}
+              >
+                <p>
+                  Find ways for users to stay motivated and engaged in the app
+                  by connecting with others with similar interests and goals.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="col-sm-6">
+          <div className="col-md-5 mx-auto ">
             <div className="cs-img__block">
               <img src={Circle1} id="circle1" className="circle" alt="" />
               <img src={Circle2} id="circle2" className="circle" alt="" />
@@ -128,8 +140,9 @@ export default function RunrPage(props) {
             <h1>RESEARCH</h1>
             <h3>Secondary Research</h3>
             <p>
-              I began the discovery stage by looking at top competitors and what
-              made them successful by conducting a SWOT analysis.
+              The discover stage began by conducting a SWOT analysis to have a
+              better understanding of the market, both in the social media and
+              fitness industries.
             </p>
           </div>
         </div>
@@ -140,10 +153,8 @@ export default function RunrPage(props) {
           <div className="col-sm-5 mx-auto">
             <h1>Interviews</h1>
             <p>
-              Due to the time constraints of this project, waiting for screener
-              participants to take a survey was not a possibility. Instead, I
-              approached three users who I knew would be a good fit for this app
-              based on the target audience:
+              Three users were interviewed, all of who were a good fit for this
+              app based on the target audience:
             </p>
 
             <div
@@ -249,6 +260,52 @@ export default function RunrPage(props) {
             active and involved in group fitness activities.
           </p>
         ]}
+      />
+
+      <section className="container mb-lg">
+        <div className="row">
+          <div className="col-md-11 mx-auto mb-5">
+            <h2>DESIGN PROCESS</h2>
+            <p>
+              Once a flow was established rough sketches were created to think
+              through the best designs given the problem. The final sketches
+              became a guide to create low and high fidelity mockups.{" "}
+            </p>
+          </div>
+
+          <div className="col-md-9 mx-auto mb-5">
+            <h6 className="mb-3">ROUGH SKETCHES</h6>
+            <LazyLoad offset={100}>
+              <img src={Sketches} alt="" className="w-100" />
+            </LazyLoad>
+          </div>
+
+          <div className="col-md-9 mx-auto">
+            <h6 className="mb-3">LOW-FIDELITY MOCKUPS</h6>
+            <LazyLoad offset={100}>
+              <img src={LowFidelity} alt="" className="w-100" />
+            </LazyLoad>
+          </div>
+
+          <div className="col-md-9 mx-auto">
+            <h6 className="mb-3">HIGH-FIDELITY MOCKUPS</h6>
+            <LazyLoad offset={100}>
+              <img src={HighFidelity} alt="" className="w-100" />
+            </LazyLoad>
+          </div>
+        </div>
+      </section>
+
+      <Banner
+        cta={"VIEW CASE STUDY"}
+        subtitle={"WANT TO SEE MORE?"}
+        message={
+          <h2>
+            Check out the <br /> GRO App Case Study
+          </h2>
+        }
+        link={"/casestudy/gro"}
+        target={"_self"}
       />
     </div>
   );

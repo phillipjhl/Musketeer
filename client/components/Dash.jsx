@@ -1,7 +1,7 @@
 import React from "react";
 import GRO_APP_PNG from "../assets/images/Gro-Home.png";
 import DSCard from "../assets/images/Homepage/Design-System-Card.png";
-// import SAYV_APP_GIF from "../assets/gifs/Sayv-Mockup.gif";
+import RUNRCard from "../assets/images/Homepage/RUNR-home-card.png";
 
 export function DashCard(props) {
   const { item, i } = props;
