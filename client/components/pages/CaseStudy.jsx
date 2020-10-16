@@ -122,7 +122,7 @@ export default function CaseStudyPage(props) {
             </div>
           </div>
 
-          <div className="col-sm-6">
+          <div className="col-md-6">
             <div className="cs-img__block">
               <img src={Circle1} id="circle1" className="circle" alt="" />
               <img src={Circle2} id="circle2" className="circle" alt="" />

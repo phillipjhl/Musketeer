@@ -71,8 +71,36 @@
     }
   }
 
-  // runr page 
+  // runr page
   // &--runr {
 
+  // }
+}
+
+@media (max-width: 768px) {
+  img.circle {
+    display: block;
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    left: inherit !important;
+    top: inherit !important;
+    margin-bottom: 1rem;
+  }
+  // #circle1 {
+  // }
+
+  // #circle2 {
+  //   position: relative !important;
+  //   width: 100% !important;
+  //   height: auto !important;
+  //   left: 10px;
+  // }
+
+  // #circle3 {
+  //   position: relative !important;
+  //   width: 100% !important;
+  //   height: auto !important;
+  //   left: 10px;
   // }
 }
