@@ -3,6 +3,7 @@ import LazyLoad from "react-lazyload";
 import Section from "../blocks/Section";
 import Banner from "../Banner";
 
+import RUNRHero from "../../assets/images/Case-Study-RUNR-App/RUNR-hero.png";
 import Circle1 from "../../assets/images/Case-Study-RUNR-App/Circle-1.png";
 import Circle2 from "../../assets/images/Case-Study-RUNR-App/Circle-2.png";
 import Circle3 from "../../assets/images/Case-Study-RUNR-App/Circle-3.png";
@@ -20,8 +21,8 @@ export default function RunrPage(props) {
     <div className="container-fluid casestudy casestudy--runr p-0">
       <div
         style={{
-          height: "758px"
-          // backgroundImage: `url(${HeroImg})`
+          height: "758px",
+          backgroundImage: `url(${RUNRHero})`
         }}
         className="bg-runr-blue casestudy-top"
       >
@@ -292,6 +293,16 @@ export default function RunrPage(props) {
             <LazyLoad offset={100}>
               <img src={HighFidelity} alt="" className="w-100" />
             </LazyLoad>
+          </div>
+
+          <div className="col-md-11 mx-auto mb-5">
+            <h2>FINAL PRODUCT</h2>
+            <p>
+              The final product successfully allowed users to find people and
+              groups with shared health and fitness goals by including a “For
+              You” feed that includes posts related to the users interests
+              indicated.
+            </p>
           </div>
         </div>
       </section>

@@ -14,7 +14,7 @@ export default function JumboTitle(props) {
         with three years of design experience and a
         <span className="text-primary"> passion </span> for solving problems
         through simple and intuitive
-        <span className="text-primary"> user-centeric </span> designs.
+        <span className="text-primary"> user-centric </span> designs.
       </h2>
       {props.ctaText && (
         <Link

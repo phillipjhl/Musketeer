@@ -88,7 +88,7 @@ export default function Dash(props) {
         "UX Research and Design to increase RUNR fitness app user engagement.",
       cta: "SEE CASE STUDY",
       ctaLink: "/casestudy/runr",
-      imageUrl: `${GRO_APP_PNG}`,
+      imageUrl: `${RUNRCard}`,
       className: "--runr",
       animate: true,
       disabled: false,

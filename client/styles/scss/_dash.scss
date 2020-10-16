@@ -171,16 +171,16 @@
 //   }
 // }
 
-// @media (min-width: 768px) {
-//   .dash {
-//     .dash-item__content::after {
-//       right: 30% !important;
-//     }
-//     .dash-item__content__img {
-//       right: 14% !important;
-//     }
-//   }
-// }
+@media (max-width: 768px) {
+  .dash {
+    .dash-item__content::after {
+      right: 30% !important;
+    }
+    .dash-item__content__img {
+      right: 10% !important;
+    }
+  }
+}
 
 // @media (min-width: 992px) {
 //   .dash {
