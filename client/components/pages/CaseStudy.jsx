@@ -179,10 +179,6 @@ export default function CaseStudyPage(props) {
               Twenty-one people completed the survey, seven of which were a good
               fit for interviews.
             </p>
-            <p>
-              Twenty-one people completed the survey, seven of which were a good
-              fit for interviews.
-            </p>
             <LazyLoad offset={100}>
               <img src={SurveyStatsImg} className="w-100" alt="" />
             </LazyLoad>
