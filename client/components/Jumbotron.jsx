@@ -13,7 +13,7 @@ function Jumbotron(props) {
 
   return (
     <div
-      className={`jumbotron bg-white text-dark px-5 p-dash ${className}`}
+      className={`jumbotron bg-white text-dark px-md-5 p-dash ${className}`}
       style={styles}
     >
       <div

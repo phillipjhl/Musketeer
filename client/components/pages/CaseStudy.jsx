@@ -250,7 +250,7 @@ export default function CaseStudyPage(props) {
       <section className="container mb-lg">
         <div className="row">
           <div className="col-md-11 mx-auto mb-5">
-            <h5>INTERVIEWS - Affinity MAPS AND FINDINGS</h5>
+            <h5>INTERVIEWS - AFFINITY MAPS AND FINDINGS</h5>
             <h1>
               Participants Had Difficulty Finding and Comprehending Plant
               Information

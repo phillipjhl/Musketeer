@@ -15,6 +15,7 @@ import AffinityMap from "../../assets/images/Case-Study-RUNR-App/Affinity-Map.pn
 import Sketches from "../../assets/images/Case-Study-RUNR-App/Sketches.png";
 import LowFidelity from "../../assets/images/Case-Study-RUNR-App/Low-Fidelity.png";
 import HighFidelity from "../../assets/images/Case-Study-RUNR-App/High-Fidelity.png";
+import FinalProduct from "../../assets/images/Case-Study-RUNR-App/RUNR-Final-Product.png";
 
 export default function RunrPage(props) {
   return (
@@ -84,7 +85,7 @@ export default function RunrPage(props) {
         </div>
 
         <div className="row mb-lg">
-          <div className="row col-md-5 mx-auto">
+          <div className="row col-md-5 p-0 mx-auto">
             <div className="col-12 mx-auto d-flex text-left flex-column justify-content-center align-items-start">
               <h2 className="">PROBLEM</h2>
               <div
@@ -295,7 +296,7 @@ export default function RunrPage(props) {
             </LazyLoad>
           </div>
 
-          <div className="col-md-11 mx-auto mb-5">
+          <div className="col-md-11 mx-auto mb-3">
             <h2>FINAL PRODUCT</h2>
             <p>
               The final product successfully allowed users to find people and
@@ -303,6 +304,12 @@ export default function RunrPage(props) {
               You” feed that includes posts related to the users interests
               indicated.
             </p>
+          </div>
+
+          <div className="col-md-11 mx-auto">
+            <LazyLoad offset={100}>
+              <img src={FinalProduct} alt="" className="w-100" />
+            </LazyLoad>
           </div>
         </div>
       </section>
