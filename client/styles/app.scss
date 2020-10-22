@@ -16,6 +16,10 @@
 @import "./scss/timeline";
 @import "./scss/about";
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
   // background: $light-grey;
   font-family: "Lato", sans-serif;

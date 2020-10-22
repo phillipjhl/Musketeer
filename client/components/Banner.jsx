@@ -4,7 +4,7 @@ import Resume from "../assets/documents/KatrinaLanglandResume.pdf";
 
 export default function Banner(props) {
   return (
-    <section className="w-100 bg-light" style={{ height: "auto" }}>
+    <section className={`w-100 ${props.backgroundTheme}`} style={{ height: "auto" }}>
       <div
         className="d-flex flex-column justify-content-center align-items-center"
         style={{ minHeight: "350px" }}

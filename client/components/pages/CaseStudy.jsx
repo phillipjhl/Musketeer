@@ -109,7 +109,8 @@ export default function CaseStudyPage(props) {
         </div>
 
         <div className="row my-lg">
-          <div className="col-md-5 mx-auto d-flex text-left flex-column justify-content-center align-items-start">
+          <div className="row col-md-6 mb-5 mb-md-0 p-0">
+          <div className="col-md-11 mx-auto mb-5 mb-md-0 d-flex text-left flex-column justify-content-center align-items-start">
             <h2 className="">PROBLEM</h2>
             <div>
               Gardeners struggled to keep their plants alive due to the absence
@@ -122,7 +123,21 @@ export default function CaseStudyPage(props) {
             </div>
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-11 mx-auto mb-5 mb-md-0 d-flex text-left flex-column justify-content-center align-items-start">
+            <h2 className="">SOLUTION</h2>
+            <div>
+              <p>
+                A mobile app that helps users easily create a garden maintenance
+                plan for their garden.
+              </p>
+            </div>
+            <a href="#final-prototype" role="link" className="text-dark">
+              SEE FINAL PROTOTYPE
+            </a>
+          </div>
+          </div>
+
+          <div className="col-md-6 mb-5 mb-md-0">
             <div className="cs-img__block">
               <img src={Circle1} id="circle1" className="circle" alt="" />
               <img src={Circle2} id="circle2" className="circle" alt="" />
@@ -179,12 +194,12 @@ export default function CaseStudyPage(props) {
               Twenty-one people completed the survey, seven of which were a good
               fit for interviews.
             </p>
-            <LazyLoad offset={100}>
+            <LazyLoad offset={100} height={272}>
               <img src={SurveyStatsImg} className="w-100" alt="" />
             </LazyLoad>
           </div>
           <div className="col-sm-5 mx-auto">
-            <LazyLoad offset={100}>
+            <LazyLoad offset={100} height={601}>
               <img src={MacImg} alt="" className="w-100" />
             </LazyLoad>
           </div>
@@ -194,7 +209,7 @@ export default function CaseStudyPage(props) {
       <section className="container mb-lg">
         <div className="row">
           <div className="col-sm-5 mx-auto text-center">
-            <LazyLoad offset={100}>
+            <LazyLoad offset={100} height={405}>
               <img src={InterviewImg} alt="" className="w-75 mx-auto" />
             </LazyLoad>
           </div>
@@ -236,7 +251,7 @@ export default function CaseStudyPage(props) {
             </div>
           </div>
           <div className="col-md-11 mx-auto">
-            <LazyLoad offset={100}>
+            <LazyLoad offset={100} height={1225}>
               <img src={MapImg1} alt="" className="w-100" />
             </LazyLoad>
           </div>
@@ -266,7 +281,7 @@ export default function CaseStudyPage(props) {
             </div>
           </div>
           <div className="col-md-11 mx-auto">
-            <LazyLoad offset={100}>
+            <LazyLoad offset={100} height={1225}>
               <img src={AffinityMap} alt="" className="w-100" />
             </LazyLoad>
           </div>
@@ -360,7 +375,7 @@ export default function CaseStudyPage(props) {
 
       <section className="container mb-lg">
         <div className="col-md-11 mx-auto">
-          <LazyLoad offset={100}>
+          <LazyLoad offset={100} height={1225}>
             <img src={SiteMap} alt="" className="w-100" />
           </LazyLoad>
         </div>
@@ -379,19 +394,19 @@ export default function CaseStudyPage(props) {
           </div>
 
           <div className="col-md-11 mx-auto">
-            <LazyLoad offset={100}>
+            <LazyLoad offset={100} height={612}>
               <img src={UserFlow1} alt="" className="my-5 w-100" />
             </LazyLoad>
           </div>
 
           <div className="col-md-11 mx-auto">
-            <LazyLoad offset={100}>
+            <LazyLoad offset={100} height={612}>
               <img src={UserFlow2} alt="" className="my-5 w-100" />
             </LazyLoad>
           </div>
 
           <div className="col-md-11 mx-auto">
-            <LazyLoad offset={100}>
+            <LazyLoad offset={100} height={612}>
               <img src={UserFlow3} alt="" className="my-5 w-100" />
             </LazyLoad>
           </div>
@@ -411,28 +426,28 @@ export default function CaseStudyPage(props) {
 
         <div className="col-md-11 mx-auto">
           <h6>SKETCHES</h6>
-          <LazyLoad offset={100}>
+          <LazyLoad offset={100} height={342}>
             <img src={Sketches} alt="" className="my-5 w-100" />
           </LazyLoad>
         </div>
 
         <div className="col-md-11 mx-auto">
           <h6>LOW-FIDELITY MOCKUPS (ROUND ONE)</h6>
-          <LazyLoad offset={100}>
+          <LazyLoad offset={100} height={342}>
             <img src={Round1} alt="" className="my-5 w-100" />
           </LazyLoad>
         </div>
 
         <div className="col-md-11 mx-auto">
           <h6>LOW-FIDELITY MOCKUPS (ROUND TWO)</h6>
-          <LazyLoad offset={100}>
+          <LazyLoad offset={100} height={342}>
             <img src={Round2} alt="" className="my-5 w-100" />
           </LazyLoad>
         </div>
 
         <div className="col-md-11 mx-auto">
           <h6>HIGH-FIDELITY MOCKUPS</h6>
-          <LazyLoad offset={100}>
+          <LazyLoad offset={100} height={342}>
             <img src={HFM} alt="" className="my-5 w-100" />
           </LazyLoad>
         </div>
@@ -455,22 +470,22 @@ export default function CaseStudyPage(props) {
 
           <div className="row col-md-11 mx-auto">
             <div className="col-sm-3">
-              <LazyLoad offset={100}>
+              <LazyLoad offset={100} height={724}>
                 <img src={UT1} alt="" className="my-5 w-100" />
               </LazyLoad>
             </div>
             <div className="col-sm-3">
-              <LazyLoad offset={100}>
+              <LazyLoad offset={100} height={724}>
                 <img src={UT2} alt="" className="my-5 w-100" />
               </LazyLoad>
             </div>
             <div className="col-sm-3">
-              <LazyLoad offset={100}>
+              <LazyLoad offset={100} height={724}>
                 <img src={UT3} alt="" className="my-5 w-100" />
               </LazyLoad>
             </div>
             <div className="col-sm-3">
-              <LazyLoad offset={100}>
+              <LazyLoad offset={100} height={724}>
                 <img src={UT4} alt="" className="my-5 w-100" />
               </LazyLoad>
             </div>
@@ -478,7 +493,7 @@ export default function CaseStudyPage(props) {
         </div>
       </section>
 
-      <section className="container mb-lg">
+      <section id="final-product" className="container mb-lg">
         <div className="row">
           <div className="col-md-11 mx-auto">
             <h2>FINAL PRODUCT</h2>
@@ -494,13 +509,13 @@ export default function CaseStudyPage(props) {
 
           <div className="row col-md-11 mx-auto">
             <div className="col-sm-6">
-              <LazyLoad offset={100}>
+              <LazyLoad offset={100} height={903}>
                 <img src={FinalProd1} alt="" className="my-5 w-100" />
               </LazyLoad>
             </div>
 
             <div className="col-sm-6">
-              <LazyLoad offset={100}>
+              <LazyLoad offset={100} height={903}>
                 <img src={FinalProd2} alt="" className="my-5 w-100" />
               </LazyLoad>
             </div>
@@ -508,7 +523,7 @@ export default function CaseStudyPage(props) {
         </div>
       </section>
 
-      <section className="container my-lg col-12">
+      <section id="final-prototype" className="container my-lg col-12">
         <iframe
           style={{
             minHeight: "800px",

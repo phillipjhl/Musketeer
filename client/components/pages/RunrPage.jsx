@@ -47,7 +47,7 @@ export default function RunrPage(props) {
       </div>
 
       <section className="container pt-5">
-        <div className="row mb-lg">
+        <div className="row pb-5">
           <div className="col-md-5 mx-auto">
             <h2>BACKGROUND</h2>
             <div>
@@ -84,8 +84,21 @@ export default function RunrPage(props) {
           </div>
         </div>
 
-        <div className="row mb-lg">
+        <div className="row pb-5">
           <div className="row col-md-5 p-0 mx-auto">
+            <div className="col-12 mx-auto d-flex text-left flex-column justify-content-center align-items-start">
+              <h2 className="">PROJECT GOALS</h2>
+              <div
+                className="border-left border-runr-blue pl-4"
+                style={{ borderLeftWidth: "3px" }}
+              >
+                <p>
+                  Find ways for users to stay motivated and engaged in the app
+                  by connecting with others with similar interests and goals.
+                </p>
+              </div>
+            </div>
+
             <div className="col-12 mx-auto d-flex text-left flex-column justify-content-center align-items-start">
               <h2 className="">PROBLEM</h2>
               <div
@@ -104,15 +117,27 @@ export default function RunrPage(props) {
             </div>
 
             <div className="col-12 mx-auto d-flex text-left flex-column justify-content-center align-items-start">
-              <h2 className="">PROJECT GOALS</h2>
+              <h2 className="">SOLUTION</h2>
               <div
                 className="border-left border-runr-blue pl-4"
                 style={{ borderLeftWidth: "3px" }}
               >
                 <p>
-                  Find ways for users to stay motivated and engaged in the app
-                  by connecting with others with similar interests and goals.
+                  Added a “For You” feed on the homepage to show users content
+                  that aligned with their fitness goals and interests.
                 </p>
+                <p>
+                  Added a Groups feature to easily connect with users who
+                  participate in similar activies.
+                </p>
+                <p>
+                  Integrated a “Challenges” feature so users can easily track
+                  their progress and connect with others working towards the
+                  same goal.
+                </p>
+                <a href="#final-product" role="link" className="text-dark">
+                  SEE FINAL DESIGN
+                </a>
               </div>
             </div>
           </div>
@@ -155,7 +180,7 @@ export default function RunrPage(props) {
           <div className="col-sm-5 mx-auto">
             <h1>Interviews</h1>
             <p>
-              Three users were interviewed, all of who were a good fit for this
+              Three users were interviewed, all of whom were a good fit for this
               app based on the target audience:
             </p>
 
@@ -170,7 +195,7 @@ export default function RunrPage(props) {
             </div>
           </div>
           <div className="col-sm-5 mx-auto">
-            <LazyLoad offset={100}>
+            <LazyLoad offset={100} height={280}>
               <img src={UserStats} alt="" className="w-100" />
             </LazyLoad>
           </div>
@@ -179,7 +204,7 @@ export default function RunrPage(props) {
 
       <section className="container mb-lg">
         <div className="col-md-11 mx-auto">
-          <LazyLoad offset={100}>
+          <LazyLoad offset={100} height={1225}>
             <img src={AffinityMap} alt="" className="w-100" />
           </LazyLoad>
         </div>
@@ -277,25 +302,29 @@ export default function RunrPage(props) {
 
           <div className="col-md-9 mx-auto mb-5">
             <h6 className="mb-3">ROUGH SKETCHES</h6>
-            <LazyLoad offset={100}>
+            <LazyLoad offset={100} height={476}>
               <img src={Sketches} alt="" className="w-100" />
             </LazyLoad>
           </div>
 
           <div className="col-md-9 mx-auto">
             <h6 className="mb-3">LOW-FIDELITY MOCKUPS</h6>
-            <LazyLoad offset={100}>
+            <LazyLoad offset={100} height={647}>
               <img src={LowFidelity} alt="" className="w-100" />
             </LazyLoad>
           </div>
 
           <div className="col-md-9 mx-auto">
             <h6 className="mb-3">HIGH-FIDELITY MOCKUPS</h6>
-            <LazyLoad offset={100}>
+            <LazyLoad offset={100} height={647}>
               <img src={HighFidelity} alt="" className="w-100" />
             </LazyLoad>
           </div>
+        </div>
+      </section>
 
+      <section id="final-product" className="container mb-lg">
+        <div className="row">
           <div className="col-md-11 mx-auto mb-3">
             <h2>FINAL PRODUCT</h2>
             <p>
@@ -307,7 +336,7 @@ export default function RunrPage(props) {
           </div>
 
           <div className="col-md-11 mx-auto">
-            <LazyLoad offset={100}>
+            <LazyLoad offset={100} height={1225}>
               <img src={FinalProduct} alt="" className="w-100" />
             </LazyLoad>
           </div>
@@ -324,6 +353,7 @@ export default function RunrPage(props) {
         }
         link={"/casestudy/gro"}
         target={"_self"}
+        backgroundTheme="bg-white"
       />
     </div>
   );

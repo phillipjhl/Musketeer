@@ -25,9 +25,9 @@ function Jumbotron(props) {
         <TitleComp ctaText={props.ctaText} subtitleTop={props.subtitleTop} />
       </div>
       <div className="w-100 d-flex justify-content-center align-items-center">
-        <span className="jumbotron__chevron" style={{ fontSize: "4rem" }}>
+        <a href="#cards" className="jumbotron__chevron text-dark" style={{ fontSize: "4rem" }} >
           <ChevDown />
-        </span>
+        </a>
       </div>
     </div>
   );

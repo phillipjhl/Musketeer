@@ -2,15 +2,21 @@
   height: 400px;
   overflow: hidden;
 
+  a:hover,
+  a:focus {
+    text-decoration: none;
+    opacity: 0.8;
+  }
+
   .footer-list {
     a {
-      color: #fff !important;
+      color: $dark !important;
       line-height: 24px;
       transition: all 0.2s ease;
 
       &:hover {
         text-decoration: none;
-        opacity: .8;
+        opacity: 0.8;
       }
     }
 
@@ -19,6 +25,4 @@
       margin-bottom: 1rem;
     }
   }
-
-
 }

@@ -111,5 +111,5 @@ export default function Dash(props) {
     );
   });
 
-  return <div className="row w-100 p-4 dash p-dash">{dashItems}</div>;
+  return <div id="cards" className="row w-100 p-4 dash p-dash">{dashItems}</div>;
 }
