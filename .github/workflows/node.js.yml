@@ -5,13 +5,13 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ master ]
+    tags:
+        - "*"
   pull_request:
     branches: [ master ]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -36,8 +36,6 @@ jobs:
 
     - name: Amazon ECR "Login" Action for GitHub Actions
       id: login-ecr
-      # You may pin to the exact commit or the version.
-      # uses: aws-actions/amazon-ecr-login@060516122e7b4cc1cc3d4614a998adbb93d3fbf2
       uses: aws-actions/amazon-ecr-login@v1
 
 
@@ -46,7 +44,7 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: musketeer
-        IMAGE_TAG: ${{ github.sha }}
+        IMAGE_TAG: ${{ github.ref }}
       run: |
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
