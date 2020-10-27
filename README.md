@@ -2,8 +2,12 @@
 
 Take a visit at https://www.katrinalangland.com
 
-Designed using Figma by Katrina Langland.
+![Image 1](/docs/www.katrinalangland.com_(Laptop).png)
 
-Built using Express and React by Phillip Langland.
+![Image 2](/docs/katrinalangland-site-home.png)
+
+Designed and Created using Figma by Katrina Langland.
+
+Built and Developed using Express and React by Phillip Langland.
 
 *Musketeer Project - All for One, One for All*
