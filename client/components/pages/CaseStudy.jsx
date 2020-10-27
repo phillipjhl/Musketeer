@@ -110,31 +110,31 @@ export default function CaseStudyPage(props) {
 
         <div className="row my-lg">
           <div className="row col-md-6 mb-5 mb-md-0 p-0">
-          <div className="col-md-11 mx-auto mb-5 mb-md-0 d-flex text-left flex-column justify-content-center align-items-start">
-            <h2 className="">PROBLEM</h2>
-            <div>
-              Gardeners struggled to keep their plants alive due to the absence
-              of tools that made plant information easy to understand and refer
-              back to.{" "}
-              <b>
-                This lack of information made creating and sticking to a garden
-                maintenance plan challenging for users.
-              </b>
+            <div className="col-md-11 mx-auto mb-5 mb-md-0 d-flex text-left flex-column justify-content-center align-items-start">
+              <h2 className="">PROBLEM</h2>
+              <div>
+                Gardeners struggled to keep their plants alive due to the
+                absence of tools that made plant information easy to understand
+                and refer back to.{" "}
+                <b>
+                  This lack of information made creating and sticking to a
+                  garden maintenance plan challenging for users.
+                </b>
+              </div>
             </div>
-          </div>
 
-          <div className="col-md-11 mx-auto mb-5 mb-md-0 d-flex text-left flex-column justify-content-center align-items-start">
-            <h2 className="">SOLUTION</h2>
-            <div>
-              <p>
-                A mobile app that helps users easily create a garden maintenance
-                plan for their garden.
-              </p>
+            <div className="col-md-11 mx-auto mb-5 mb-md-0 d-flex text-left flex-column justify-content-center align-items-start">
+              <h2 className="">SOLUTION</h2>
+              <div>
+                <p>
+                  A mobile app that helps users easily create a garden
+                  maintenance plan for their garden.
+                </p>
+              </div>
+              <a href="#final-prototype" role="link" className="text-dark">
+                SEE FINAL PROTOTYPE
+              </a>
             </div>
-            <a href="#final-prototype" role="link" className="text-dark">
-              SEE FINAL PROTOTYPE
-            </a>
-          </div>
           </div>
 
           <div className="col-md-6 mb-5 mb-md-0">
@@ -164,7 +164,7 @@ export default function CaseStudyPage(props) {
             <h3>Secondary Research</h3>
             <p>
               Research began with finding studies and journals published to see
-              <b>if there was a market for this type of product.</b>
+              <b> if there was a market for this type of product.</b>
             </p>
             <p>
               After completing sufficient market research, research was

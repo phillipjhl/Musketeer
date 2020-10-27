@@ -15,7 +15,15 @@ import AffinityMap from "../../assets/images/Case-Study-RUNR-App/Affinity-Map.pn
 import Sketches from "../../assets/images/Case-Study-RUNR-App/Sketches.png";
 import LowFidelity from "../../assets/images/Case-Study-RUNR-App/Low-Fidelity.png";
 import HighFidelity from "../../assets/images/Case-Study-RUNR-App/High-Fidelity.png";
-import FinalProduct from "../../assets/images/Case-Study-RUNR-App/RUNR-Final-Product.png";
+// import FinalProduct from "../../assets/images/Case-Study-RUNR-App/RUNR-Final-Product.png";
+import UserR1 from "../../assets/images/Case-Study-RUNR-App/User-Experience-Refinement-1.png";
+import UserR2 from "../../assets/images/Case-Study-RUNR-App/User-Experience-Refinement-2.png";
+import FD1 from "../../assets/images/Case-Study-RUNR-App/Final-Design-1.png";
+import FD2 from "../../assets/images/Case-Study-RUNR-App/Final-Design-2.png";
+import FD3 from "../../assets/images/Case-Study-RUNR-App/Final-Design-3.png";
+import FD4 from "../../assets/images/Case-Study-RUNR-App/Final-Design-4.png";
+import FD5 from "../../assets/images/Case-Study-RUNR-App/Final-Design-5.png";
+import FD6 from "../../assets/images/Case-Study-RUNR-App/Final-Design-6.png";
 
 export default function RunrPage(props) {
   return (
@@ -61,7 +69,7 @@ export default function RunrPage(props) {
                 project,{" "}
                 <b>
                   I was presented with the challenge of increasing user
-                  engagement by designing new messaging features.
+                  engagement.
                 </b>
               </p>
             </div>
@@ -73,7 +81,7 @@ export default function RunrPage(props) {
               style={{ borderLeftWidth: "3px" }}
             >
               <h6 className="mb-0">ROLE</h6>
-              <p className="mb-3">UX Research + Design</p>
+              <p className="mb-3">Sole UX Researcher + Designer</p>
               <h6 className="mb-0">PURPOSE</h6>
               <p className="mb-3">
                 Project designed for Springboard’s UX/UI Design Program
@@ -191,7 +199,7 @@ export default function RunrPage(props) {
               <p>18 - 34 years old</p>
               <p>Tech-savvy</p>
               <p>Budget-conscious</p>
-              <p>Communicating with friends and family is a very important</p>
+              <p>Communicating with friends and family is very important</p>
             </div>
           </div>
           <div className="col-sm-5 mx-auto">
@@ -323,9 +331,36 @@ export default function RunrPage(props) {
         </div>
       </section>
 
+      <section className="container mb-lg">
+        <div className="row">
+          <div className="col-md-11 mx-auto mb-5">
+            <h2>REFINEMENT</h2>
+            <p>
+              Continuously improving products and user experience is an
+              important, ongoing part of the design process. It was obvious that
+              the inital design’s engagement could be further improved and
+              fitness goals and interests more clearly displayed. Thus, during
+              the refinement stage, a new “Challenges” feature was added.{" "}
+            </p>
+          </div>
+
+          <div className="col-md-5 mx-auto">
+            <LazyLoad offset={100} once>
+              <img src={UserR1} alt="" className="w-100" />
+            </LazyLoad>
+          </div>
+
+          <div className="col-md-5 mx-auto">
+            <LazyLoad offset={100} once>
+              <img src={UserR2} alt="" className="w-100" />
+            </LazyLoad>
+          </div>
+        </div>
+      </section>
+
       <section id="final-product" className="container mb-lg">
         <div className="row">
-          <div className="col-md-11 mx-auto mb-3">
+          <div className="col-md-11 mx-auto mb-5">
             <h2>FINAL PRODUCT</h2>
             <p>
               The final product successfully allowed users to find people and
@@ -334,11 +369,115 @@ export default function RunrPage(props) {
               indicated.
             </p>
           </div>
+        </div>
 
-          <div className="col-md-11 mx-auto">
-            <LazyLoad offset={100} height={1225}>
-              <img src={FinalProduct} alt="" className="w-100" />
+        <div className="row col-md-11 mx-auto mb-5">
+          <div className="col-md-4 mb-5 d-flex justify-content-end flex-column">
+            <LazyLoad offset={100} height={351}>
+              <img src={FD1} alt="" className="w-75" />
             </LazyLoad>
+          </div>
+          <div className="col-md-4 mb-5">
+            <LazyLoad offset={100} height={351}>
+              <img src={FD2} alt="" className="w-75" />
+            </LazyLoad>
+            <h4>Tailored Content</h4>
+            <p>
+              Users decide the content they wish to see based on their interests
+              and fitness goals.
+            </p>
+          </div>
+
+          <div className="col-md-4 mb-5">
+            <h4>See What You Want</h4>
+            <p>
+              Users are presented with two feeds to view content: a “For You”
+              feed based on the user’s interests and goals indicated during
+              onboarding and a “Following” feed which shows posts from Groups
+              the user is actively following.
+            </p>
+            <LazyLoad offset={100} height={351}>
+              <img src={FD3} alt="" className="w-75" />
+            </LazyLoad>
+          </div>
+        </div>
+
+        <div className="row col-md-11 mx-auto">
+          <div className="col-md-4 mb-5">
+            <LazyLoad offset={100} height={351}>
+              <img src={FD4} alt="" className="w-75" />
+            </LazyLoad>
+            <h4>Join Groups</h4>
+            <p>
+              Users are able to join groups based on common interests to connect
+              with other users.
+            </p>
+          </div>
+
+          <div className="col-md-4 mb-5">
+            <h4>Join Challenges</h4>
+            <p>
+              Research showed that users enjoy psrticipating in challenges,
+              adding challenges within groups engages users while motivating
+              them to reach fitness goals.
+            </p>
+            <LazyLoad offset={100} height={351}>
+              <img src={FD5} alt="" className="w-75" />
+            </LazyLoad>
+          </div>
+
+          <div className="col-md-4 mb-5">
+            <LazyLoad offset={100} height={351}>
+              <img src={FD6} alt="" className="w-75" />
+            </LazyLoad>
+            <h4>Share Progress</h4>
+            <p>
+              Users are able to share their progress with followers. This
+              feature increases motivation by adding accountability and making
+              it easy for other users to engage and encourage eachother.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="container mb-lg">
+        <div className="row">
+          <div className="col-md-11 mx-auto mb-3">
+            <h2>RETROSPECTIVE</h2>
+            <p>
+              I learned a lot by completing this project, from learning how to
+              ask better questions during interviews and pay attentions to
+              users’ non-verbal responses and how to better phrase tasks for
+              users to perform during usability testing.
+            </p>
+          </div>
+
+          <div className="col-md-11 mx-auto mb-3">
+            <h3>The Importance of Understanding User’s Motivations</h3>
+            <p>
+              The biggest takeaway from this project was just how important it
+              is to not just understand the problems users face, but their “why”
+              behind what they do. I never would have come up with the idea for
+              the challenges feature had I not truly “dug” into each users
+              motivation for staying fit and how they enjoy going about creating
+              and reaching their fitness and health goals.
+            </p>
+          </div>
+
+          <div className="col-md-11 mx-auto mb-3">
+            <h3>Copy is Key</h3>
+            <p>
+              Prior to usability testing for this project, I found myself
+              focusing on the visuals of each screen, how prominent the button
+              is, the visual hierarchy, the use of visuals, etc. but during
+              testing, I realized how important copy is to the user. For
+              instance, in the first iteration of the app, on the Group page the
+              button simply said “Join.” Little did I know that this button
+              could be confusing, especially when the user was on the
+              “Challenges” view of the group, they may think they were joining
+              the challenge rather than the entire group. The solution to this
+              problem was simply by changing the copy to “Join Group.”
+            </p>
           </div>
         </div>
       </section>
