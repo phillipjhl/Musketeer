@@ -417,7 +417,7 @@ export default function RunrPage(props) {
           <div className="col-md-4 mb-5">
             <h4>Join Challenges</h4>
             <p>
-              Research showed that users enjoy psrticipating in challenges,
+              Research showed that users enjoy participating in challenges,
               adding challenges within groups engages users while motivating
               them to reach fitness goals.
             </p>
