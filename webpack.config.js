@@ -12,7 +12,7 @@ const CLIENT_DEST = path.join(__dirname, "./build/public");
 const ASSET_PATH =
   process.env.NODE_ENV === "production" && process.env.ASSET_PATH
     ? process.env.ASSET_PATH
-    : "/public/";
+    : "/";
 
 module.exports = {
   entry: ["@babel/polyfill", "./client/index.js", "bootstrap"],
