@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/contact",
+            "lambdaFunction": "katrinaportfoliolambda",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "musketeerapi",
+    "apiName": "musketeerapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "katrinaportfoliolambda"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-amplifyc2eb8fe8277b4-staging-184440-authRole",
+        "unAuthRoleName": "amplify-amplifyc2eb8fe8277b4-staging-184440-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "katrinaportfoliolambda",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
