@@ -44,3 +44,4 @@ amplify-gradle-config.json
 amplifyxc.config
 team-provider-info.json
 amplify/backend/function/*/*-cloudformation-template.json
+backupstoragelocations.velero.io-default.yaml

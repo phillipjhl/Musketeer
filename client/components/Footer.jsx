@@ -84,12 +84,12 @@ export default function Footer(props) {
                 role="link"
                 target="_blank"
               >
-                Dribble
+                Dribbble
               </a>
             </nav>
           </div>
           <small className="col-12 mt-4 text-center">
-            © Katrina Langland 2020 | All Rights Reserved
+            © Katrina Langland 2021 | All Rights Reserved
           </small>
         </div>
       </div>

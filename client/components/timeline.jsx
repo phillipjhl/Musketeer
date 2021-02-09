@@ -67,7 +67,7 @@ export default function Timeline(props) {
       yearFull: "Summer 2020",
       title: "STARTED UX/UI PROGRAM",
       text:
-        "In June of 2020, I committed to developing my User Experience and Interface skills. I joined the Springboard programthat included a 700+ hour curriculum along with expert mentorship. This opportunity has allowed me to successfully solve complex problems through simple, beautiful designs."
+        "In June of 2020, I committed to developing my User Experience and Interface skills. I joined the Springboard program that included a 700+ hour curriculum along with expert mentorship. This opportunity has allowed me to successfully solve complex problems through simple, beautiful designs."
     }
   ];
 
