@@ -1,17 +1,17 @@
 {
-    "providers": [
-        "awscloudformation"
-    ],
-    "projectName": "Katrina's Portfolio",
-    "version": "3.0",
-    "frontend": "javascript",
-    "javascript": {
-        "framework": "react",
-        "config": {
-            "SourceDir": "client",
-            "DistributionDir": "build/public",
-            "BuildCommand": "npm run build:prod",
-            "StartCommand": "npm run dev"
-        }
+  "providers": [
+    "awscloudformation"
+  ],
+  "projectName": "Katrina's Portfolio",
+  "version": "3.0",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "react",
+    "config": {
+      "SourceDir": "client",
+      "DistributionDir": "build/public",
+      "BuildCommand": "npm run build:client:prod",
+      "StartCommand": "npm run dev"
     }
+  }
 }

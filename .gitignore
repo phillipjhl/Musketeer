@@ -26,13 +26,21 @@ development.js
 
 # K8s Yaml
 .eks
+backupstoragelocations.velero.io-default.yaml
+
+# Custom Amplify Files
+amplifyxc.config
+team-provider-info.json
+amplify/backend/function/*/*-cloudformation-template.json
 
 #amplify
 amplify/\#current-cloud-backend
 amplify/.config/local-*
+amplify/logs
 amplify/mock-data
 amplify/backend/amplify-meta.json
 amplify/backend/awscloudformation
+amplify/backend/.temp
 build/
 dist/
 node_modules/
@@ -41,7 +49,5 @@ awsconfiguration.json
 amplifyconfiguration.json
 amplify-build-config.json
 amplify-gradle-config.json
-amplifyxc.config
-team-provider-info.json
-amplify/backend/function/*/*-cloudformation-template.json
-backupstoragelocations.velero.io-default.yaml
+amplifytools.xcconfig
+.secret-*
