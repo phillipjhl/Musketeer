@@ -12,7 +12,7 @@ const CLIENT_DEST = path.join(__dirname, "./build/public");
 const ASSET_PATH =
   process.env.NODE_ENV === "production"
     ? "/"
-    : "/";
+    : "/public/";
 
 module.exports = {
   entry: ["@babel/polyfill", "./client/index.js", "bootstrap"],
@@ -111,7 +111,7 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./client/index.html",
       filename: "index.html",
-      favicon: "./client/assets/images/logos/favicon.png"
+      favicon: "./client/assets/images/Homepage/K-logo.png"
     }),
     new MiniCssExtractPlugin({
       filename: devMode ? "css/[name].css" : "css/[name].[contenthash].css",

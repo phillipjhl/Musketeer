@@ -17,8 +17,7 @@ export default function RunrPage(props) {
           height: "758px",
           backgroundImage: `url(${DSHero})`
         }}
-        className="bg-light-grey casestudy-top"
-      >
+        className="bg-light-grey casestudy-top">
         <div className="w-100 h-100">
           <div className="casestudy-top-banner h-100 pb-5 d-flex flex-column justify-content-end align-items-start container">
             <div className="col-sm-5 mr-auto casestudy-top-banner__block text-dark d-flex flex-column justify-content-center">
@@ -62,8 +61,7 @@ export default function RunrPage(props) {
           <div className="col-md-5 mx-auto pb-5">
             <div
               className="border-left border-muted pl-5 h-100 d-flex flex-column justify-content-center"
-              style={{ borderLeftWidth: "3px" }}
-            >
+              style={{ borderLeftWidth: "3px" }}>
               <h6 className="mb-0">ROLE</h6>
               <p className="mb-3">Sole Researcher and UX/UI Designer</p>
               <h6 className="mb-0">PURPOSE</h6>
@@ -86,13 +84,13 @@ export default function RunrPage(props) {
                 I started this project by researching medium articles as well as
                 studying the guidelines established by Apple, Google, Facebook,
                 and Lyft.
-                <p>
-                  I enjoyed learning about the positive effects having a design
-                  system not only has on the design of the product, but how it
-                  increases efficiency, productivity, and communication
-                  internally. Examining these systems served as a guide for this
-                  project.
-                </p>
+              </p>
+              <p>
+                I enjoyed learning about the positive effects having a design
+                system not only has on the design of the product, but how it
+                increases efficiency, productivity, and communication
+                internally. Examining these systems served as a guide for this
+                project.
               </p>
             </div>
           </div>
@@ -122,7 +120,7 @@ export default function RunrPage(props) {
       </section>
 
       <section className="container text-dark mb-lg">
-        <div classNam="row">
+        <div className="row">
           <div className="col-md-11 mx-auto mb-5">
             <h2>DESIGN PROCESS</h2>
             <div>
@@ -191,8 +189,7 @@ export default function RunrPage(props) {
           width="100%"
           height="auto"
           src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FkFkf8sHCS6RDtiSiyjLOxC%2FKatrina-s-Capstone-Project%3Fnode-id%3D376%253A52%26viewport%3D372%252C246%252C0.08919398486614227%26scaling%3Dscale-down&chrome=DOCUMENTATION"
-          allowFullScreen
-        ></iframe>
+          allowFullScreen></iframe>
       </section>
 
       <div className="container mb-lg">
@@ -218,7 +215,11 @@ export default function RunrPage(props) {
       <Banner
         cta={"VIEW CASE STUDY"}
         subtitle={"WANT TO SEE MORE?"}
-        message={<h2>Check out the <br /> GRO App Case Study</h2>}
+        message={
+          <h2>
+            Check out the <br /> GRO App Case Study
+          </h2>
+        }
         link={"/casestudy/gro"}
         target={"_self"}
       />

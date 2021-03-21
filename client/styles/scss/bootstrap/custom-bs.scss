@@ -4,6 +4,7 @@
 
 // Custom Variables
 @import "./variables";
+@import "./utils";
 
 // Bootsrtap scss
 @import "node_modules/bootstrap/scss/bootstrap";
@@ -18,6 +19,16 @@
   .container-xl {
     max-width: 1400px !important;
   }
+}
+
+.text-size-xlarge {
+  font-size: 56px;
+}
+
+// turn into func
+a.link-border,
+a.link-border:hover {
+  text-decoration: none;
 }
 
 .m-lg {
@@ -39,6 +50,10 @@
 }
 .mb-lg {
   margin-bottom: $large-margin;
+}
+
+.mb-md {
+  margin-bottom: $medium-margin;
 }
 
 .border {
@@ -123,10 +138,7 @@ p {
 //     }
 //   }
 
-//   .dropdown-menu.dropdown-hover-menu {
-//     // box-shadow: 1px 3px 4px -1px rgba(0, 0, 0, 0.175);
-//     box-shadow: none;
-//     border: none;
-//     top: 98%;
-//   }
+// .nav-item .dropdown-menu {
+//   border: none;
+// }
 // }

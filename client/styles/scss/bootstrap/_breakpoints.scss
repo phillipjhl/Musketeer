@@ -1,5 +1,18 @@
 @media (min-width: 1200px) {
-    .p-dash {
-        padding: 2rem 5rem !important;
+  .p-dash {
+    padding: 2rem 5rem !important;
+  }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .border#{$infix}-0 {
+      border: 0 !important;
     }
+    .border#{$infix} {
+      border: $border-width solid $border-color !important;
+    }
+  }
 }

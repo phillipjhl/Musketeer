@@ -13,13 +13,12 @@ export default function Section(props) {
     <section className="container mb-5">
       <div className="row">
         <div className="col-sm-6 mx-auto">
-          <LazyLoad offset={100}>
+          <LazyLoad offset={100} once={true}>
             <img src={props.image} alt="" className="w-100" />
           </LazyLoad>
         </div>
         <div
-          className={`col-sm-5 mx-auto d-flex flex-column justify-content-center ${order}`}
-        >
+          className={`col-sm-5 mx-auto d-flex flex-column justify-content-center ${order}`}>
           <h1>{props.title}</h1>
           <div>{paragraphs}</div>
           {props.children && props.children}

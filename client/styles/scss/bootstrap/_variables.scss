@@ -1,12 +1,12 @@
 $theme-colors: (
-  "primary": #788b99,
+  "primary": #0066cc,
   "secondary": #33432f,
-  "contrast": #0e0e0e,
+  "contrast": #1d1d1f,
   "muted": #ececec,
   "danger": #a81c21,
   "success": #4d7a0a,
-  "dark": #0e0e0e,
-  "black": #000,
+  "dark": #1d1d1f,
+  "black": #1d1d1f,
   "black-transp": #000000a6,
   "bright-green": #4d7a0a,
   "runr-blue": #22999a
@@ -18,17 +18,19 @@ $grey: #ececec;
 
 $body-color: #000;
 
-$primary: #788b99;
+$primary: #0066cc;
 $secondary: #33432f;
 
 $green: #33432f;
 $light-grey: #f9f9f9;
-$light: rgba(51, 67, 47, 0.03);
+$light: rgba(0, 102, 204, 0.05);
 $black: #000;
 $black-transp: #000000a6;
 
-$enable-shadows: true;
+$enable-shadows: false;
+$enable-responsive-font-sizes: true;
 
+$medium-margin: 40px;
 $large-margin: 95px;
 
-$border-width: 3px;
+$border-width: 2px;
