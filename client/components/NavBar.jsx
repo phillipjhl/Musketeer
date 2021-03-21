@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import AuthButton from "./auth/authButton";
 import UserContext from "../services/context";
 import MessageBanner from "./message";
@@ -7,7 +7,7 @@ import Resume from "../assets/documents/KatrinaLanglandResume.pdf";
 
 export function NavBarLink(props) {
   return (
-    <Link
+    <NavLink
       key={`${props.label}-${props.index}`}
       to={props.route}
       className={`${
@@ -17,7 +17,7 @@ export function NavBarLink(props) {
       data-target={".navbar-collapse.show"}>
       {props.label}
       {props.index === 0 ? <span className="sr-only">(current)</span> : null}
-    </Link>
+    </NavLink>
   );
 }
 class NavBar extends Component {
@@ -43,6 +43,7 @@ class NavBar extends Component {
         label: "Work",
         dropdown: {
           linksConfig: [
+            { route: "/home", label: "Home" },
             { route: "/casestudy/gro", label: "GRO" },
             { route: "/casestudy/groceryapp", label: "Grocery App" },
             { route: "/casestudy/runr", label: "RUNR" },
@@ -88,7 +89,7 @@ class NavBar extends Component {
       } else {
         return (
           <li key={`${link.label}-${i}`} className="nav-item">
-            <Link
+            <NavLink
               // key={`${link.label}-${i}`}
               to={link.route}
               className="nav-link px-4"
@@ -96,7 +97,7 @@ class NavBar extends Component {
               data-target={".navbar-collapse.show"}>
               {link.label}
               {i === 0 ? <span className="sr-only">(current)</span> : null}
-            </Link>
+            </NavLink>
           </li>
         );
       }

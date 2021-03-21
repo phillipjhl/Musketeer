@@ -83,11 +83,7 @@ class App extends Component {
                 <Switch>
                   <Route
                     exact
-                    path="/"
-                    render={props => <HomeHOC {...props} />}
-                  />
-                  <Route
-                    path="/home"
+                    path={["/", "/home"]}
                     render={props => <HomeHOC {...props} />}
                   />
                   <Route path="/login" component={Login} />
@@ -118,7 +114,9 @@ class App extends Component {
                   {/* <Route path="/donate" component={Donate} /> */}
                   <Route
                     path="/contact"
-                    render={props => <ContactHOC title="Contact Me" />}
+                    render={props => (
+                      <ContactHOC title="Contact Me" {...props} />
+                    )}
                   />
                   {/* <Route path="/blogs" component={BlogMain} /> */}
                   {/* <PrivateRoute path="/admin" component={AdminPage} />

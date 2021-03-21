@@ -9,7 +9,7 @@
   .nav-link {
     text-transform: uppercase;
     color: $dark;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     letter-spacing: 4px;
     text-align: right;
   }
@@ -31,11 +31,16 @@
 }
 
 .navbar.navbar-white {
-  color: $dark !important;
+  color: $dark;
 
   a {
-    color: $dark !important;
+    color: $dark;
   }
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: $grey;
 }
 
 @media (min-width: 768px) {
