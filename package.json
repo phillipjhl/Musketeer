@@ -59,6 +59,7 @@
         "react-dom": "^16.5.1",
         "react-lazyload": "^3.0.0",
         "react-router-dom": "^5.2.0",
+        "react-spring": "^8.0.27",
         "react-stripe-elements": "^2.0.1",
         "rimraf": "^2.6.2",
         "stripe": "^6.12.1",

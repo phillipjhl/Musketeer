@@ -3,7 +3,7 @@ import Jumbotron from "../Jumbotron";
 // import JumboTitle from "../blocks/JumboTitle";
 import JumboTitleNew from "../blocks/JumboTitleNew";
 // import Dash from "../Dash";
-import Banner from "../Banner";
+// import Banner from "../Banner";
 // import Section from "../blocks/Section";
 import Container from "../blocks/Container";
 

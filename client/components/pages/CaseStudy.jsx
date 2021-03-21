@@ -35,6 +35,9 @@ import UT1 from "../../assets/images/Frame-38.png";
 import UT2 from "../../assets/images/Frame-39.png";
 import UT3 from "../../assets/images/Frame-40.png";
 import UT4 from "../../assets/images/Frame-41.png";
+import Trail, { withTrail } from "../blocks/Trail";
+
+const LoadWithTrail = withTrail(LazyLoad);
 
 export default function CaseStudyPage(props) {
   return (
@@ -44,15 +47,13 @@ export default function CaseStudyPage(props) {
           height: "758px",
           backgroundImage: `url(${HeroImg})`
         }}
-        className="bg-bright-green casestudy-top"
-      >
+        className="bg-bright-green casestudy-top">
         <div className="w-100 h-100">
           <div className="casestudy-top-banner h-100 pb-5 d-flex flex-column justify-content-end align-items-start container">
             <div className="col-sm-5 mr-auto casestudy-top-banner__block text-white">
               <div
                 className="GRO-logo d-flex flex-column align-items-start"
-                style={{ width: "200px" }}
-              >
+                style={{ width: "200px" }}>
                 <GroImg />
                 <span className="">GRO</span>
               </div>
@@ -89,8 +90,7 @@ export default function CaseStudyPage(props) {
           <div className="col-md-5 mx-auto pb-5">
             <div
               className="border-left border-bright-green pl-5"
-              style={{ borderLeftWidth: "3px" }}
-            >
+              style={{ borderLeftWidth: "3px" }}>
               <h6 className="mb-0">ROLE</h6>
               <p className="mb-3">Sole Researcher and UX/UI Designer</p>
               <h6 className="mb-0">PURPOSE</h6>
@@ -139,9 +139,11 @@ export default function CaseStudyPage(props) {
 
           <div className="col-md-6 mb-5 mb-md-0">
             <div className="cs-img__block">
-              <img src={Circle1} id="circle1" className="circle" alt="" />
-              <img src={Circle2} id="circle2" className="circle" alt="" />
-              <img src={Circle3} id="circle3" className="circle" alt="" />
+              <Trail>
+                <img src={Circle1} id="circle1" className="circle" alt="" />
+                <img src={Circle2} id="circle2" className="circle" alt="" />
+                <img src={Circle3} id="circle3" className="circle" alt="" />
+              </Trail>
             </div>
           </div>
         </div>
@@ -194,14 +196,14 @@ export default function CaseStudyPage(props) {
               Twenty-one people completed the survey, seven of which were a good
               fit for interviews.
             </p>
-            <LazyLoad offset={100} height={272}>
+            <LoadWithTrail offset={100} height={272}>
               <img src={SurveyStatsImg} className="w-100" alt="" />
-            </LazyLoad>
+            </LoadWithTrail>
           </div>
           <div className="col-sm-5 mx-auto">
-            <LazyLoad offset={100} height={601}>
+            <LoadWithTrail offset={100} height={601}>
               <img src={MacImg} alt="" className="w-100" />
-            </LazyLoad>
+            </LoadWithTrail>
           </div>
         </div>
       </section>
@@ -209,9 +211,9 @@ export default function CaseStudyPage(props) {
       <section className="container mb-lg">
         <div className="row">
           <div className="col-sm-5 mx-auto text-center">
-            <LazyLoad offset={100} height={405}>
+            <LoadWithTrail offset={100} height={405}>
               <img src={InterviewImg} alt="" className="w-75 mx-auto" />
-            </LazyLoad>
+            </LoadWithTrail>
           </div>
           <div className="col-sm-5 mx-auto d-flex flex-column justify-content-center">
             <h1>Interviews</h1>
@@ -235,8 +237,7 @@ export default function CaseStudyPage(props) {
             <h1>Users Want A Plan, Not Planning</h1>
             <div
               className="border-left border-bright-green pl-4"
-              style={{ borderLeftWidth: "3px" }}
-            >
+              style={{ borderLeftWidth: "3px" }}>
               <p>
                 Garden design and layout planning was <b>not</b> a problem area.
               </p>
@@ -251,9 +252,9 @@ export default function CaseStudyPage(props) {
             </div>
           </div>
           <div className="col-md-11 mx-auto">
-            <LazyLoad offset={100} height={1225}>
+            <LoadWithTrail offset={100} height={1225}>
               <img src={MapImg1} alt="" className="w-100" />
-            </LazyLoad>
+            </LoadWithTrail>
           </div>
         </div>
       </section>
@@ -268,8 +269,7 @@ export default function CaseStudyPage(props) {
             </h1>
             <div
               className="border-left border-bright-green pl-4"
-              style={{ borderLeftWidth: "3px" }}
-            >
+              style={{ borderLeftWidth: "3px" }}>
               <p>
                 All participants felt that{" "}
                 <b>plant tag information was difficult to understand.</b>
@@ -281,9 +281,9 @@ export default function CaseStudyPage(props) {
             </div>
           </div>
           <div className="col-md-11 mx-auto">
-            <LazyLoad offset={100} height={1225}>
+            <LoadWithTrail offset={100} height={1225}>
               <img src={AffinityMap} alt="" className="w-100" />
-            </LazyLoad>
+            </LoadWithTrail>
           </div>
         </div>
       </section>
@@ -375,9 +375,9 @@ export default function CaseStudyPage(props) {
 
       <section className="container mb-lg">
         <div className="col-md-11 mx-auto">
-          <LazyLoad offset={100} height={1225}>
+          <LoadWithTrail offset={100} height={1225}>
             <img src={SiteMap} alt="" className="w-100" />
-          </LazyLoad>
+          </LoadWithTrail>
         </div>
 
         <div className="row mb-3">
@@ -394,21 +394,21 @@ export default function CaseStudyPage(props) {
           </div>
 
           <div className="col-md-11 mx-auto">
-            <LazyLoad offset={100} height={612}>
+            <LoadWithTrail offset={100} height={612}>
               <img src={UserFlow1} alt="" className="my-5 w-100" />
-            </LazyLoad>
+            </LoadWithTrail>
           </div>
 
           <div className="col-md-11 mx-auto">
-            <LazyLoad offset={100} height={612}>
+            <LoadWithTrail offset={100} height={612}>
               <img src={UserFlow2} alt="" className="my-5 w-100" />
-            </LazyLoad>
+            </LoadWithTrail>
           </div>
 
           <div className="col-md-11 mx-auto">
-            <LazyLoad offset={100} height={612}>
+            <LoadWithTrail offset={100} height={612}>
               <img src={UserFlow3} alt="" className="my-5 w-100" />
-            </LazyLoad>
+            </LoadWithTrail>
           </div>
         </div>
       </section>
@@ -426,30 +426,30 @@ export default function CaseStudyPage(props) {
 
         <div className="col-md-11 mx-auto">
           <h6>SKETCHES</h6>
-          <LazyLoad offset={100} height={342}>
+          <LoadWithTrail offset={100} height={342}>
             <img src={Sketches} alt="" className="my-5 w-100" />
-          </LazyLoad>
+          </LoadWithTrail>
         </div>
 
         <div className="col-md-11 mx-auto">
           <h6>LOW-FIDELITY MOCKUPS (ROUND ONE)</h6>
-          <LazyLoad offset={100} height={342}>
+          <LoadWithTrail offset={100} height={342}>
             <img src={Round1} alt="" className="my-5 w-100" />
-          </LazyLoad>
+          </LoadWithTrail>
         </div>
 
         <div className="col-md-11 mx-auto">
           <h6>LOW-FIDELITY MOCKUPS (ROUND TWO)</h6>
-          <LazyLoad offset={100} height={342}>
+          <LoadWithTrail offset={100} height={342}>
             <img src={Round2} alt="" className="my-5 w-100" />
-          </LazyLoad>
+          </LoadWithTrail>
         </div>
 
         <div className="col-md-11 mx-auto">
           <h6>HIGH-FIDELITY MOCKUPS</h6>
-          <LazyLoad offset={100} height={342}>
+          <LoadWithTrail offset={100} height={342}>
             <img src={HFM} alt="" className="my-5 w-100" />
-          </LazyLoad>
+          </LoadWithTrail>
         </div>
       </section>
 
@@ -470,24 +470,24 @@ export default function CaseStudyPage(props) {
 
           <div className="row col-md-11 mx-auto">
             <div className="col-sm-3">
-              <LazyLoad offset={100} height={724}>
+              <LoadWithTrail offset={100} height={724}>
                 <img src={UT1} alt="" className="my-5 w-100" />
-              </LazyLoad>
+              </LoadWithTrail>
             </div>
             <div className="col-sm-3">
-              <LazyLoad offset={100} height={724}>
+              <LoadWithTrail offset={100} height={724}>
                 <img src={UT2} alt="" className="my-5 w-100" />
-              </LazyLoad>
+              </LoadWithTrail>
             </div>
             <div className="col-sm-3">
-              <LazyLoad offset={100} height={724}>
+              <LoadWithTrail offset={100} height={724}>
                 <img src={UT3} alt="" className="my-5 w-100" />
-              </LazyLoad>
+              </LoadWithTrail>
             </div>
             <div className="col-sm-3">
-              <LazyLoad offset={100} height={724}>
+              <LoadWithTrail offset={100} height={724}>
                 <img src={UT4} alt="" className="my-5 w-100" />
-              </LazyLoad>
+              </LoadWithTrail>
             </div>
           </div>
         </div>
@@ -509,31 +509,32 @@ export default function CaseStudyPage(props) {
 
           <div className="row col-md-11 mx-auto">
             <div className="col-sm-6">
-              <LazyLoad offset={100} height={903}>
+              <LoadWithTrail offset={100} height={903}>
                 <img src={FinalProd1} alt="" className="my-5 w-100" />
-              </LazyLoad>
+              </LoadWithTrail>
             </div>
 
             <div className="col-sm-6">
-              <LazyLoad offset={100} height={903}>
+              <LoadWithTrail offset={100} height={903}>
                 <img src={FinalProd2} alt="" className="my-5 w-100" />
-              </LazyLoad>
+              </LoadWithTrail>
             </div>
           </div>
         </div>
       </section>
 
       <section id="final-prototype" className="container my-lg col-12">
-        <iframe
-          style={{
-            minHeight: "800px",
-            border: "1px solid transparent"
-          }}
-          width="100%"
-          height="auto"
-          src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FkFkf8sHCS6RDtiSiyjLOxC%2FKatrina-s-Capstone-Project%3Fnode-id%3D376%253A52%26viewport%3D372%252C246%252C0.08919398486614227%26scaling%3Dscale-down&chrome=DOCUMENTATION"
-          allowFullScreen
-        ></iframe>
+        <LazyLoad offset={200} once throttle>
+          <iframe
+            style={{
+              minHeight: "800px",
+              border: "1px solid transparent"
+            }}
+            width="100%"
+            height="auto"
+            src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FkFkf8sHCS6RDtiSiyjLOxC%2FKatrina-s-Capstone-Project%3Fnode-id%3D376%253A52%26viewport%3D372%252C246%252C0.08919398486614227%26scaling%3Dscale-down&chrome=DOCUMENTATION"
+            allowFullScreen></iframe>
+        </LazyLoad>
       </section>
 
       <div className="container mb-lg">

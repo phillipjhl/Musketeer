@@ -9,6 +9,10 @@ import Circle2 from "../../assets/images/Design-System/Google.png";
 import Circle3 from "../../assets/images/Design-System/Lyft.png";
 import Atomic from "../../assets/images/Design-System/Atomic-Design.png";
 
+import { withTrail } from "../blocks/Trail";
+
+const LazyLoadWithTrail = withTrail(LazyLoad);
+
 export default function RunrPage(props) {
   return (
     <div className="container-fluid casestudy casestudy--runr p-0">
@@ -108,13 +112,15 @@ export default function RunrPage(props) {
       <section className="container text-dark mb-lg">
         <div className="row">
           <div className="col-md-8 mx-auto mb-lg">
-            <blockquote className="blockquote text-center text-dark text-size-large">
-              <h1 className="mb-3">
-                “Here’s the simple truth: you can’t innovate on products without
-                first innovating the way you build them.”
-              </h1>
-              <h4>ALEX SCHLEIFER, AIRBNB</h4>
-            </blockquote>
+            <LazyLoadWithTrail offset={-10} once>
+              <blockquote className="blockquote text-center text-dark text-size-large">
+                <h1 className="mb-3">
+                  “Here’s the simple truth: you can’t innovate on products
+                  without first innovating the way you build them.”
+                </h1>
+                <h4>ALEX SCHLEIFER, AIRBNB</h4>
+              </blockquote>
+            </LazyLoadWithTrail>
           </div>
         </div>
       </section>
@@ -134,9 +140,9 @@ export default function RunrPage(props) {
           </div>
 
           <div className="col-md-11 mx-auto mb-5">
-            <LazyLoad>
+            <LazyLoadWithTrail>
               <img src={Atomic} alt="" className="w-100" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
           </div>
 
           <div className="col-md-11 mx-auto text-left">
@@ -173,9 +179,9 @@ export default function RunrPage(props) {
         </div>
 
         <div className="col-md-11 mx-auto">
-          <LazyLoad>
+          <LazyLoadWithTrail>
             <img src={DS} alt="" className="w-100" />
-          </LazyLoad>
+          </LazyLoadWithTrail>
         </div>
       </section>
 

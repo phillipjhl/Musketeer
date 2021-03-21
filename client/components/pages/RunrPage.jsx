@@ -24,6 +24,9 @@ import FD3 from "../../assets/images/Case-Study-RUNR-App/Final-Design-3.png";
 import FD4 from "../../assets/images/Case-Study-RUNR-App/Final-Design-4.png";
 import FD5 from "../../assets/images/Case-Study-RUNR-App/Final-Design-5.png";
 import FD6 from "../../assets/images/Case-Study-RUNR-App/Final-Design-6.png";
+import { withTrail } from "../blocks/Trail";
+
+const LazyLoadWithTrail = withTrail(LazyLoad);
 
 export default function RunrPage(props) {
   return (
@@ -196,18 +199,18 @@ export default function RunrPage(props) {
             </div>
           </div>
           <div className="col-sm-5 mx-auto">
-            <LazyLoad once={true} offset={100} height={280}>
+            <LazyLoadWithTrail once offset={100} height={280}>
               <img src={UserStats} alt="" className="w-100" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
           </div>
         </div>
       </section>
 
       <section className="container mb-lg">
         <div className="col-md-11 mx-auto">
-          <LazyLoad once={true} offset={100} height={1225}>
+          <LazyLoadWithTrail once offset={100} height={1225}>
             <img src={AffinityMap} alt="" className="w-100" />
-          </LazyLoad>
+          </LazyLoadWithTrail>
         </div>
       </section>
 
@@ -302,23 +305,23 @@ export default function RunrPage(props) {
 
           <div className="col-md-9 mx-auto mb-5">
             <h6 className="mb-3">ROUGH SKETCHES</h6>
-            <LazyLoad once={true} offset={100} height={476}>
+            <LazyLoadWithTrail once offset={100} height={476}>
               <img src={Sketches} alt="" className="w-100" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
           </div>
 
           <div className="col-md-9 mx-auto">
             <h6 className="mb-3">LOW-FIDELITY MOCKUPS</h6>
-            <LazyLoad once={true} offset={100} height={647}>
+            <LazyLoadWithTrail once offset={100} height={647}>
               <img src={LowFidelity} alt="" className="w-100" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
           </div>
 
           <div className="col-md-9 mx-auto">
             <h6 className="mb-3">HIGH-FIDELITY MOCKUPS</h6>
-            <LazyLoad once={true} offset={100} height={647}>
+            <LazyLoadWithTrail once offset={100} height={647}>
               <img src={HighFidelity} alt="" className="w-100" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
           </div>
         </div>
       </section>
@@ -337,15 +340,15 @@ export default function RunrPage(props) {
           </div>
 
           <div className="col-md-5 mx-auto">
-            <LazyLoad once={true} offset={100} once>
+            <LazyLoadWithTrail once offset={100} once>
               <img src={UserR1} alt="" className="w-100" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
           </div>
 
           <div className="col-md-5 mx-auto">
-            <LazyLoad once={true} offset={100} once>
+            <LazyLoadWithTrail once offset={100} once>
               <img src={UserR2} alt="" className="w-100" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
           </div>
         </div>
       </section>
@@ -365,14 +368,14 @@ export default function RunrPage(props) {
 
         <div className="row col-md-11 mx-auto mb-5">
           <div className="col-md-4 mb-5 d-flex justify-content-end flex-column">
-            <LazyLoad once={true} offset={100} height={351}>
+            <LazyLoadWithTrail once offset={100} height={351}>
               <img src={FD1} alt="" className="w-75" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
           </div>
           <div className="col-md-4 mb-5">
-            <LazyLoad once={true} offset={100} height={351}>
+            <LazyLoadWithTrail once offset={100} height={351}>
               <img src={FD2} alt="" className="w-75" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
             <h4>Tailored Content</h4>
             <p>
               Users decide the content they wish to see based on their interests
@@ -388,17 +391,17 @@ export default function RunrPage(props) {
               onboarding and a “Following” feed which shows posts from Groups
               the user is actively following.
             </p>
-            <LazyLoad once={true} offset={100} height={351}>
+            <LazyLoadWithTrail once offset={100} height={351}>
               <img src={FD3} alt="" className="w-75" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
           </div>
         </div>
 
         <div className="row col-md-11 mx-auto">
           <div className="col-md-4 mb-5">
-            <LazyLoad once={true} offset={100} height={351}>
+            <LazyLoadWithTrail once offset={100} height={351}>
               <img src={FD4} alt="" className="w-75" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
             <h4>Join Groups</h4>
             <p>
               Users are able to join groups based on common interests to connect
@@ -413,15 +416,15 @@ export default function RunrPage(props) {
               adding challenges within groups engages users while motivating
               them to reach fitness goals.
             </p>
-            <LazyLoad once={true} offset={100} height={351}>
+            <LazyLoadWithTrail once offset={100} height={351}>
               <img src={FD5} alt="" className="w-75" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
           </div>
 
           <div className="col-md-4 mb-5">
-            <LazyLoad once={true} offset={100} height={351}>
+            <LazyLoadWithTrail once offset={100} height={351}>
               <img src={FD6} alt="" className="w-75" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
             <h4>Share Progress</h4>
             <p>
               Users are able to share their progress with followers. This
