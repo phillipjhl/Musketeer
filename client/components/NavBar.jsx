@@ -131,7 +131,7 @@ class NavBar extends Component {
                   target="_blank"
                   className="nav-link px-4"
                   to={Resume}>
-                  RESUME
+                  Resume
                 </Link>
               </li>
               {this.props.loginBtn && <AuthButton />}

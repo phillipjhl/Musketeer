@@ -1,5 +1,6 @@
 .navbar {
   padding: 1rem 2rem;
+  font-family: "Montserrat", sans-serif;
 
   &.navbar-light .navbar-toggler {
     color: $dark;
@@ -7,9 +8,7 @@
   }
 
   .nav-link {
-    text-transform: uppercase;
-    color: $dark;
-    font-family: "Montserrat", sans-serif;
+    color: $dark !important;
     letter-spacing: 4px;
     text-align: right;
   }
@@ -40,7 +39,7 @@
 
 .dropdown-item.active,
 .dropdown-item:active {
-  background-color: $grey;
+  background-color: $light;
 }
 
 @media (min-width: 768px) {

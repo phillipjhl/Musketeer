@@ -161,10 +161,10 @@ export default function RunrPage(props) {
         <div className="row">
           <div className="col-sm-5 mx-auto">
             <blockquote className="blockquote text-right text-runr-blue text-size-large">
-              <h1 className="mb-3">
+              <h2 className="mb-3">
                 “...just watching other people workout motivates me to hit the
                 gym.”
-              </h1>
+              </h2>
               <h4>ASHLEY GAITA</h4>
             </blockquote>
           </div>

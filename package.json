@@ -23,7 +23,8 @@
         "start:server": "node ./build/musketeer-api/index.js",
         "watch:client": "webpack --mode development --watch",
         "watch:server": "babel ./musketeer-api -w -d ./build/musketeer-api",
-        "build:prod": "export NODE_ENV=production && npm run clean:prod && npm run build:client:prod && npm run build:server:prod"
+        "build:prod": "export NODE_ENV=production && npm run clean:prod && npm run build:client:prod && npm run build:server:prod",
+        "zip:public": "cd build/public && zip -r prod-public.zip ."
     },
     "author": {
         "name": "Phillip Langland"
@@ -57,7 +58,7 @@
         "popper.js": "^1.16.1",
         "react": "^16.5.1",
         "react-dom": "^16.5.1",
-        "react-lazyload": "^3.0.0",
+        "react-lazyload": "^3.2.0",
         "react-router-dom": "^5.2.0",
         "react-spring": "^8.0.27",
         "react-stripe-elements": "^2.0.1",

@@ -139,11 +139,11 @@ export default function CaseStudyPage(props) {
 
           <div className="col-md-6 mb-5 mb-md-0">
             <div className="cs-img__block">
-              <Trail>
+              <LoadWithTrail offset={-40} once>
                 <img src={Circle1} id="circle1" className="circle" alt="" />
                 <img src={Circle2} id="circle2" className="circle" alt="" />
                 <img src={Circle3} id="circle3" className="circle" alt="" />
-              </Trail>
+              </LoadWithTrail>
             </div>
           </div>
         </div>
@@ -153,11 +153,11 @@ export default function CaseStudyPage(props) {
         <div className="row">
           <div className="col-sm-5 mx-auto">
             <blockquote className="blockquote text-right text-bright-green text-size-large">
-              <h1 className="mb-0">
+              <h2 className="mb-0">
                 “the under 35s are now truly engaged in the full range of
                 gardening activities … many of these gardeners [want] gardening
                 apps.”
-              </h1>
+              </h2>
               <h4>IAN BALWDIN, INDUSTRY ANALYST</h4>
             </blockquote>
           </div>
@@ -196,12 +196,12 @@ export default function CaseStudyPage(props) {
               Twenty-one people completed the survey, seven of which were a good
               fit for interviews.
             </p>
-            <LoadWithTrail offset={100} height={272}>
+            <LoadWithTrail once offset={100} height={272}>
               <img src={SurveyStatsImg} className="w-100" alt="" />
             </LoadWithTrail>
           </div>
           <div className="col-sm-5 mx-auto">
-            <LoadWithTrail offset={100} height={601}>
+            <LoadWithTrail once offset={100} height={601}>
               <img src={MacImg} alt="" className="w-100" />
             </LoadWithTrail>
           </div>
@@ -211,7 +211,7 @@ export default function CaseStudyPage(props) {
       <section className="container mb-lg">
         <div className="row">
           <div className="col-sm-5 mx-auto text-center">
-            <LoadWithTrail offset={100} height={405}>
+            <LoadWithTrail once offset={100} height={405}>
               <img src={InterviewImg} alt="" className="w-75 mx-auto" />
             </LoadWithTrail>
           </div>
@@ -252,7 +252,7 @@ export default function CaseStudyPage(props) {
             </div>
           </div>
           <div className="col-md-11 mx-auto">
-            <LoadWithTrail offset={100} height={1225}>
+            <LoadWithTrail once offset={100} height={1225}>
               <img src={MapImg1} alt="" className="w-100" />
             </LoadWithTrail>
           </div>
@@ -281,7 +281,7 @@ export default function CaseStudyPage(props) {
             </div>
           </div>
           <div className="col-md-11 mx-auto">
-            <LoadWithTrail offset={100} height={1225}>
+            <LoadWithTrail once offset={100} height={1225}>
               <img src={AffinityMap} alt="" className="w-100" />
             </LoadWithTrail>
           </div>
@@ -375,7 +375,7 @@ export default function CaseStudyPage(props) {
 
       <section className="container mb-lg">
         <div className="col-md-11 mx-auto">
-          <LoadWithTrail offset={100} height={1225}>
+          <LoadWithTrail once offset={100} height={1225}>
             <img src={SiteMap} alt="" className="w-100" />
           </LoadWithTrail>
         </div>
@@ -394,19 +394,19 @@ export default function CaseStudyPage(props) {
           </div>
 
           <div className="col-md-11 mx-auto">
-            <LoadWithTrail offset={100} height={612}>
+            <LoadWithTrail once offset={100} height={612}>
               <img src={UserFlow1} alt="" className="my-5 w-100" />
             </LoadWithTrail>
           </div>
 
           <div className="col-md-11 mx-auto">
-            <LoadWithTrail offset={100} height={612}>
+            <LoadWithTrail once offset={100} height={612}>
               <img src={UserFlow2} alt="" className="my-5 w-100" />
             </LoadWithTrail>
           </div>
 
           <div className="col-md-11 mx-auto">
-            <LoadWithTrail offset={100} height={612}>
+            <LoadWithTrail once offset={100} height={612}>
               <img src={UserFlow3} alt="" className="my-5 w-100" />
             </LoadWithTrail>
           </div>
@@ -426,28 +426,28 @@ export default function CaseStudyPage(props) {
 
         <div className="col-md-11 mx-auto">
           <h6>SKETCHES</h6>
-          <LoadWithTrail offset={100} height={342}>
+          <LoadWithTrail once offset={100} height={342}>
             <img src={Sketches} alt="" className="my-5 w-100" />
           </LoadWithTrail>
         </div>
 
         <div className="col-md-11 mx-auto">
           <h6>LOW-FIDELITY MOCKUPS (ROUND ONE)</h6>
-          <LoadWithTrail offset={100} height={342}>
+          <LoadWithTrail once offset={100} height={342}>
             <img src={Round1} alt="" className="my-5 w-100" />
           </LoadWithTrail>
         </div>
 
         <div className="col-md-11 mx-auto">
           <h6>LOW-FIDELITY MOCKUPS (ROUND TWO)</h6>
-          <LoadWithTrail offset={100} height={342}>
+          <LoadWithTrail once offset={100} height={342}>
             <img src={Round2} alt="" className="my-5 w-100" />
           </LoadWithTrail>
         </div>
 
         <div className="col-md-11 mx-auto">
           <h6>HIGH-FIDELITY MOCKUPS</h6>
-          <LoadWithTrail offset={100} height={342}>
+          <LoadWithTrail once offset={100} height={342}>
             <img src={HFM} alt="" className="my-5 w-100" />
           </LoadWithTrail>
         </div>
@@ -470,22 +470,22 @@ export default function CaseStudyPage(props) {
 
           <div className="row col-md-11 mx-auto">
             <div className="col-sm-3">
-              <LoadWithTrail offset={100} height={724}>
+              <LoadWithTrail once offset={100} height={724}>
                 <img src={UT1} alt="" className="my-5 w-100" />
               </LoadWithTrail>
             </div>
             <div className="col-sm-3">
-              <LoadWithTrail offset={100} height={724}>
+              <LoadWithTrail once offset={100} height={724}>
                 <img src={UT2} alt="" className="my-5 w-100" />
               </LoadWithTrail>
             </div>
             <div className="col-sm-3">
-              <LoadWithTrail offset={100} height={724}>
+              <LoadWithTrail once offset={100} height={724}>
                 <img src={UT3} alt="" className="my-5 w-100" />
               </LoadWithTrail>
             </div>
             <div className="col-sm-3">
-              <LoadWithTrail offset={100} height={724}>
+              <LoadWithTrail once offset={100} height={724}>
                 <img src={UT4} alt="" className="my-5 w-100" />
               </LoadWithTrail>
             </div>
@@ -509,13 +509,13 @@ export default function CaseStudyPage(props) {
 
           <div className="row col-md-11 mx-auto">
             <div className="col-sm-6">
-              <LoadWithTrail offset={100} height={903}>
+              <LoadWithTrail once offset={100} height={903}>
                 <img src={FinalProd1} alt="" className="my-5 w-100" />
               </LoadWithTrail>
             </div>
 
             <div className="col-sm-6">
-              <LoadWithTrail offset={100} height={903}>
+              <LoadWithTrail once offset={100} height={903}>
                 <img src={FinalProd2} alt="" className="my-5 w-100" />
               </LoadWithTrail>
             </div>
@@ -524,7 +524,7 @@ export default function CaseStudyPage(props) {
       </section>
 
       <section id="final-prototype" className="container my-lg col-12">
-        <LazyLoad offset={200} once throttle>
+        <LazyLoad once offset={200} once height={800}>
           <iframe
             style={{
               minHeight: "800px",

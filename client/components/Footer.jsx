@@ -10,7 +10,7 @@ export default function Footer(props) {
       className="footer container-fluid w-100 text-dark bg-light">
       <div className="h-100 row mx-auto">
         <div className="col-md-12 d-flex flex-column justify-content-center align-itms-center mx-auto">
-          <div className="d-flex justify-content-center align-itms-center text-center border-bottom border-dark">
+          <div className="d-flex justify-content-center align-itms-center text-center ">
             <Link to={"/"} className={"text-dark"}>
               {/* <WhiteLogo /> */}
               <h4 className="font-weight-bold">Katrina Langland</h4>
@@ -18,7 +18,7 @@ export default function Footer(props) {
             </Link>
           </div>
           {props.children}
-          {/* <nav className="nav d-flex flex-row justify-content-center footer-list border-bottom border-dark">
+          <nav className="nav d-flex flex-row justify-content-center footer-list">
             <a
               href="mailto:katrina@katrinalangland.com"
               role="link"
@@ -43,7 +43,7 @@ export default function Footer(props) {
               className="nav-link">
               Dribbble
             </a>
-          </nav> */}
+          </nav>
           <small className="d-flex mt-4 text-center align-items-center justify-content-center">
             © Katrina Langland 2021 | All Rights Reserved
           </small>

@@ -101,9 +101,11 @@ export default function RunrPage(props) {
 
           <div className="col-md-6">
             <div className="cs-img__block">
-              <img src={Circle1} id="circle1" className="circle" alt="" />
-              <img src={Circle2} id="circle2" className="circle" alt="" />
-              <img src={Circle3} id="circle3" className="circle" alt="" />
+              <LazyLoadWithTrail once offset={-10}>
+                <img src={Circle1} id="circle1" className="circle" alt="" />
+                <img src={Circle2} id="circle2" className="circle" alt="" />
+                <img src={Circle3} id="circle3" className="circle" alt="" />
+              </LazyLoadWithTrail>
             </div>
           </div>
         </div>
@@ -140,7 +142,7 @@ export default function RunrPage(props) {
           </div>
 
           <div className="col-md-11 mx-auto mb-5">
-            <LazyLoadWithTrail>
+            <LazyLoadWithTrail once offset={50}>
               <img src={Atomic} alt="" className="w-100" />
             </LazyLoadWithTrail>
           </div>
@@ -179,7 +181,7 @@ export default function RunrPage(props) {
         </div>
 
         <div className="col-md-11 mx-auto">
-          <LazyLoadWithTrail>
+          <LazyLoadWithTrail once offset={50}>
             <img src={DS} alt="" className="w-100" />
           </LazyLoadWithTrail>
         </div>
