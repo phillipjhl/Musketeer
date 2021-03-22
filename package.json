@@ -4,6 +4,10 @@
     "description": "Site with marketing, blog, payments, and contact all in one.",
     "main": "build/musketeer-api/index.js",
     "private": true,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/phillipjhl/musketeer.git"
+    },
     "engines": {
         "node": ">= 8.16.0",
         "npm": ">= 6.9.0"
@@ -24,7 +28,7 @@
         "watch:client": "webpack --mode development --watch",
         "watch:server": "babel ./musketeer-api -w -d ./build/musketeer-api",
         "build:prod": "export NODE_ENV=production && npm run clean:prod && npm run build:client:prod && npm run build:server:prod",
-        "zip:public": "cd build/public && zip -r prod-public.zip ."
+        "zip:public": "cd build/public && zip -r prod.zip ."
     },
     "author": {
         "name": "Phillip Langland"
