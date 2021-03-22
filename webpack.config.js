@@ -14,6 +14,8 @@ const ASSET_PATH =
     ? "/"
     : "/public/";
 
+console.log(ASSET_PATH)
+
 module.exports = {
   entry: ["@babel/polyfill", "./client/index.js", "bootstrap"],
   output: {
