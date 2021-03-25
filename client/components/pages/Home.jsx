@@ -9,20 +9,20 @@ import Container from "../blocks/Container";
 
 // Images
 import DSM from "../../assets/images/Homepage/Design-System-Mockup.png";
-import GROM from "../../assets/images/Homepage/GRO-Mockup.png";
+import GROM from "../../assets/images/Homepage/GRO-Mockup-2.png";
 import RUNRM from "../../assets/images/Homepage/RUNR-Mockup.png";
-import ShiptM from "../../assets/images/Homepage/Shipt-Mockup.png";
+import GRCM from "../../assets/images/Homepage/Grocery-Mockup.png";
 
 export default function Home(props) {
   const sectionConfigs = [
     {
       subtitle: "UX/UI DESIGN",
-      title: "GRO App",
+      title: "Grocery App",
       description:
-        "Led the research and design for an innovative gardening app.",
-      ctaText: "See solution",
-      ctaLink: "/casestudy/gro",
-      imageUrl: `${GROM}`,
+        "Researched and designed a shopping list feature to improve user experience for ordering grocery delivery.",
+      ctaText: "See Solution",
+      ctaLink: "/casestudy/shipt",
+      imageUrl: `${GRCM}`,
       className: "bg-dark text-white",
       animate: true,
       disabled: false,
@@ -32,12 +32,12 @@ export default function Home(props) {
     },
     {
       subtitle: "UX/UI DESIGN",
-      title: "Grocery App",
+      title: "GRO App",
       description:
-        "Researched and designed a shopping list feature to improve user experience for ordering grocery delivery.",
-      ctaText: "See Solution",
-      ctaLink: "/casestudy/shipt",
-      imageUrl: `${ShiptM}`,
+        "Led the research and design for an innovative gardening app.",
+      ctaText: "See solution",
+      ctaLink: "/casestudy/gro",
+      imageUrl: `${GROM}`,
       className: "",
       animate: true,
       disabled: false,

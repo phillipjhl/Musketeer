@@ -18,7 +18,7 @@ export default function Container(props) {
           <div
             className={`col-md-5 mx-auto d-flex flex-column justify-content-center order-0 order-md-${order}`}
             style={props.style}>
-            <LoadWithTrail once offset={-80}>
+            <LazyLoad once offset={-80}>
               <Trail>
                 <h5 className="mb-2">{props.subtitle}</h5>
                 <h1 className="mb-2">{props.title}</h1>
@@ -29,7 +29,7 @@ export default function Container(props) {
                   className="align-self-start"
                 />
               </Trail>
-            </LoadWithTrail>
+            </LazyLoad>
             {props.children && props.children}
           </div>
           <div className={`col-md-6 mx-auto order-1 order-md-${imgOrder}`}>
