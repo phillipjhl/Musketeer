@@ -5,7 +5,7 @@ import CSPageJumbo from "./sub-comps/CSPageJumbo";
 
 export default function CaseStudyPageWrapper(props) {
   return (
-    <div className="container-fluid casestudy p-0">
+    <div className={`container-fluid casestudy p-0 ${props.className} `}>
       <CSPageJumbo
         className={props.jumboClassName}
         heroImage={props.jumboHeroImage}
