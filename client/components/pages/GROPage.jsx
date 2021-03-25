@@ -1,7 +1,7 @@
 import React from "react";
 import LazyLoad from "react-lazyload";
-import Section from "../blocks/Section";
-import Banner from "../Banner";
+import Section from "./sub-comps/Section";
+// import Banner from "./sub-comps/Banner";
 
 import HeroImg from "../../assets/images/GRO-Hero-Image.png";
 import GroImg from "../../assets/images/Case-Study-GRO-App/GRO-Sub-Logo-White-01.svg";
@@ -37,36 +37,26 @@ import UT3 from "../../assets/images/Frame-40.png";
 import UT4 from "../../assets/images/Frame-41.png";
 import Trail, { withTrail } from "../blocks/Trail";
 
+import CaseStudyPageWrapper from "./CaseStudyPageWrapper";
+
 const LoadWithTrail = withTrail(LazyLoad);
 
-export default function CaseStudyPage(props) {
+export default function GROPage(props) {
   return (
-    <div className="container-fluid casestudy p-0">
-      <div
-        style={{
-          height: "758px",
-          backgroundImage: `url(${HeroImg})`
-        }}
-        className="bg-bright-green casestudy-top">
-        <div className="w-100 h-100">
-          <div className="casestudy-top-banner h-100 pb-5 d-flex flex-column justify-content-end align-items-start container">
-            <div className="col-sm-5 mr-auto casestudy-top-banner__block text-white">
-              <div
-                className="GRO-logo d-flex flex-column align-items-start"
-                style={{ width: "200px" }}>
-                <GroImg />
-                <span className="">GRO</span>
-              </div>
-              <p className="">
-                GRO is a mobile app designed to help provide gardeners with
-                reliable and easy-to-understand plant information to create a
-                successful garden maintenance plan.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <CaseStudyPageWrapper
+      jumboClassName={"bg-bright-green"}
+      jumboHeroImage={HeroImg}
+      appImageComp={<GroImg />}
+      jumboTitle={"GRO"}
+      jumboDescription={
+        "GRO is a mobile app designed to help provide gardeners with reliable and easy-to-understand plant information to create a successful garden maintenance plan."
+      }
+      bottomBannerMessage={
+        <h2>
+          Check out the <br /> RUNR App Case Study
+        </h2>
+      }
+      bottomBannerLink={"/casestudy/runr"}>
       <section className="container pt-5">
         <div className="row my-lg">
           <div className="col-md-5 mx-auto">
@@ -561,18 +551,6 @@ export default function CaseStudyPage(props) {
           </div>
         </div>
       </div>
-
-      <Banner
-        cta={"VIEW CASE STUDY"}
-        subtitle={"WANT TO SEE MORE?"}
-        message={
-          <h2>
-            Check out the <br /> RUNR App Case Study
-          </h2>
-        }
-        link={"/casestudy/runr"}
-        target={"_self"}
-      />
-    </div>
+    </CaseStudyPageWrapper>
   );
 }

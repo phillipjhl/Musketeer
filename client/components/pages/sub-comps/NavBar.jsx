@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from "react";
 import { Link, NavLink } from "react-router-dom";
-import AuthButton from "./auth/authButton";
-import UserContext from "../services/context";
-import MessageBanner from "./message";
-import Resume from "../assets/documents/KatrinaLanglandResume.pdf";
+import AuthButton from "../../auth/authButton";
+import UserContext from "../../../services/context";
+import MessageBanner from "../../utilities/message";
+import Resume from "../../../assets/documents/KatrinaLanglandResume.pdf";
 
 export function NavBarLink(props) {
   return (

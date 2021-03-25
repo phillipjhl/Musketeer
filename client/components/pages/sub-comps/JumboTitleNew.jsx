@@ -1,8 +1,8 @@
 import React from "react";
 // import { Link } from "react-router-dom";
-import KLogo from "../../assets/images/Homepage/K-logo.png";
-import AnchorLink from "../blocks/anchorLink";
-import Trail from "../blocks/Trail";
+import KLogo from "../../../assets/images/Homepage/K-logo.png";
+import AnchorLink from "../../blocks/anchorLink";
+import Trail from "../../blocks/Trail";
 
 export default function JumboTitleNew(props) {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import LazyLoad from "react-lazyload";
-import Section from "../blocks/Section";
-import Banner from "../Banner";
+import Section from "./sub-comps/Section";
+import Banner from "./sub-comps/Banner";
 
 import RUNRHero from "../../assets/images/Case-Study-RUNR-App/RUNR-hero.png";
 import Circle1 from "../../assets/images/Case-Study-RUNR-App/Circle-1.png";
@@ -25,36 +25,27 @@ import FD4 from "../../assets/images/Case-Study-RUNR-App/Final-Design-4.png";
 import FD5 from "../../assets/images/Case-Study-RUNR-App/Final-Design-5.png";
 import FD6 from "../../assets/images/Case-Study-RUNR-App/Final-Design-6.png";
 import { withTrail } from "../blocks/Trail";
+import CaseStudyPageWrapper from "./CaseStudyPageWrapper";
 
 const LazyLoadWithTrail = withTrail(LazyLoad);
 
 export default function RunrPage(props) {
   return (
-    <div className="container-fluid casestudy casestudy--runr p-0">
-      <div
-        style={{
-          height: "758px",
-          backgroundImage: `url(${RUNRHero})`
-        }}
-        className="bg-runr-blue casestudy-top">
-        <div className="w-100 h-100">
-          <div className="casestudy-top-banner h-100 pb-5 d-flex flex-column justify-content-end align-items-start container">
-            <div className="col-sm-5 mr-auto casestudy-top-banner__block text-white">
-              <div
-                className="GRO-logo d-flex flex-column align-items-start"
-                style={{ width: "200px" }}>
-                <img src={RUNRLogo} alt="" />
-                <span className="">RUNR</span>
-              </div>
-              <h6 className="text-bold">
-                RUNR is a social health tracking app designed to motivate users
-                to get active while staying social and tracking their progress.
-              </h6>
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <CaseStudyPageWrapper
+      className="casestudy--runr"
+      bottomBannerMessage={
+        <h2>
+          Check out the <br /> GRO App Case Study
+        </h2>
+      }
+      bottomBannerLink={"/casestudy/gro"}
+      jumboClassName={"bg-runr-blue"}
+      jumboHeroImage={RUNRHero}
+      appImageComp={<img src={RUNRLogo} alt="" />}
+      jumboTitle={"RUNR"}
+      jumboDescription={
+        "RUNR is a social health tracking app designed to motivate users to get active while staying social and tracking their progress."
+      }>
       <section className="container pt-5">
         <div className="row pb-5">
           <div className="col-md-5 mx-auto">
@@ -476,19 +467,6 @@ export default function RunrPage(props) {
           </div>
         </div>
       </section>
-
-      <Banner
-        cta={"VIEW CASE STUDY"}
-        subtitle={"WANT TO SEE MORE?"}
-        message={
-          <h2>
-            Check out the <br /> GRO App Case Study
-          </h2>
-        }
-        link={"/casestudy/gro"}
-        target={"_self"}
-        backgroundTheme="bg-white"
-      />
-    </div>
+    </CaseStudyPageWrapper>
   );
 }
