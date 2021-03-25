@@ -9,13 +9,14 @@
 
   .nav-link {
     color: $dark !important;
-    letter-spacing: 4px;
+    letter-spacing: 1px;
     text-align: right;
+    font-weight: 500;
   }
 
   .navbar-brand {
     font-weight: bold;
-    letter-spacing: 4px;
+    letter-spacing: 1px;
     font-size: 1rem;
   }
 
