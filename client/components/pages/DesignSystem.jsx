@@ -10,40 +10,26 @@ import Circle3 from "../../assets/images/Design-System/Lyft.png";
 import Atomic from "../../assets/images/Design-System/Atomic-Design.png";
 
 import { withTrail } from "../blocks/Trail";
+import CaseStudyPageWrapper from "./CaseStudyPageWrapper";
 
 const LazyLoadWithTrail = withTrail(LazyLoad);
 
-export default function RunrPage(props) {
+export default function DesignSystemPage(props) {
   return (
-    <div className="container-fluid casestudy casestudy--runr p-0">
-      <div
-        style={{
-          height: "758px",
-          backgroundImage: `url(${DSHero})`
-        }}
-        className="bg-light-grey casestudy-top">
-        <div className="w-100 h-100">
-          <div className="casestudy-top-banner h-100 pb-5 d-flex flex-column justify-content-end align-items-start container">
-            <div className="col-sm-5 mr-auto casestudy-top-banner__block text-dark d-flex flex-column justify-content-center">
-              <div
-                className="GRO-logo d-flex flex-column align-items-start"
-                // style={{ width: "200px" }}
-              >
-                <h1 className="">
-                  GRO APP <br />
-                  DESIGN SYSTEM
-                </h1>
-              </div>
-              <h6 className="text-bold">
-                While designing GRO, an innovative gardening app, I was
-                presented with the challenge of creating an entire design system
-                that served the users and aligned with the brand.
-              </h6>
-            </div>
-          </div>
-        </div>
-      </div>
-
+    <CaseStudyPageWrapper
+      className="casestudy--runr"
+      jumboClassName={"bg-light-grey text-dark"}
+      jumboHeroImage={DSHero}
+      jumboImageStyle={{}}
+      jumboTitleComp={
+        <h1 className="">
+          GRO APP <br />
+          DESIGN SYSTEM
+        </h1>
+      }
+      jumboDescription={
+        "While designing GRO, an innovative gardening app, I was presented with the challenge of creating an entire design system that served the users and aligned with the brand."
+      }>
       <section className="container pt-5">
         <div className="row my-lg">
           <div className="col-md-5 mx-auto">
@@ -219,18 +205,6 @@ export default function RunrPage(props) {
           </div>
         </div>
       </div>
-
-      <Banner
-        cta={"VIEW CASE STUDY"}
-        subtitle={"WANT TO SEE MORE?"}
-        message={
-          <h2>
-            Check out the <br /> GRO App Case Study
-          </h2>
-        }
-        link={"/casestudy/gro"}
-        target={"_self"}
-      />
-    </div>
+    </CaseStudyPageWrapper>
   );
 }
