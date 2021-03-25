@@ -1,5 +1,5 @@
 import React from "react";
-import heroImage from "../assets/images/Homepage/Hero-Image.jpg";
+import heroImage from "../../../assets/images/Homepage/Hero-Image.jpg";
 import ChevDown from "bootstrap-icons/icons/chevron-down.svg";
 
 function Jumbotron(props) {

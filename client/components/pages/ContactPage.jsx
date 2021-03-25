@@ -1,5 +1,5 @@
 import React from "react";
-import ContactForm from "../contactForm";
+import ContactForm from "../forms/contactForm";
 // import Jumbotron from "../Jumbotron";
 // import JumboTitle from "../blocks/JumboTitle";
 // import Dash from "../Dash";

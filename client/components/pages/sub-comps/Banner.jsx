@@ -1,14 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Resume from "../assets/documents/KatrinaLanglandResume.pdf";
+import Resume from "../../../assets/documents/KatrinaLanglandResume.pdf";
 
 export default function Banner(props) {
   return (
-    <section className={`w-100 ${props.backgroundTheme}`} style={{ height: "auto" }}>
+    <section
+      className={`w-100 ${props.backgroundTheme}`}
+      style={{ height: "auto" }}>
       <div
         className="d-flex flex-column justify-content-center align-items-center"
-        style={{ minHeight: "350px" }}
-      >
+        style={{ minHeight: "350px" }}>
         {props.subtitle && (
           <span className="text-subtitle font-weight-bold">
             {props.subtitle}
@@ -25,8 +26,7 @@ export default function Banner(props) {
             target={props.target || "_blank"}
             className="btn btn-outline-primary text-uppercase"
             to={props.link || Resume}
-            title={props.cta}
-          >
+            title={props.cta}>
             {props.cta}
           </Link>
         )}

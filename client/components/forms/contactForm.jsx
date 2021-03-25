@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { sendContactEmail } from "../services/contact";
+import { sendContactEmail } from "../../services/contact";
 
 class ContactForm extends Component {
   constructor(props) {
@@ -121,8 +121,7 @@ class ContactForm extends Component {
         <form
           id="contact-form"
           className={`form ${this.state.formClass}`}
-          onSubmit={this.handleSubmit}
-        >
+          onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Your Name</label>
             <input
@@ -169,8 +168,7 @@ class ContactForm extends Component {
               name="message"
               className="form-control"
               onChange={this.handleChange}
-              required
-            ></textarea>
+              required></textarea>
             {errors.message && (
               <div className="text-danger">{errors.message}</div>
             )}
@@ -178,8 +176,7 @@ class ContactForm extends Component {
           <button
             type="submit"
             onClick={this.handleSubmit}
-            className="btn btn-outline-secondary"
-          >
+            className="btn btn-outline-secondary">
             CONTACT ME
           </button>
         </form>
