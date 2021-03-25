@@ -1,11 +1,11 @@
 import React from "react";
-import Jumbotron from "../Jumbotron";
+import Jumbotron from "./sub-comps/Jumbotron";
 // import JumboTitle from "../blocks/JumboTitle";
-import JumboTitleNew from "../blocks/JumboTitleNew";
+import JumboTitleNew from "./sub-comps/JumboTitleNew";
 // import Dash from "../Dash";
 // import Banner from "../Banner";
 // import Section from "../blocks/Section";
-import Container from "../blocks/Container";
+import Container from "./sub-comps/Container";
 
 // Images
 import DSM from "../../assets/images/Homepage/Design-System-Mockup.png";

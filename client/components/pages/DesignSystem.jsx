@@ -1,6 +1,6 @@
 import React from "react";
 import LazyLoad from "react-lazyload";
-import Banner from "../Banner";
+import Banner from "./sub-comps/Banner";
 
 import DSHero from "../../assets/images/Design-System/DS-Hero.png";
 import DS from "../../assets/images/Design-System/Design-System.png";

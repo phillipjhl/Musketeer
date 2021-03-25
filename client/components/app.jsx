@@ -1,8 +1,9 @@
 import React, { lazy, useEffect, Fragment, Suspense, useState } from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import { checkLogin, getUser } from "../services/user";
+import { withTitle } from "./pages/hocs/withTitle";
 
-import NavBar from "./NavBar";
+import NavBar from "./pages/sub-comps/NavBar";
 // const BlogMain = lazy(() => import("./pages/BlogMain"));
 // const AdminEdit = lazy(() => import("./admin/AdminEdit"));
 // const AdminPage = lazy(() => import("./admin/AdminPage"));
@@ -14,34 +15,19 @@ const Logout = lazy(() => import("./auth/logout"));
 import UserContext from "../services/context";
 // const Home = lazy(() => import("./pages/Home"));
 import Home from "./pages/Home";
-const AboutPage = lazy(() => import("./pages/About"));
-import Footer from "./Footer";
+const AboutPage = lazy(() => import("./pages/AboutPage"));
+import Footer from "./pages/sub-comps/Footer";
 import IndeterminateProgress from "./utilities/indeterminateProgress";
 const ContactPage = lazy(() => import("./pages/ContactPage"));
-const CaseStudyPage = lazy(() => import("./pages/CaseStudy"));
+const GROPage = lazy(() => import("./pages/GROPage"));
 const RunrPage = lazy(() => import("./pages/RunrPage"));
 const DesignSystem = lazy(() => import("./pages/DesignSystem"));
 // export const UserContext = React.createContext("guest");
 import FourZeroFour from "./pages/FourZeroFour";
 
-const withTitle = COMP => {
-  const wrappedPage = props => {
-    useEffect(() => {
-      window.scrollTo(0, 0);
-      document.title = props.title
-        ? `Katrina Langland | ${props.title}`
-        : "Katrina Langland | Product Designer";
-    }, [props.title]);
-
-    return <COMP {...props} />;
-  };
-
-  return wrappedPage;
-};
-
 const HomeHOC = withTitle(Home);
 const AboutHOC = withTitle(AboutPage);
-const CSStudyHOC = withTitle(CaseStudyPage);
+const GROPageHOC = withTitle(GROPage);
 const RunrPageHOC = withTitle(RunrPage);
 const DesignSystemHOC = withTitle(DesignSystem);
 const ContactHOC = withTitle(ContactPage);
@@ -96,7 +82,7 @@ function App(props) {
                 <Route
                   path="/casestudy/gro"
                   render={props => (
-                    <CSStudyHOC title="Case Study - GRO" {...props} />
+                    <GROPageHOC title="Case Study - GRO" {...props} />
                   )}
                 />
                 <Route

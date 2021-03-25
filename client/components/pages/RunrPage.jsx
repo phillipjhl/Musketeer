@@ -1,7 +1,7 @@
 import React from "react";
 import LazyLoad from "react-lazyload";
-import Section from "../blocks/Section";
-import Banner from "../Banner";
+import Section from "./sub-comps/Section";
+import Banner from "./sub-comps/Banner";
 
 import RUNRHero from "../../assets/images/Case-Study-RUNR-App/RUNR-hero.png";
 import Circle1 from "../../assets/images/Case-Study-RUNR-App/Circle-1.png";

@@ -1,6 +1,6 @@
 import React from "react";
-import Banner from "../Banner";
-import Timeline from "../timeline";
+import Banner from "./sub-comps/Banner";
+import Timeline from "./sub-comps/timeline";
 import LazyLoad from "react-lazyload";
 
 import AboutPhoto from "../../assets/images/AboutPhoto.png";

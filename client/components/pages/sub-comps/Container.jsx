@@ -1,7 +1,7 @@
 import React from "react";
 import LazyLoad from "react-lazyload";
-import AnchorLink from "../blocks/anchorLink";
-import { Trail, withTrail } from "./Trail";
+import AnchorLink from "../../blocks/anchorLink";
+import { Trail, withTrail } from "../../blocks/Trail";
 
 const LoadWithTrail = withTrail(LazyLoad);
 
