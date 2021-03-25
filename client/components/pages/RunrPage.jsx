@@ -24,6 +24,9 @@ import FD3 from "../../assets/images/Case-Study-RUNR-App/Final-Design-3.png";
 import FD4 from "../../assets/images/Case-Study-RUNR-App/Final-Design-4.png";
 import FD5 from "../../assets/images/Case-Study-RUNR-App/Final-Design-5.png";
 import FD6 from "../../assets/images/Case-Study-RUNR-App/Final-Design-6.png";
+import { withTrail } from "../blocks/Trail";
+
+const LazyLoadWithTrail = withTrail(LazyLoad);
 
 export default function RunrPage(props) {
   return (
@@ -33,15 +36,13 @@ export default function RunrPage(props) {
           height: "758px",
           backgroundImage: `url(${RUNRHero})`
         }}
-        className="bg-runr-blue casestudy-top"
-      >
+        className="bg-runr-blue casestudy-top">
         <div className="w-100 h-100">
           <div className="casestudy-top-banner h-100 pb-5 d-flex flex-column justify-content-end align-items-start container">
             <div className="col-sm-5 mr-auto casestudy-top-banner__block text-white">
               <div
                 className="GRO-logo d-flex flex-column align-items-start"
-                style={{ width: "200px" }}
-              >
+                style={{ width: "200px" }}>
                 <img src={RUNRLogo} alt="" />
                 <span className="">RUNR</span>
               </div>
@@ -78,8 +79,7 @@ export default function RunrPage(props) {
           <div className="col-md-5 mx-auto pb-5">
             <div
               className="border-left border-runr-blue pl-5 h-100 d-flex flex-column justify-content-center"
-              style={{ borderLeftWidth: "3px" }}
-            >
+              style={{ borderLeftWidth: "3px" }}>
               <h6 className="mb-0">ROLE</h6>
               <p className="mb-3">Sole UX Researcher + Designer</p>
               <h6 className="mb-0">PURPOSE</h6>
@@ -98,8 +98,7 @@ export default function RunrPage(props) {
               <h2 className="">PROJECT GOALS</h2>
               <div
                 className="border-left border-runr-blue pl-4"
-                style={{ borderLeftWidth: "3px" }}
-              >
+                style={{ borderLeftWidth: "3px" }}>
                 <p>
                   Find ways for users to stay motivated and engaged in the app
                   by connecting with others with similar interests and goals.
@@ -111,8 +110,7 @@ export default function RunrPage(props) {
               <h2 className="">PROBLEM</h2>
               <div
                 className="border-left border-runr-blue pl-4"
-                style={{ borderLeftWidth: "3px" }}
-              >
+                style={{ borderLeftWidth: "3px" }}>
                 <p>
                   Users engagement in this app declined weeks after downloading
                   the app{" "}
@@ -128,8 +126,7 @@ export default function RunrPage(props) {
               <h2 className="">SOLUTION</h2>
               <div
                 className="border-left border-runr-blue pl-4"
-                style={{ borderLeftWidth: "3px" }}
-              >
+                style={{ borderLeftWidth: "3px" }}>
                 <p>
                   Added a “For You” feed on the homepage to show users content
                   that aligned with their fitness goals and interests.
@@ -164,10 +161,10 @@ export default function RunrPage(props) {
         <div className="row">
           <div className="col-sm-5 mx-auto">
             <blockquote className="blockquote text-right text-runr-blue text-size-large">
-              <h1 className="mb-3">
+              <h2 className="mb-3">
                 “...just watching other people workout motivates me to hit the
                 gym.”
-              </h1>
+              </h2>
               <h4>ASHLEY GAITA</h4>
             </blockquote>
           </div>
@@ -194,8 +191,7 @@ export default function RunrPage(props) {
 
             <div
               className="border-left border-runr-blue pl-4"
-              style={{ borderLeftWidth: "3px" }}
-            >
+              style={{ borderLeftWidth: "3px" }}>
               <p>18 - 34 years old</p>
               <p>Tech-savvy</p>
               <p>Budget-conscious</p>
@@ -203,18 +199,18 @@ export default function RunrPage(props) {
             </div>
           </div>
           <div className="col-sm-5 mx-auto">
-            <LazyLoad offset={100} height={280}>
+            <LazyLoadWithTrail once offset={100} height={280}>
               <img src={UserStats} alt="" className="w-100" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
           </div>
         </div>
       </section>
 
       <section className="container mb-lg">
         <div className="col-md-11 mx-auto">
-          <LazyLoad offset={100} height={1225}>
+          <LazyLoadWithTrail once offset={100} height={1225}>
             <img src={AffinityMap} alt="" className="w-100" />
-          </LazyLoad>
+          </LazyLoadWithTrail>
         </div>
       </section>
 
@@ -225,8 +221,7 @@ export default function RunrPage(props) {
             <h1>Participants Want to Share Progress and Achievements</h1>
             <div
               className="border-left border-runr-blue pl-4"
-              style={{ borderLeftWidth: "3px" }}
-            >
+              style={{ borderLeftWidth: "3px" }}>
               <p>
                 Each participant expressed{" "}
                 <b>a desire to participate in challenges</b>, which varied based
@@ -310,23 +305,23 @@ export default function RunrPage(props) {
 
           <div className="col-md-9 mx-auto mb-5">
             <h6 className="mb-3">ROUGH SKETCHES</h6>
-            <LazyLoad offset={100} height={476}>
+            <LazyLoadWithTrail once offset={100} height={476}>
               <img src={Sketches} alt="" className="w-100" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
           </div>
 
           <div className="col-md-9 mx-auto">
             <h6 className="mb-3">LOW-FIDELITY MOCKUPS</h6>
-            <LazyLoad offset={100} height={647}>
+            <LazyLoadWithTrail once offset={100} height={647}>
               <img src={LowFidelity} alt="" className="w-100" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
           </div>
 
           <div className="col-md-9 mx-auto">
             <h6 className="mb-3">HIGH-FIDELITY MOCKUPS</h6>
-            <LazyLoad offset={100} height={647}>
+            <LazyLoadWithTrail once offset={100} height={647}>
               <img src={HighFidelity} alt="" className="w-100" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
           </div>
         </div>
       </section>
@@ -345,15 +340,15 @@ export default function RunrPage(props) {
           </div>
 
           <div className="col-md-5 mx-auto">
-            <LazyLoad offset={100} once>
+            <LazyLoadWithTrail once offset={100} once>
               <img src={UserR1} alt="" className="w-100" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
           </div>
 
           <div className="col-md-5 mx-auto">
-            <LazyLoad offset={100} once>
+            <LazyLoadWithTrail once offset={100} once>
               <img src={UserR2} alt="" className="w-100" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
           </div>
         </div>
       </section>
@@ -373,14 +368,14 @@ export default function RunrPage(props) {
 
         <div className="row col-md-11 mx-auto mb-5">
           <div className="col-md-4 mb-5 d-flex justify-content-end flex-column">
-            <LazyLoad offset={100} height={351}>
+            <LazyLoadWithTrail once offset={100} height={351}>
               <img src={FD1} alt="" className="w-75" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
           </div>
           <div className="col-md-4 mb-5">
-            <LazyLoad offset={100} height={351}>
+            <LazyLoadWithTrail once offset={100} height={351}>
               <img src={FD2} alt="" className="w-75" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
             <h4>Tailored Content</h4>
             <p>
               Users decide the content they wish to see based on their interests
@@ -396,17 +391,17 @@ export default function RunrPage(props) {
               onboarding and a “Following” feed which shows posts from Groups
               the user is actively following.
             </p>
-            <LazyLoad offset={100} height={351}>
+            <LazyLoadWithTrail once offset={100} height={351}>
               <img src={FD3} alt="" className="w-75" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
           </div>
         </div>
 
         <div className="row col-md-11 mx-auto">
           <div className="col-md-4 mb-5">
-            <LazyLoad offset={100} height={351}>
+            <LazyLoadWithTrail once offset={100} height={351}>
               <img src={FD4} alt="" className="w-75" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
             <h4>Join Groups</h4>
             <p>
               Users are able to join groups based on common interests to connect
@@ -421,15 +416,15 @@ export default function RunrPage(props) {
               adding challenges within groups engages users while motivating
               them to reach fitness goals.
             </p>
-            <LazyLoad offset={100} height={351}>
+            <LazyLoadWithTrail once offset={100} height={351}>
               <img src={FD5} alt="" className="w-75" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
           </div>
 
           <div className="col-md-4 mb-5">
-            <LazyLoad offset={100} height={351}>
+            <LazyLoadWithTrail once offset={100} height={351}>
               <img src={FD6} alt="" className="w-75" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
             <h4>Share Progress</h4>
             <p>
               Users are able to share their progress with followers. This

@@ -9,6 +9,10 @@ import Circle2 from "../../assets/images/Design-System/Google.png";
 import Circle3 from "../../assets/images/Design-System/Lyft.png";
 import Atomic from "../../assets/images/Design-System/Atomic-Design.png";
 
+import { withTrail } from "../blocks/Trail";
+
+const LazyLoadWithTrail = withTrail(LazyLoad);
+
 export default function RunrPage(props) {
   return (
     <div className="container-fluid casestudy casestudy--runr p-0">
@@ -17,8 +21,7 @@ export default function RunrPage(props) {
           height: "758px",
           backgroundImage: `url(${DSHero})`
         }}
-        className="bg-light-grey casestudy-top"
-      >
+        className="bg-light-grey casestudy-top">
         <div className="w-100 h-100">
           <div className="casestudy-top-banner h-100 pb-5 d-flex flex-column justify-content-end align-items-start container">
             <div className="col-sm-5 mr-auto casestudy-top-banner__block text-dark d-flex flex-column justify-content-center">
@@ -62,8 +65,7 @@ export default function RunrPage(props) {
           <div className="col-md-5 mx-auto pb-5">
             <div
               className="border-left border-muted pl-5 h-100 d-flex flex-column justify-content-center"
-              style={{ borderLeftWidth: "3px" }}
-            >
+              style={{ borderLeftWidth: "3px" }}>
               <h6 className="mb-0">ROLE</h6>
               <p className="mb-3">Sole Researcher and UX/UI Designer</p>
               <h6 className="mb-0">PURPOSE</h6>
@@ -86,22 +88,24 @@ export default function RunrPage(props) {
                 I started this project by researching medium articles as well as
                 studying the guidelines established by Apple, Google, Facebook,
                 and Lyft.
-                <p>
-                  I enjoyed learning about the positive effects having a design
-                  system not only has on the design of the product, but how it
-                  increases efficiency, productivity, and communication
-                  internally. Examining these systems served as a guide for this
-                  project.
-                </p>
+              </p>
+              <p>
+                I enjoyed learning about the positive effects having a design
+                system not only has on the design of the product, but how it
+                increases efficiency, productivity, and communication
+                internally. Examining these systems served as a guide for this
+                project.
               </p>
             </div>
           </div>
 
           <div className="col-md-6">
             <div className="cs-img__block">
-              <img src={Circle1} id="circle1" className="circle" alt="" />
-              <img src={Circle2} id="circle2" className="circle" alt="" />
-              <img src={Circle3} id="circle3" className="circle" alt="" />
+              <LazyLoadWithTrail once offset={-10}>
+                <img src={Circle1} id="circle1" className="circle" alt="" />
+                <img src={Circle2} id="circle2" className="circle" alt="" />
+                <img src={Circle3} id="circle3" className="circle" alt="" />
+              </LazyLoadWithTrail>
             </div>
           </div>
         </div>
@@ -110,19 +114,21 @@ export default function RunrPage(props) {
       <section className="container text-dark mb-lg">
         <div className="row">
           <div className="col-md-8 mx-auto mb-lg">
-            <blockquote className="blockquote text-center text-dark text-size-large">
-              <h1 className="mb-3">
-                “Here’s the simple truth: you can’t innovate on products without
-                first innovating the way you build them.”
-              </h1>
-              <h4>ALEX SCHLEIFER, AIRBNB</h4>
-            </blockquote>
+            <LazyLoadWithTrail offset={-10} once>
+              <blockquote className="blockquote text-center text-dark text-size-large">
+                <h1 className="mb-3">
+                  “Here’s the simple truth: you can’t innovate on products
+                  without first innovating the way you build them.”
+                </h1>
+                <h4>ALEX SCHLEIFER, AIRBNB</h4>
+              </blockquote>
+            </LazyLoadWithTrail>
           </div>
         </div>
       </section>
 
       <section className="container text-dark mb-lg">
-        <div classNam="row">
+        <div className="row">
           <div className="col-md-11 mx-auto mb-5">
             <h2>DESIGN PROCESS</h2>
             <div>
@@ -136,9 +142,9 @@ export default function RunrPage(props) {
           </div>
 
           <div className="col-md-11 mx-auto mb-5">
-            <LazyLoad>
+            <LazyLoadWithTrail once offset={50}>
               <img src={Atomic} alt="" className="w-100" />
-            </LazyLoad>
+            </LazyLoadWithTrail>
           </div>
 
           <div className="col-md-11 mx-auto text-left">
@@ -175,9 +181,9 @@ export default function RunrPage(props) {
         </div>
 
         <div className="col-md-11 mx-auto">
-          <LazyLoad>
+          <LazyLoadWithTrail once offset={50}>
             <img src={DS} alt="" className="w-100" />
-          </LazyLoad>
+          </LazyLoadWithTrail>
         </div>
       </section>
 
@@ -191,8 +197,7 @@ export default function RunrPage(props) {
           width="100%"
           height="auto"
           src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FkFkf8sHCS6RDtiSiyjLOxC%2FKatrina-s-Capstone-Project%3Fnode-id%3D376%253A52%26viewport%3D372%252C246%252C0.08919398486614227%26scaling%3Dscale-down&chrome=DOCUMENTATION"
-          allowFullScreen
-        ></iframe>
+          allowFullScreen></iframe>
       </section>
 
       <div className="container mb-lg">
@@ -218,7 +223,11 @@ export default function RunrPage(props) {
       <Banner
         cta={"VIEW CASE STUDY"}
         subtitle={"WANT TO SEE MORE?"}
-        message={<h2>Check out the <br /> GRO App Case Study</h2>}
+        message={
+          <h2>
+            Check out the <br /> GRO App Case Study
+          </h2>
+        }
         link={"/casestudy/gro"}
         target={"_self"}
       />

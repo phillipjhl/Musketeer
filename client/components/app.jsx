@@ -1,4 +1,4 @@
-import React, { lazy, useEffect, Component, Fragment, Suspense } from "react";
+import React, { lazy, useEffect, Fragment, Suspense, useState } from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import { checkLogin, getUser } from "../services/user";
 
@@ -12,7 +12,8 @@ const Login = lazy(() => import("./auth/login"));
 const Logout = lazy(() => import("./auth/logout"));
 // import Donate from "./donate";
 import UserContext from "../services/context";
-const Home = lazy(() => import("./pages/Home"));
+// const Home = lazy(() => import("./pages/Home"));
+import Home from "./pages/Home";
 const AboutPage = lazy(() => import("./pages/About"));
 import Footer from "./Footer";
 import IndeterminateProgress from "./utilities/indeterminateProgress";
@@ -45,99 +46,88 @@ const RunrPageHOC = withTitle(RunrPage);
 const DesignSystemHOC = withTitle(DesignSystem);
 const ContactHOC = withTitle(ContactPage);
 
-class App extends Component {
-  constructor(props) {
-    super(props);
+function App(props) {
+  const [USER, setUser] = useState("guest");
 
-    this.state = {
-      user: "guest"
-    };
-  }
-  static contextType = UserContext;
-
-  componentDidMount() {
+  useEffect(() => {
     checkLogin()
       .then(loggedIn => {
-        getUser()
-          .then(user => {
-            this.setState({ user });
-          })
-          .catch(err => {});
+        if (loggedIn) {
+          getUser()
+            .then(user => {
+              setUser(user);
+            })
+            .catch(err => {});
+        }
       })
       .catch(err => {});
-  }
+  }, []);
 
-  render() {
-    return (
-      <UserContext.Provider value={this.state.user}>
-        <Router>
-          <Fragment>
-            <NavBar
-              user={this.state.user}
-              homeLinkText={"KATRINA LANGLAND"}
-              styleMode={"white"}
-              sticky={true}
-            />
-            <main className="main">
-              <Suspense fallback={<IndeterminateProgress />}>
-                <Switch>
-                  <Route
-                    exact
-                    path="/"
-                    render={props => <HomeHOC {...props} />}
-                  />
-                  <Route
-                    path="/home"
-                    render={props => <HomeHOC {...props} />}
-                  />
-                  <Route path="/login" component={Login} />
-                  <Route path="/logout" component={Logout} />
-                  <Route
-                    path="/about"
-                    render={props => <AboutHOC title="About" {...props} />}
-                  />
-                  <Route
-                    path="/casestudy/runr"
-                    render={props => (
-                      <RunrPageHOC title="Case Study - RUNR" {...props} />
-                    )}
-                  />
-                  <Route
-                    path="/casestudy/gro"
-                    render={props => (
-                      <CSStudyHOC title="Case Study - GRO" {...props} />
-                    )}
-                  />
-                  <Route
-                    path="/casestudy/designstudy"
-                    render={props => (
-                      <DesignSystemHOC title="Design System - GRO" {...props} />
-                    )}
-                  />
-                  {/* <Route path="/blogs/:id" component={BlogFull} /> */}
-                  {/* <Route path="/donate" component={Donate} /> */}
-                  <Route
-                    path="/contact"
-                    render={props => <ContactHOC title="Contact Me" />}
-                  />
-                  {/* <Route path="/blogs" component={BlogMain} /> */}
-                  {/* <PrivateRoute path="/admin" component={AdminPage} />
+  return (
+    <UserContext.Provider value={USER}>
+      <Router>
+        <Fragment>
+          <NavBar
+            user={USER}
+            homeLinkText={"Katrina Langland"}
+            styleMode={"white"}
+            sticky={true}
+          />
+          <main className="main">
+            <Suspense fallback={<IndeterminateProgress />}>
+              <Switch>
+                <Route
+                  exact
+                  path={["/", "/home"]}
+                  render={props => <HomeHOC {...props} />}
+                />
+                <Route path="/login" component={Login} />
+                <Route path="/logout" component={Logout} />
+                <Route
+                  path="/about"
+                  render={props => <AboutHOC title="About" {...props} />}
+                />
+                <Route
+                  path="/casestudy/runr"
+                  render={props => (
+                    <RunrPageHOC title="Case Study - RUNR" {...props} />
+                  )}
+                />
+                <Route
+                  path="/casestudy/gro"
+                  render={props => (
+                    <CSStudyHOC title="Case Study - GRO" {...props} />
+                  )}
+                />
+                <Route
+                  path="/casestudy/designstudy"
+                  render={props => (
+                    <DesignSystemHOC title="Design System - GRO" {...props} />
+                  )}
+                />
+                {/* <Route path="/blogs/:id" component={BlogFull} /> */}
+                {/* <Route path="/donate" component={Donate} /> */}
+                <Route
+                  path="/contact"
+                  render={props => <ContactHOC title="Contact Me" {...props} />}
+                />
+                {/* <Route path="/blogs" component={BlogMain} /> */}
+                {/* <PrivateRoute path="/admin" component={AdminPage} />
                   <PrivateRoute path="/admin/*" component={AdminPage} /> */}
-                  {/* <PrivateRoute
+                {/* <PrivateRoute
                     exact
                     path="/blog/:id/edit"
                     component={AdminEdit}
                   /> */}
-                  <Route component={FourZeroFour} />
-                </Switch>
-              </Suspense>
-            </main>
-            <Footer />
-          </Fragment>
-        </Router>
-      </UserContext.Provider>
-    );
-  }
+                <Route component={FourZeroFour} />
+              </Switch>
+            </Suspense>
+          </main>
+          <Footer />
+        </Fragment>
+      </Router>
+    </UserContext.Provider>
+  );
 }
 
 export default App;

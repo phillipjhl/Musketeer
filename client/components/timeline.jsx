@@ -9,8 +9,7 @@ export function TimelineBox(props) {
       id={props.id}
       className={`timeline__box col-md-6 grid-item px-5 py-5 ${
         position === "left" ? "text-right" : "text-left"
-      }`}
-    >
+      }`}>
       <div className={`timeline__box__arrow--${position}`} />
       {props.year && <h1 className="text-hollow-primary">{props.year}</h1>}
       <div className="pl-3">
