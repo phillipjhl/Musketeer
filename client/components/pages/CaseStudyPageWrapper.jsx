@@ -18,8 +18,14 @@ export default function CaseStudyPageWrapper(props) {
       <Banner
         cta={"VIEW CASE STUDY"}
         subtitle={"WANT TO SEE MORE?"}
-        message={props.bottomBannerMessage}
-        link={props.bottomBannerLink}
+        message={
+          props.bottomBannerMessage || (
+            <h2>
+              Check out the <br /> GRO App Case Study
+            </h2>
+          )
+        }
+        link={props.bottomBannerLink || "/casestudy/gro"}
         target={"_self"}
       />
     </div>
