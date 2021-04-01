@@ -23,7 +23,6 @@ import SelectStoreFinal from "../../assets/images/CS-GroceryApp/Final-Solution-S
 
 import GROM from "../../assets/images/Homepage/GRO-Mockup-2.png";
 
-
 import { withTrail } from "../blocks/Trail";
 
 import CaseStudyPageWrapper from "./CaseStudyPageWrapper";
@@ -37,7 +36,8 @@ const BannerV2 = props => {
       <p>
         Grocery delivery apps have truly changed the way many people shop for
         groceries, however they have neglected to take into consideration the
-        large majority who rely on shopping lists before to place there orders.
+        large majority of users who rely on shopping lists before to place there
+        orders.
       </p>
       <p>
         The goal of this project was to take the opportunity to improve user
@@ -94,9 +94,12 @@ export default function GroceryDeliveryApp(props) {
                 Currently, users create their shopping lists using separate apps
                 or pen and paper. When they are ready to place their order, the
                 user constantly has to refer back to the items on their list.
-                This process has created a cumbersome experience for users
-                resulting in a loss of time, increase in missed items, and
-                potential decrease in user satisfaction.
+                This process has created a <b>cumbersome experience</b> for
+                users resulting in a{" "}
+                <b>
+                  loss of time, increase in missed items, and potential decrease
+                  in user satisfaction.
+                </b>
               </div>
             </div>
 
@@ -169,7 +172,7 @@ export default function GroceryDeliveryApp(props) {
             <blockquote className="blockquote text-right text-gda-green text-size-large">
               <h2 className="mb-0">
                 “I use Shipt, but have to use a different app to create a
-                shopping list... it’s pretty frustrating”
+                shopping list... [adding the items to my order] is tedious.”
               </h2>
               <h4>W., SHIPT USER</h4>
             </blockquote>
@@ -252,6 +255,7 @@ export default function GroceryDeliveryApp(props) {
           </LoadWithTrail>
         </div>
       </section>
+
       {/* User Journey */}
 
       <section className="container mb-lg">
@@ -278,6 +282,8 @@ export default function GroceryDeliveryApp(props) {
         </div>
       </section>
 
+      {/* Design Process Section */}
+
       <section className="container mb-lg">
         <div className="col-md-11 mx-auto mb-lg">
           <h2>DESIGN PROCESS</h2>
@@ -291,7 +297,7 @@ export default function GroceryDeliveryApp(props) {
               this medium article
             </a>{" "}
             written by Sangwoo Kim, a product designer at Shipt, along with
-            screenshots of the app to create a feature that was consistent to
+            screenshots of the app to create a feature that was consistent with
             the existing product.
           </p>
         </div>
@@ -451,7 +457,12 @@ export default function GroceryDeliveryApp(props) {
         <div className="col-md-11 mx-auto mb-5">
           <h3>Selecting Store</h3>
           <LoadWithTrail once offset={100} height={518}>
-            <img src={SelectStoreFinal} alt="" className="" style={{maxHeight: "518px"}} />
+            <img
+              src={SelectStoreFinal}
+              alt=""
+              className=""
+              style={{ maxHeight: "518px" }}
+            />
           </LoadWithTrail>
         </div>
 
@@ -473,6 +484,8 @@ export default function GroceryDeliveryApp(props) {
               reported the feature to reduce time spent placing a grocery
               delivery and 40% of users said they appreciated being able to
               compare the number of deals they would receive at each store.
+            </p>
+            <p>
               Throughout the span of this project, I was tasked with presenting
               my work each week. During this time, I received constructive
               feedback as my design decisions were challenged. Not only did this

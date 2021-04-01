@@ -11,6 +11,8 @@
 
 // Beginning of Overrides
 
+@import "../links";
+
 @media (min-width: 1200px) {
   .container,
   .container-sm,
@@ -23,12 +25,6 @@
 
 .text-size-xlarge {
   font-size: 56px;
-}
-
-// turn into func
-a.link-border,
-a.link-border:hover {
-  text-decoration: none;
 }
 
 .m-lg {
