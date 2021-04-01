@@ -24,7 +24,7 @@ import FD3 from "../../assets/images/Case-Study-RUNR-App/Final-Design-3.png";
 import FD4 from "../../assets/images/Case-Study-RUNR-App/Final-Design-4.png";
 import FD5 from "../../assets/images/Case-Study-RUNR-App/Final-Design-5.png";
 import FD6 from "../../assets/images/Case-Study-RUNR-App/Final-Design-6.png";
-import { withTrail } from "../blocks/Trail";
+import { Trail, withTrail } from "../blocks/Trail";
 
 const LazyLoadWithTrail = withTrail(LazyLoad);
 
@@ -40,16 +40,19 @@ export default function RunrPage(props) {
         <div className="w-100 h-100">
           <div className="casestudy-top-banner h-100 pb-5 d-flex flex-column justify-content-end align-items-start container">
             <div className="col-sm-5 mr-auto casestudy-top-banner__block text-white">
-              <div
-                className="GRO-logo d-flex flex-column align-items-start"
-                style={{ width: "200px" }}>
-                <img src={RUNRLogo} alt="" />
-                <span className="">RUNR</span>
-              </div>
-              <h6 className="text-bold">
-                RUNR is a social health tracking app designed to motivate users
-                to get active while staying social and tracking their progress.
-              </h6>
+              <Trail>
+                <div
+                  className="GRO-logo d-flex flex-column align-items-start"
+                  style={{ width: "200px" }}>
+                  <img src={RUNRLogo} alt="" />
+                  <span className="">RUNR</span>
+                </div>
+                <h6 className="text-bold">
+                  RUNR is a social health tracking app designed to motivate
+                  users to get active while staying social and tracking their
+                  progress.
+                </h6>
+              </Trail>
             </div>
           </div>
         </div>
@@ -169,7 +172,7 @@ export default function RunrPage(props) {
             </blockquote>
           </div>
           <div className="col-sm-5 mx-auto">
-            <h1>RESEARCH</h1>
+            <h2>RESEARCH</h2>
             <h3>Secondary Research</h3>
             <p>
               The discover stage began by conducting a SWOT analysis to have a
@@ -183,7 +186,7 @@ export default function RunrPage(props) {
       <section className="container mb-lg">
         <div className="row">
           <div className="col-sm-5 mx-auto">
-            <h1>Interviews</h1>
+            <h2>Interviews</h2>
             <p>
               Three users were interviewed, all of whom were a good fit for this
               app based on the target audience:
@@ -218,7 +221,7 @@ export default function RunrPage(props) {
         <div className="row">
           <div className="col-md-11 mx-auto mb-5">
             <h5>INTERVIEWS + AFFINITY MAPS AND FINDINGS</h5>
-            <h1>Participants Want to Share Progress and Achievements</h1>
+            <h2>Participants Want to Share Progress and Achievements</h2>
             <div
               className="border-left border-runr-blue pl-4"
               style={{ borderLeftWidth: "3px" }}>

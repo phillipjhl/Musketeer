@@ -9,11 +9,11 @@ import Circle2 from "../../assets/images/Design-System/Google.png";
 import Circle3 from "../../assets/images/Design-System/Lyft.png";
 import Atomic from "../../assets/images/Design-System/Atomic-Design.png";
 
-import { withTrail } from "../blocks/Trail";
+import { Trail, withTrail } from "../blocks/Trail";
 
 const LazyLoadWithTrail = withTrail(LazyLoad);
 
-export default function RunrPage(props) {
+export default function DesignSystemPage(props) {
   return (
     <div className="container-fluid casestudy casestudy--runr p-0">
       <div
@@ -25,20 +25,22 @@ export default function RunrPage(props) {
         <div className="w-100 h-100">
           <div className="casestudy-top-banner h-100 pb-5 d-flex flex-column justify-content-end align-items-start container">
             <div className="col-sm-5 mr-auto casestudy-top-banner__block text-dark d-flex flex-column justify-content-center">
-              <div
-                className="GRO-logo d-flex flex-column align-items-start"
-                // style={{ width: "200px" }}
-              >
-                <h1 className="">
-                  GRO APP <br />
-                  DESIGN SYSTEM
-                </h1>
-              </div>
-              <h6 className="text-bold">
-                While designing GRO, an innovative gardening app, I was
-                presented with the challenge of creating an entire design system
-                that served the users and aligned with the brand.
-              </h6>
+              <Trail>
+                <div
+                  className="GRO-logo d-flex flex-column align-items-start"
+                  // style={{ width: "200px" }}
+                >
+                  <h1 className="">
+                    GRO APP <br />
+                    DESIGN SYSTEM
+                  </h1>
+                </div>
+                <h6 className="text-bold">
+                  While designing GRO, an innovative gardening app, I was
+                  presented with the challenge of creating an entire design
+                  system that served the users and aligned with the brand.
+                </h6>
+              </Trail>
             </div>
           </div>
         </div>

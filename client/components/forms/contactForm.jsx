@@ -176,7 +176,7 @@ class ContactForm extends Component {
           <button
             type="submit"
             onClick={this.handleSubmit}
-            className="btn btn-outline-secondary">
+            className="btn btn-outline-primary">
             CONTACT ME
           </button>
         </form>

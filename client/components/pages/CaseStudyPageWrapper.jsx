@@ -1,18 +1,17 @@
 import React from "react";
 import Banner from "./sub-comps/Banner";
 
-import CSPageJumbo from "./sub-comps/CSPageJumbo";
+import CSPageJumbo, { CSPageJumboV2 } from "./sub-comps/CSPageJumbo";
 
 export default function CaseStudyPageWrapper(props) {
+  const { jumboProps, ...restProps } = props;
   return (
     <div className="container-fluid casestudy p-0">
-      <CSPageJumbo
-        className={props.jumboClassName}
-        heroImage={props.jumboHeroImage}
-        appImageComp={props.appImageComp}
-        title={props.jumboTitle}
-        description={props.jumboDescription}
-      />
+      {jumboProps.version == 2 ? (
+        <CSPageJumboV2 {...jumboProps} />
+      ) : (
+        <CSPageJumbo {...jumboProps} />
+      )}
 
       {props.children}
 
