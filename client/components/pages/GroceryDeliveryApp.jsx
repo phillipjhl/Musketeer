@@ -23,12 +23,16 @@ import SelectStoreFinal from "../../assets/images/CS-GroceryApp/Final-Solution-S
 
 import GROM from "../../assets/images/Homepage/GRO-Mockup-2.png";
 
-import { withTrail } from "../blocks/Trail";
+import { Trail, withTrail } from "../blocks/Trail";
 
 import CaseStudyPageWrapper from "./CaseStudyPageWrapper";
 import Container from "./sub-comps/Container";
 
-const LoadWithTrail = withTrail(LazyLoad);
+const LoadWithTrail = props => (
+  <LazyLoad {...props} offset={-40} once>
+    <Trail>{props.children}</Trail>
+  </LazyLoad>
+);
 
 const BannerV2 = props => {
   return (
