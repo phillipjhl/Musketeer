@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import AuthButton from "../../auth/authButton";
 import UserContext from "../../../services/context";
 import MessageBanner from "../../utilities/message";
-import Resume from "../../../assets/documents/KatrinaLanglandResume.pdf";
+import Resume from "../../../assets/documents/Katrina-Langland-Resume-01.pdf";
 
 export function NavBarLink(props) {
   return (
@@ -70,7 +70,7 @@ class NavBar extends Component {
         return (
           <li key={`${link.label}-${i}`} className="nav-item dropdown">
             <a
-              className="nav-link dropdown-toggle"
+              className="nav-link dropdown-toggle px-4"
               href="#"
               id="navbarDropdown"
               role="button"

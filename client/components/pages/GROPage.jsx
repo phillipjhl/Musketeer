@@ -35,22 +35,27 @@ import UT1 from "../../assets/images/Frame-38.png";
 import UT2 from "../../assets/images/Frame-39.png";
 import UT3 from "../../assets/images/Frame-40.png";
 import UT4 from "../../assets/images/Frame-41.png";
-import Trail, { withTrail } from "../blocks/Trail";
+import { withTrail } from "../blocks/Trail";
 
 import CaseStudyPageWrapper from "./CaseStudyPageWrapper";
 
-const LoadWithTrail = withTrail(LazyLoad);
+const LoadWithTrail = props => (
+  <LazyLoad {...props} offset={-100}>
+    <Trail>{props.children}</Trail>
+  </LazyLoad>
+);
 
 export default function GROPage(props) {
   return (
     <CaseStudyPageWrapper
-      jumboClassName={"bg-bright-green"}
-      jumboHeroImage={HeroImg}
-      appImageComp={<GroImg />}
-      jumboTitle={"GRO"}
-      jumboDescription={
-        "GRO is a mobile app designed to help provide gardeners with reliable and easy-to-understand plant information to create a successful garden maintenance plan."
-      }
+      jumboProps={{
+        className: "bg-bright-green",
+        heroImage: HeroImg,
+        appImageComp: <GroImg />,
+        title: "GRO",
+        description:
+          "GRO is a mobile app designed to help provide gardeners with reliable and easy-to-understand plant information to create a successful garden maintenance plan."
+      }}
       bottomBannerMessage={
         <h2>
           Check out the <br /> RUNR App Case Study
@@ -127,7 +132,7 @@ export default function GROPage(props) {
             </div>
           </div>
 
-          <div className="col-md-6 mb-5 mb-md-0">
+          <div className="col-md-6 mb-5 mb-md-0 d-none d-md-block">
             <div className="cs-img__block">
               <LoadWithTrail offset={-40} once>
                 <img src={Circle1} id="circle1" className="circle" alt="" />

@@ -1,12 +1,11 @@
 import React from "react";
 import Banner from "./sub-comps/Banner";
 import Timeline from "./sub-comps/timeline";
-import LazyLoad from "react-lazyload";
 
 import AboutPhoto from "../../assets/images/AboutPhoto.png";
-import ChairImg from "../../assets/images/About/ChairOffice.png";
-import IcedCoffee from "../../assets/images/About/IcedCoffee.png";
-import CorgiImg from "../../assets/images/About/Winston.png";
+// import ChairImg from "../../assets/images/About/ChairOffice.png";
+// import IcedCoffee from "../../assets/images/About/IcedCoffee.png";
+// import CorgiImg from "../../assets/images/About/Winston.png";
 
 export default function AboutPage(props) {
   return (

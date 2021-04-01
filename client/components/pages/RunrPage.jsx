@@ -1,7 +1,6 @@
 import React from "react";
 import LazyLoad from "react-lazyload";
 import Section from "./sub-comps/Section";
-import Banner from "./sub-comps/Banner";
 
 import RUNRHero from "../../assets/images/Case-Study-RUNR-App/RUNR-hero.png";
 import Circle1 from "../../assets/images/Case-Study-RUNR-App/Circle-1.png";
@@ -24,10 +23,14 @@ import FD3 from "../../assets/images/Case-Study-RUNR-App/Final-Design-3.png";
 import FD4 from "../../assets/images/Case-Study-RUNR-App/Final-Design-4.png";
 import FD5 from "../../assets/images/Case-Study-RUNR-App/Final-Design-5.png";
 import FD6 from "../../assets/images/Case-Study-RUNR-App/Final-Design-6.png";
-import { withTrail } from "../blocks/Trail";
+import { Trail, withTrail } from "../blocks/Trail";
 import CaseStudyPageWrapper from "./CaseStudyPageWrapper";
 
-const LazyLoadWithTrail = withTrail(LazyLoad);
+const LazyLoadWithTrail = props => (
+  <LazyLoad {...props} offset={-100}>
+    <Trail>{props.children}</Trail>
+  </LazyLoad>
+);
 
 export default function RunrPage(props) {
   return (
@@ -39,13 +42,14 @@ export default function RunrPage(props) {
         </h2>
       }
       bottomBannerLink={"/casestudy/gro"}
-      jumboClassName={"bg-runr-blue"}
-      jumboHeroImage={RUNRHero}
-      appImageComp={<img src={RUNRLogo} alt="" />}
-      jumboTitle={"RUNR"}
-      jumboDescription={
-        "RUNR is a social health tracking app designed to motivate users to get active while staying social and tracking their progress."
-      }>
+      jumboProps={{
+        className: "bg-runr-blue",
+        heroImage: RUNRHero,
+        appImageComp: <img src={RUNRLogo} alt="" />,
+        title: "RUNR",
+        description:
+          "RUNR is a social health tracking app designed to motivate users to get active while staying social and tracking their progress."
+      }}>
       <section className="container pt-5">
         <div className="row pb-5">
           <div className="col-md-5 mx-auto">
@@ -83,7 +87,7 @@ export default function RunrPage(props) {
           </div>
         </div>
 
-        <div className="row pb-5">
+        <div className="row pb-md-5">
           <div className="row col-md-5 p-0 mx-auto">
             <div className="col-12 mx-auto d-flex text-left flex-column justify-content-center align-items-start">
               <h2 className="">PROJECT GOALS</h2>
@@ -138,17 +142,19 @@ export default function RunrPage(props) {
             </div>
           </div>
 
-          <div className="col-md-5 mx-auto ">
+          <div className="col-md-5 mx-auto d-none d-md-block">
             <div className="cs-img__block">
-              <img src={Circle1} id="circle1" className="circle" alt="" />
-              <img src={Circle2} id="circle2" className="circle" alt="" />
-              <img src={Circle3} id="circle3" className="circle" alt="" />
+              <LazyLoadWithTrail height={583} once>
+                <img src={Circle1} id="circle1" className="circle" alt="" />
+                <img src={Circle2} id="circle2" className="circle" alt="" />
+                <img src={Circle3} id="circle3" className="circle" alt="" />
+              </LazyLoadWithTrail>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="container text-dark my-lg">
+      <section className="container text-dark my-5 my-md-lg">
         <div className="row">
           <div className="col-sm-5 mx-auto">
             <blockquote className="blockquote text-right text-runr-blue text-size-large">
@@ -160,7 +166,7 @@ export default function RunrPage(props) {
             </blockquote>
           </div>
           <div className="col-sm-5 mx-auto">
-            <h1>RESEARCH</h1>
+            <h2>RESEARCH</h2>
             <h3>Secondary Research</h3>
             <p>
               The discover stage began by conducting a SWOT analysis to have a
@@ -174,7 +180,7 @@ export default function RunrPage(props) {
       <section className="container mb-lg">
         <div className="row">
           <div className="col-sm-5 mx-auto">
-            <h1>Interviews</h1>
+            <h2>Interviews</h2>
             <p>
               Three users were interviewed, all of whom were a good fit for this
               app based on the target audience:
@@ -190,18 +196,22 @@ export default function RunrPage(props) {
             </div>
           </div>
           <div className="col-sm-5 mx-auto">
-            <LazyLoadWithTrail once offset={100} height={280}>
-              <img src={UserStats} alt="" className="w-100" />
-            </LazyLoadWithTrail>
+            <LazyLoad once offset={-100} height={280}>
+              <Trail>
+                <img src={UserStats} alt="" className="w-100" />
+              </Trail>
+            </LazyLoad>
           </div>
         </div>
       </section>
 
       <section className="container mb-lg">
         <div className="col-md-11 mx-auto">
-          <LazyLoadWithTrail once offset={100} height={1225}>
-            <img src={AffinityMap} alt="" className="w-100" />
-          </LazyLoadWithTrail>
+          <LazyLoad once offset={-100} height={1225}>
+            <Trail>
+              <img src={AffinityMap} alt="" className="w-100" />
+            </Trail>
+          </LazyLoad>
         </div>
       </section>
 
@@ -209,7 +219,7 @@ export default function RunrPage(props) {
         <div className="row">
           <div className="col-md-11 mx-auto mb-5">
             <h5>INTERVIEWS + AFFINITY MAPS AND FINDINGS</h5>
-            <h1>Participants Want to Share Progress and Achievements</h1>
+            <h2>Participants Want to Share Progress and Achievements</h2>
             <div
               className="border-left border-runr-blue pl-4"
               style={{ borderLeftWidth: "3px" }}>
@@ -296,23 +306,29 @@ export default function RunrPage(props) {
 
           <div className="col-md-9 mx-auto mb-5">
             <h6 className="mb-3">ROUGH SKETCHES</h6>
-            <LazyLoadWithTrail once offset={100} height={476}>
-              <img src={Sketches} alt="" className="w-100" />
-            </LazyLoadWithTrail>
+            <LazyLoad once offset={100} height={476}>
+              <Trail>
+                <img src={Sketches} alt="" className="w-100" />
+              </Trail>
+            </LazyLoad>
           </div>
 
           <div className="col-md-9 mx-auto">
             <h6 className="mb-3">LOW-FIDELITY MOCKUPS</h6>
-            <LazyLoadWithTrail once offset={100} height={647}>
-              <img src={LowFidelity} alt="" className="w-100" />
-            </LazyLoadWithTrail>
+            <LazyLoad once offset={100} height={647}>
+              <Trail>
+                <img src={LowFidelity} alt="" className="w-100" />
+              </Trail>
+            </LazyLoad>
           </div>
 
           <div className="col-md-9 mx-auto">
             <h6 className="mb-3">HIGH-FIDELITY MOCKUPS</h6>
-            <LazyLoadWithTrail once offset={100} height={647}>
-              <img src={HighFidelity} alt="" className="w-100" />
-            </LazyLoadWithTrail>
+            <LazyLoad once offset={100} height={647}>
+              <Trail>
+                <img src={HighFidelity} alt="" className="w-100" />
+              </Trail>
+            </LazyLoad>
           </div>
         </div>
       </section>

@@ -15,16 +15,14 @@
 @import "./scss/loading";
 @import "./scss/timeline";
 @import "./scss/about";
+@import "./scss/icons";
 
 html {
   scroll-behavior: smooth !important;
 }
 
 body {
-  // background: $light-grey;
-  font-family: "Lato", sans-serif;
-  font-size: 16px;
-  color: #0e0e0e;
+  font-size: 18px;
 }
 
 h1,
@@ -42,10 +40,12 @@ h2 {
   font-weight: 600;
 }
 
+h3,
 h4,
 h5,
 h6 {
   letter-spacing: 0.2px;
+  line-height: 32px;
 }
 
 h1 {

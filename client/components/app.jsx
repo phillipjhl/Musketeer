@@ -22,6 +22,7 @@ const ContactPage = lazy(() => import("./pages/ContactPage"));
 const GROPage = lazy(() => import("./pages/GROPage"));
 const RunrPage = lazy(() => import("./pages/RunrPage"));
 const DesignSystem = lazy(() => import("./pages/DesignSystem"));
+const GroceryApp = lazy(() => import("./pages/GroceryDeliveryApp"))
 // export const UserContext = React.createContext("guest");
 import FourZeroFour from "./pages/FourZeroFour";
 
@@ -31,6 +32,7 @@ const GROPageHOC = withTitle(GROPage);
 const RunrPageHOC = withTitle(RunrPage);
 const DesignSystemHOC = withTitle(DesignSystem);
 const ContactHOC = withTitle(ContactPage);
+const GroceryAppHOC = withTitle(GroceryApp);
 
 function App(props) {
   const [USER, setUser] = useState("guest");
@@ -89,6 +91,12 @@ function App(props) {
                   path="/casestudy/designstudy"
                   render={props => (
                     <DesignSystemHOC title="Design System - GRO" {...props} />
+                  )}
+                />
+                <Route
+                  path="/casestudy/groceryapp"
+                  render={props => (
+                    <GroceryAppHOC title="Grocery Delivery App" {...props} />
                   )}
                 />
                 {/* <Route path="/blogs/:id" component={BlogFull} /> */}

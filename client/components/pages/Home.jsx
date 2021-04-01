@@ -21,7 +21,7 @@ export default function Home(props) {
       description:
         "Researched and designed a shopping list feature to improve user experience for ordering grocery delivery.",
       ctaText: "See Solution",
-      ctaLink: "/casestudy/shipt",
+      ctaLink: "/casestudy/groceryapp",
       imageUrl: `${GRCM}`,
       className: "bg-dark text-white",
       animate: true,

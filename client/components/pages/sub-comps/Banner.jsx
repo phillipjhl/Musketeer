@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Resume from "../../../assets/documents/KatrinaLanglandResume.pdf";
+import Resume from "../../../assets/documents/Katrina-Langland-Resume-01.pdf";
 
 export default function Banner(props) {
   return (

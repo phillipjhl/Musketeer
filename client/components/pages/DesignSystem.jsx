@@ -12,24 +12,29 @@ import Atomic from "../../assets/images/Design-System/Atomic-Design.png";
 import { withTrail } from "../blocks/Trail";
 import CaseStudyPageWrapper from "./CaseStudyPageWrapper";
 
-const LazyLoadWithTrail = withTrail(LazyLoad);
+const LazyLoadWithTrail = props => (
+  <LazyLoad {...props} offset={-100}>
+    <Trail>{props.children}</Trail>
+  </LazyLoad>
+);
 
 export default function DesignSystemPage(props) {
   return (
     <CaseStudyPageWrapper
       className="casestudy--runr"
-      jumboClassName={"bg-light-grey text-dark"}
-      jumboHeroImage={DSHero}
-      jumboImageStyle={{}}
-      jumboTitleComp={
-        <h1 className="">
-          GRO APP <br />
-          DESIGN SYSTEM
-        </h1>
-      }
-      jumboDescription={
-        "While designing GRO, an innovative gardening app, I was presented with the challenge of creating an entire design system that served the users and aligned with the brand."
-      }>
+      jumboProps={{
+        className: "bg-light-grey text-dark",
+        heroImage: DSHero,
+        imageStyle: {},
+        titleComp: (
+          <h1 className="">
+            GRO APP <br />
+            DESIGN SYSTEM
+          </h1>
+        ),
+        description:
+          "While designing GRO, an innovative gardening app, I was presented with the challenge of creating an entire design system that served the users and aligned with the brand."
+      }}>
       <section className="container pt-5">
         <div className="row my-lg">
           <div className="col-md-5 mx-auto">
