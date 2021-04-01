@@ -39,7 +39,11 @@ import { withTrail } from "../blocks/Trail";
 
 import CaseStudyPageWrapper from "./CaseStudyPageWrapper";
 
-const LoadWithTrail = withTrail(LazyLoad);
+const LoadWithTrail = props => (
+  <LazyLoad {...props} offset={-100}>
+    <Trail>{props.children}</Trail>
+  </LazyLoad>
+);
 
 export default function GROPage(props) {
   return (
@@ -128,7 +132,7 @@ export default function GROPage(props) {
             </div>
           </div>
 
-          <div className="col-md-6 mb-5 mb-md-0">
+          <div className="col-md-6 mb-5 mb-md-0 d-none d-md-block">
             <div className="cs-img__block">
               <LoadWithTrail offset={-40} once>
                 <img src={Circle1} id="circle1" className="circle" alt="" />

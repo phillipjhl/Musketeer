@@ -15,19 +15,21 @@ export default function CaseStudyPageWrapper(props) {
 
       {props.children}
 
-      <Banner
-        cta={"VIEW CASE STUDY"}
-        subtitle={"WANT TO SEE MORE?"}
-        message={
-          props.bottomBannerMessage || (
-            <h2>
-              Check out the <br /> GRO App Case Study
-            </h2>
-          )
-        }
-        link={props.bottomBannerLink || "/casestudy/gro"}
-        target={"_self"}
-      />
+      {props.bottomBannerLink && props.bottomBannerMessage && (
+        <Banner
+          cta={"VIEW CASE STUDY"}
+          subtitle={"WANT TO SEE MORE?"}
+          message={
+            props.bottomBannerMessage || (
+              <h2>
+                Check out the <br /> GRO App Case Study
+              </h2>
+            )
+          }
+          link={props.bottomBannerLink || "/casestudy/gro"}
+          target={"_self"}
+        />
+      )}
     </div>
   );
 }

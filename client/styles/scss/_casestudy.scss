@@ -5,12 +5,15 @@
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
+    height: "758px";
   }
 
   @media (max-width: 768px) {
     .casestudy-top {
       background-image: none !important;
       margin: 1rem 0;
+      height: auto;
+      max-height: 768px;
     }
   }
 

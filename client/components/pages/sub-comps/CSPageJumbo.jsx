@@ -14,12 +14,11 @@ export default function CSPageJumbo(props) {
   return (
     <div
       style={{
-        height: "758px",
         backgroundImage: `url(${props.heroImage})`
       }}
       className={`${props.className} d-flex flex-column casestudy-top`}>
       <div className="casestudy-top-banner flex-grow-1 pb-5 d-flex flex-column justify-content-end align-items-start container">
-        <div className="col-sm-5 mr-auto casestudy-top-banner__block">
+        <div className="col-sm-5 mr-auto casestudy-top-banner__block py-4">
           <Trail>
             <div
               className="GRO-logo d-flex flex-column align-items-start"
@@ -39,6 +38,7 @@ export function CSPageJumboV2(props) {
   return (
     <div
       style={{
+        height: "auto",
         minHeight: "758px",
         backgroundImage: `url(${props.heroImage})`,
         backgroundPosition: "90% 100%",
@@ -46,8 +46,11 @@ export function CSPageJumboV2(props) {
       }}
       className={`${props.className} d-flex flex-column casestudy-top`}>
       <div className="casestudy-top-banner flex-grow-1 pb-5 d-flex flex-column justify-content-center align-items-start container">
-        <div className="col-sm-7 mr-auto casestudy-top-banner__block">
+        <div className="col-sm-7 mr-auto casestudy-top-banner__block py-4">
           <Trail>
+            <span className="text-uppercase font-size-sm">
+              {props.subtitle}
+            </span>
             <h1>{props.title}</h1>
             {props.children}
           </Trail>

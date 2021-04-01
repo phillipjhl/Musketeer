@@ -12,7 +12,11 @@ import Atomic from "../../assets/images/Design-System/Atomic-Design.png";
 import { withTrail } from "../blocks/Trail";
 import CaseStudyPageWrapper from "./CaseStudyPageWrapper";
 
-const LazyLoadWithTrail = withTrail(LazyLoad);
+const LazyLoadWithTrail = props => (
+  <LazyLoad {...props} offset={-100}>
+    <Trail>{props.children}</Trail>
+  </LazyLoad>
+);
 
 export default function DesignSystemPage(props) {
   return (

@@ -17,9 +17,17 @@ import AddingItems from "../../assets/images/CS-GroceryApp/Adding-Items.png";
 import SelectItems from "../../assets/images/CS-GroceryApp/Select-Items.png";
 import SelectStore from "../../assets/images/CS-GroceryApp/Select-Store.png";
 
+import AddingItemsFinal from "../../assets/images/CS-GroceryApp/Final-Solution-Adding-Items.png";
+import SelectItemsFinal from "../../assets/images/CS-GroceryApp/Final-Solution-Selecting-Items.png";
+import SelectStoreFinal from "../../assets/images/CS-GroceryApp/Final-Solution-Selecting-Store.png";
+
+import GROM from "../../assets/images/Homepage/GRO-Mockup-2.png";
+
+
 import { withTrail } from "../blocks/Trail";
 
 import CaseStudyPageWrapper from "./CaseStudyPageWrapper";
+import Container from "./sub-comps/Container";
 
 const LoadWithTrail = withTrail(LazyLoad);
 
@@ -46,11 +54,27 @@ const BannerV2 = props => {
 };
 
 export default function GroceryDeliveryApp(props) {
+  const BottomBannerProps = {
+    subtitle: "UX/UI DESIGN",
+    title: "GRO App",
+    description: "Led the research and design for an innovative gardening app.",
+    ctaText: "See solution",
+    ctaLink: "/casestudy/gro",
+    imageUrl: `${GROM}`,
+    className: "",
+    animate: true,
+    disabled: false,
+    style: {
+      // backgroundImage: `url("${GRO_APP_PNG}") no-repeat`
+    }
+  };
+
   return (
     <CaseStudyPageWrapper
       jumboProps={{
         version: 2,
-        title: "Grocery Delivery Shopping List Concept",
+        subtitle: "Grocery Delivery App",
+        title: "Shopping List Concept",
         className: "bg-gda-green",
         heroImage: HeroImg,
         children: <BannerV2 />
@@ -255,8 +279,21 @@ export default function GroceryDeliveryApp(props) {
       </section>
 
       <section className="container mb-lg">
-        <div className="col-md-11 mx-auto mb-4">
+        <div className="col-md-11 mx-auto mb-lg">
           <h2>DESIGN PROCESS</h2>
+
+          <p>
+            Throughout the entire design process, I was aware of the importance
+            of following an existing product’s design system. I referred to{" "}
+            <a
+              href="https://shipt.tech/the-genesis-e2e2ce4d05a"
+              target="_blank">
+              this medium article
+            </a>{" "}
+            written by Sangwoo Kim, a product designer at Shipt, along with
+            screenshots of the app to create a feature that was consistent to
+            the existing product.
+          </p>
         </div>
 
         <div className="col-md-11 mx-auto row">
@@ -386,6 +423,69 @@ export default function GroceryDeliveryApp(props) {
           <LoadWithTrail once offset={100} height={813}>
             <img src={SelectItems} alt="" className="w-100" />
           </LoadWithTrail>
+        </div>
+      </section>
+
+      <section className="container mb-5 mb-md-lg">
+        <div className="col-md-11 mx-auto">
+          <h2>FINAL SOLUTION</h2>
+
+          <p>
+            As part of my process, I detailed several flows and weighed the pros
+            and cons of each. The biggest takeaway from designing for this
+            challenge was that{" "}
+            <b>
+              the simplest solutions often provides the most intuitive user
+              experience.
+            </b>
+          </p>
+        </div>
+
+        <div className="col-md-11 mx-auto mb-5">
+          <h3>Creating List</h3>
+          <LoadWithTrail once offset={100} height={518}>
+            <img src={AddingItemsFinal} alt="" className="w-100" />
+          </LoadWithTrail>
+        </div>
+
+        <div className="col-md-11 mx-auto mb-5">
+          <h3>Selecting Store</h3>
+          <LoadWithTrail once offset={100} height={518}>
+            <img src={SelectStoreFinal} alt="" className="" style={{maxHeight: "518px"}} />
+          </LoadWithTrail>
+        </div>
+
+        <div className="col-md-11 mx-auto mb-5">
+          <h3>Specifing Items</h3>
+          <LoadWithTrail once offset={100} height={518}>
+            <img src={SelectItemsFinal} alt="" className="w-100" />
+          </LoadWithTrail>
+        </div>
+      </section>
+
+      <section className="container mb-lg">
+        <div className="col-md-11 mx-auto">
+          <h2>RETROSPECTIVE</h2>
+          <div>
+            <p>
+              All users who participated in the final round of user testing said
+              that they would use and enjoy this shopping list feature. Users
+              reported the feature to reduce time spent placing a grocery
+              delivery and 40% of users said they appreciated being able to
+              compare the number of deals they would receive at each store.
+              Throughout the span of this project, I was tasked with presenting
+              my work each week. During this time, I received constructive
+              feedback as my design decisions were challenged. Not only did this
+              project grow my design thinking skills, but allowed me to practice
+              articulating and defending my design decisions. ​
+            </p>
+            <p>
+              If you want to hear more about this project, feel free to{" "}
+              <a href="/contact" role="link" className="">
+                contact me.
+              </a>
+            </p>
+          </div>
         </div>
       </section>
     </CaseStudyPageWrapper>
