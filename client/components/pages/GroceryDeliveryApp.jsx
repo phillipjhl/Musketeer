@@ -23,10 +23,9 @@ import SelectStoreFinal from "../../assets/images/CS-GroceryApp/Final-Solution-S
 
 import GROM from "../../assets/images/Homepage/GRO-Mockup-2.png";
 
-import { Trail, withTrail } from "../blocks/Trail";
+import { Trail } from "../blocks/Trail";
 
 import CaseStudyPageWrapper from "./CaseStudyPageWrapper";
-import Container from "./sub-comps/Container";
 
 const LoadWithTrail = props => (
   <LazyLoad {...props} offset={-40} once>
@@ -464,7 +463,7 @@ export default function GroceryDeliveryApp(props) {
             <img
               src={SelectStoreFinal}
               alt=""
-              className=""
+              className="img-fluid"
               style={{ maxHeight: "518px" }}
             />
           </LoadWithTrail>
