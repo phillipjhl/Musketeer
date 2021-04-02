@@ -26,15 +26,6 @@ body {
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Montserrat", sans-serif;
-}
-
-h1,
 h2 {
   line-height: 48px;
   font-weight: 600;
@@ -49,8 +40,7 @@ h6 {
 }
 
 h1 {
-  font-size: 56px;
-  line-height: 72px;
+  line-height: 4rem;
 }
 
 #root {

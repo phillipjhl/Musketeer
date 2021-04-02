@@ -12,7 +12,7 @@ export default function JumboTitleNew(props) {
         <p className="jumbotron-subtitle text-uppercase text-bold mb-4">
           {props.subtitleTop}
         </p>
-        <h1 className="font-weight-bold text-size-xlarge mb-md">
+        <h1 className="font-weight-bold mb-md">
           {props.title}
         </h1>
         <AnchorLink ctaText={props.ctaText} ctaLink={props.ctaLink} />
