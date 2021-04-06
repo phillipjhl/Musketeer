@@ -4,9 +4,7 @@
 
 Take a visit at https://www.katrinalangland.com
 
-![Image 1](</docs/www.katrinalangland.com_(Laptop).png>)
-
-![Image 2](/docs/katrinalangland-site-home.png)
+![Image 1](</docs/katrinalangland-site-home-v2.png>)
 
 Designed and Created using Figma by Katrina Langland.
 
