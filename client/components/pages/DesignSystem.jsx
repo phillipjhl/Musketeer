@@ -9,7 +9,7 @@ import Circle2 from "../../assets/images/Design-System/Google.png";
 import Circle3 from "../../assets/images/Design-System/Lyft.png";
 import Atomic from "../../assets/images/Design-System/Atomic-Design.png";
 
-import { withTrail } from "../blocks/Trail";
+import { Trail, withTrail } from "../blocks/Trail";
 import CaseStudyPageWrapper from "./CaseStudyPageWrapper";
 
 const LazyLoadWithTrail = props => (

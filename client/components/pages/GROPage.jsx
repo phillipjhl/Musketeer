@@ -35,7 +35,7 @@ import UT1 from "../../assets/images/Frame-38.png";
 import UT2 from "../../assets/images/Frame-39.png";
 import UT3 from "../../assets/images/Frame-40.png";
 import UT4 from "../../assets/images/Frame-41.png";
-import { withTrail } from "../blocks/Trail";
+import { Trail, withTrail } from "../blocks/Trail";
 
 import CaseStudyPageWrapper from "./CaseStudyPageWrapper";
 
