@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import AuthButton from "../../auth/authButton";
 import UserContext from "../../../services/context";
 import MessageBanner from "../../utilities/message";
-import Resume from "../../../assets/documents/Katrina-Langland-Resume-01.pdf";
+import Resume from "../../../assets/documents/Katrina-Langland-Resume.pdf";
 
 export function NavBarLink(props) {
   return (

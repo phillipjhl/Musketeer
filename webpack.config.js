@@ -3,18 +3,15 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserJSPlugin = require("terser-webpack-plugin");
-const CompressionPlugin = require('compression-webpack-plugin');
+const CompressionPlugin = require("compression-webpack-plugin");
 
 const devMode = process.env.NODE_ENV !== "production";
 
 const CLIENT_DEST = path.join(__dirname, "./build/public");
 
-const ASSET_PATH =
-  process.env.NODE_ENV === "production"
-    ? "/"
-    : "/public/";
+const ASSET_PATH = process.env.NODE_ENV === "production" ? "/" : "/public/";
 
-console.log(ASSET_PATH)
+console.log(ASSET_PATH);
 
 module.exports = {
   entry: ["@babel/polyfill", "./client/index.js", "bootstrap"],
@@ -25,8 +22,7 @@ module.exports = {
     publicPath: ASSET_PATH
   },
   mode: "development",
-  devtool:
-    process.env.NODE_ENV === "production" ? "source-map" : "inline-source-map",
+  devtool: process.env.NODE_ENV === "production" ? "source-map" : "inline-source-map",
   optimization: {
     minimizer: [new TerserJSPlugin({})],
     moduleIds: "hashed",
@@ -103,6 +99,16 @@ module.exports = {
             loader: "html-loader"
           }
         ]
+      },
+      {
+        test: /\.mp4$/,
+        use: {
+          loader: "file-loader",
+          options: {
+            attrs: [":src"],
+            outputPath: "assets"
+          }
+        }
       }
     ]
   },
@@ -118,7 +124,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: devMode ? "css/[name].css" : "css/[name].[contenthash].css",
       chunkFilename: devMode ? "css/[id].css" : "css/[id].[contenthash].css"
-    }),
+    })
     // new CompressionPlugin({
     //     filename: '[path][base].gz',
     //     algorithm: 'gzip',
