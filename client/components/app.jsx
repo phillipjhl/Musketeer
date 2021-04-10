@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import { checkLogin, getUser } from "../services/user";
 import { withTitle } from "./pages/hocs/withTitle";
 
+import GHLConcept from "../assets/images/shlconcept.png";
+
 import NavBar from "./pages/sub-comps/NavBar";
 // const BlogMain = lazy(() => import("./pages/BlogMain"));
 // const AdminEdit = lazy(() => import("./admin/AdminEdit"));
