@@ -26,7 +26,7 @@ export default function CaseStudyPageWrapper(props) {
               </h2>
             )
           }
-          link={props.bottomBannerLink || "/casestudy/gro"}
+          link={props.bottomBannerLink || "/gro"}
           target={"_self"}
         />
       )}

@@ -44,10 +44,10 @@ class NavBar extends Component {
         dropdown: {
           linksConfig: [
             { route: "/home", label: "Home" },
-            { route: "/casestudy/gro", label: "GRO" },
-            { route: "/casestudy/groceryapp", label: "Grocery App" },
-            { route: "/casestudy/runr", label: "RUNR" },
-            { route: "/casestudy/designstudy", label: "Design Study" }
+            { route: "/gro", label: "GRO" },
+            { route: "/groceryapp", label: "Grocery App" },
+            { route: "/runr", label: "RUNR" },
+            { route: "/designstudy", label: "Design Study" }
           ]
         }
       },

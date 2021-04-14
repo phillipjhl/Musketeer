@@ -41,7 +41,7 @@ export default function RunrPage(props) {
           Check out the <br /> GRO App Case Study
         </h2>
       }
-      bottomBannerLink={"/casestudy/gro"}
+      bottomBannerLink={"/gro"}
       jumboProps={{
         className: "bg-runr-blue",
         heroImage: RUNRHero,

@@ -61,7 +61,7 @@ export default function GROPage(props) {
           Check out the <br /> RUNR App Case Study
         </h2>
       }
-      bottomBannerLink={"/casestudy/runr"}>
+      bottomBannerLink={"/runr"}>
       <section className="container pt-5">
         <div className="row my-lg">
           <div className="col-md-5 mx-auto">

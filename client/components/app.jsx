@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import { checkLogin, getUser } from "../services/user";
 import { withTitle } from "./pages/hocs/withTitle";
 
-import GHLConcept from "../assets/images/shlconcept.png";
+import MetaPhoto from "../assets/images/Homepage/Meta-Photo.png";
 
 import NavBar from "./pages/sub-comps/NavBar";
 // const BlogMain = lazy(() => import("./pages/BlogMain"));
@@ -78,25 +78,25 @@ function App(props) {
                   render={props => <AboutHOC title="About" {...props} />}
                 />
                 <Route
-                  path="/casestudy/runr"
+                  path={["/runr", "/casestudy/runr"]}
                   render={props => (
                     <RunrPageHOC title="Case Study - RUNR" {...props} />
                   )}
                 />
                 <Route
-                  path="/casestudy/gro"
+                  path={["/gro", "/casestudy/gro"]}
                   render={props => (
                     <GROPageHOC title="Case Study - GRO" {...props} />
                   )}
                 />
                 <Route
-                  path="/casestudy/designstudy"
+                  path={["/designstudy", "/casestudy/designstudy"]}
                   render={props => (
                     <DesignSystemHOC title="Design System - GRO" {...props} />
                   )}
                 />
                 <Route
-                  path="/casestudy/groceryapp"
+                  path={["/groceryapp", "/casestudy/groceryapp"]}
                   render={props => (
                     <GroceryAppHOC title="Grocery Delivery App" {...props} />
                   )}

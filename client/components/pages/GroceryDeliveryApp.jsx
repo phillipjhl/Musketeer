@@ -63,7 +63,7 @@ export default function GroceryDeliveryApp(props) {
     title: "GRO App",
     description: "Led the research and design for an innovative gardening app.",
     ctaText: "See solution",
-    ctaLink: "/casestudy/gro",
+    ctaLink: "/gro",
     imageUrl: `${GROM}`,
     className: "",
     animate: true,
@@ -88,7 +88,7 @@ export default function GroceryDeliveryApp(props) {
           Check out the <br /> GRO App Case Study
         </h2>
       }
-      bottomBannerLink={"/casestudy/gro"}>
+      bottomBannerLink={"/gro"}>
       <section className="container pt-5">
         <div className="row my-3 my-md-lg">
           <div className="row col-md-6 mb-5 mb-md-0 p-0">

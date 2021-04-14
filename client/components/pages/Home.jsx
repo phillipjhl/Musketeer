@@ -21,7 +21,7 @@ export default function Home(props) {
       description:
         "Researched and designed a shopping list feature to improve user experience for ordering grocery delivery.",
       ctaText: "See Solution",
-      ctaLink: "/casestudy/groceryapp",
+      ctaLink: "/groceryapp",
       imageUrl: `${GRCM}`,
       className: "bg-dark text-white",
       animate: true,
@@ -36,7 +36,7 @@ export default function Home(props) {
       description:
         "Led the research and design for an innovative gardening app.",
       ctaText: "See solution",
-      ctaLink: "/casestudy/gro",
+      ctaLink: "/gro",
       imageUrl: `${GROM}`,
       className: "",
       animate: true,
@@ -51,7 +51,7 @@ export default function Home(props) {
       description:
         "UX Research and Design to increase RUNR fitness app user engagement.",
       ctaText: "See solution",
-      ctaLink: "/casestudy/runr",
+      ctaLink: "/runr",
       imageUrl: `${RUNRM}`,
       className: "bg-dark text-white",
       animate: true,
@@ -65,7 +65,7 @@ export default function Home(props) {
       title: "Design System",
       description: "Established a design system for a mobile app.",
       ctaText: "See solution",
-      ctaLink: "/casestudy/designstudy",
+      ctaLink: "/designstudy",
       imageUrl: `${DSM}`,
       className: "--ds",
       animate: true,

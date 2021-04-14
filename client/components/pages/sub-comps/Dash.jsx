@@ -58,7 +58,7 @@ export default function Dash(props) {
       description:
         "Led the research and design for an innovative gardening app.",
       cta: "SEE CASE STUDY",
-      ctaLink: "/casestudy/gro",
+      ctaLink: "/gro",
       imageUrl: `${GRO_APP_PNG}`,
       className: "--gro",
       animate: true,
@@ -72,7 +72,7 @@ export default function Dash(props) {
       title: "Design System",
       description: "Established a design system for a mobile app.",
       cta: "SEE CASE STUDY",
-      ctaLink: "/casestudy/designstudy",
+      ctaLink: "/designstudy",
       imageUrl: `${DSCard}`,
       className: "--ds",
       animate: true,
@@ -87,7 +87,7 @@ export default function Dash(props) {
       description:
         "UX Research and Design to increase RUNR fitness app user engagement.",
       cta: "SEE CASE STUDY",
-      ctaLink: "/casestudy/runr",
+      ctaLink: "/runr",
       imageUrl: `${RUNRCard}`,
       className: "--runr",
       animate: true,
