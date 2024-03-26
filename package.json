@@ -48,7 +48,7 @@
         "bootstrap-icons": "^1.0.0",
         "compression": "^1.7.4",
         "esm": "^3.2.25",
-        "express": "^4.16.3",
+        "express": "^4.19.2",
         "file-loader": "^2.0.0",
         "isomorphic-fetch": "^3.0.0",
         "jquery": "^3.5.1",
