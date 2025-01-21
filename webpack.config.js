@@ -22,6 +22,10 @@ module.exports = {
     publicPath: ASSET_PATH
   },
   mode: "development",
+  devServer: {
+    contentBase: CLIENT_DEST,
+	publicPath: ASSET_PATH
+  },
   devtool: process.env.NODE_ENV === "production" ? "source-map" : "inline-source-map",
   optimization: {
     minimizer: [new TerserJSPlugin({})],
