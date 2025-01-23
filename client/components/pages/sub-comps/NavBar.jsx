@@ -45,6 +45,8 @@ class NavBar extends Component {
           linksConfig: [
             { route: "/home", label: "Home" },
             { route: "/gro", label: "GRO" },
+            { route: "/cowello", label: "CoWello" },
+            { route: "/listedkit", label: "ListedKit" },
             { route: "/groceryapp", label: "Grocery App" },
             { route: "/runr", label: "RUNR" },
             { route: "/designstudy", label: "Design Study" }
