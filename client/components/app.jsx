@@ -1,21 +1,13 @@
 import React, { lazy, useEffect, Fragment, Suspense, useState } from "react"
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom"
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import { checkLogin, getUser } from "../services/user"
 import { withTitle } from "./pages/hocs/withTitle"
 
-import MetaPhoto from "../assets/images/Homepage/Meta-Photo.png"
 
 import NavBar from "./pages/sub-comps/NavBar"
-// const BlogMain = lazy(() => import("./pages/BlogMain"));
-// const AdminEdit = lazy(() => import("./admin/AdminEdit"));
-// const AdminPage = lazy(() => import("./admin/AdminPage"));
-// const BlogFull = lazy(() => import("./BlogFull"));
-import PrivateRoute from "./auth/privateRoute"
 const Login = lazy(() => import("./auth/login"))
 const Logout = lazy(() => import("./auth/logout"))
-// import Donate from "./donate";
 import UserContext from "../services/context"
-// const Home = lazy(() => import("./pages/Home"));
 import Home from "./pages/Home"
 const AboutPage = lazy(() => import("./pages/AboutPage"))
 import Footer from "./pages/sub-comps/Footer"
@@ -26,7 +18,7 @@ const RunrPage = lazy(() => import("./pages/RunrPage"))
 const DesignSystem = lazy(() => import("./pages/DesignSystem"))
 const GroceryApp = lazy(() => import("./pages/GroceryDeliveryApp"))
 const ListedKit = lazy(() => import("./pages/ListedKit"))
-// export const UserContext = React.createContext("guest");
+const CoWello = lazy(() => import("./pages/CoWello"))
 import FourZeroFour from "./pages/FourZeroFour"
 
 const HomeHOC = withTitle(Home)
@@ -36,7 +28,7 @@ const RunrPageHOC = withTitle(RunrPage)
 const DesignSystemHOC = withTitle(DesignSystem)
 const ContactHOC = withTitle(ContactPage)
 const GroceryAppHOC = withTitle(GroceryApp)
-// const CoWelloHOC = withTitle(CoWello)
+const CoWelloHOC = withTitle(CoWello)
 const ListedKitHOC = withTitle(ListedKit)
 
 function App(props) {
@@ -145,8 +137,6 @@ function App(props) {
                                         />
                                     )}
                                 />
-                                {/* <Route path="/blogs/:id" component={BlogFull} /> */}
-                                {/* <Route path="/donate" component={Donate} /> */}
                                 <Route
                                     path="/contact"
                                     render={(props) => (
@@ -156,14 +146,6 @@ function App(props) {
                                         />
                                     )}
                                 />
-                                {/* <Route path="/blogs" component={BlogMain} /> */}
-                                {/* <PrivateRoute path="/admin" component={AdminPage} />
-                  <PrivateRoute path="/admin/*" component={AdminPage} /> */}
-                                {/* <PrivateRoute
-                    exact
-                    path="/blog/:id/edit"
-                    component={AdminEdit}
-                  /> */}
                                 <Route component={FourZeroFour} />
                             </Switch>
                         </Suspense>

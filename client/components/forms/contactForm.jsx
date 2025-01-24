@@ -91,7 +91,7 @@ class ContactForm extends Component {
               "There was an error submitting your information. Please try again later or email me directly!",
             formClass: "needs-validation"
           });
-          console.log(err);
+          console.error(err);
         });
     } else {
       this.setState({

@@ -26,7 +26,7 @@ function Jumbotron(props) {
                     title={
                         <span>
                             Product designer with a passion for crafting
-                            impactful, delightful experiences.
+                            impactful, <span className="hover-underline">delightful</span> experiences.
                         </span>
                     }
                 ></TitleComp>

@@ -8,12 +8,12 @@ import JumboTitleNew from "./sub-comps/JumboTitleNew"
 import Container from "./sub-comps/Container"
 
 // Images
-import DSM from "../../assets/images/Homepage/Design-System-Mockup.png"
+// import DSM from "../../assets/images/Homepage/Design-System-Mockup.png"
 import GROM from "../../assets/images/Homepage/GRO-Mockup-2.png"
-import RUNRM from "../../assets/images/Homepage/RUNR-Mockup.png"
+// import RUNRM from "../../assets/images/Homepage/RUNR-Mockup.png"
 import GRCM from "../../assets/images/Homepage/Grocery-Mockup.png"
 import LKM from "../../assets/images/listedkit/ListedKit-Cover.png"
-import COM from "../../assets/images/cowello/CoWelloCover.png"
+import COM from "../../assets/images/cowello/CoWello-Cover.png"
 
 export default function Home(props) {
     const sectionConfigs = [
