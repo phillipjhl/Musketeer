@@ -1,7 +1,5 @@
 import React from "react"
 import LazyLoad from "react-lazyload"
-import Section from "./sub-comps/Section"
-// import Banner from "./sub-comps/Banner";
 
 import HeroImg from "../../assets/images/listedkit/ListedKit-Cover.png"
 import LKLogo from "../../assets/images/listedkit/ListedKit_Logo.png"
@@ -24,7 +22,7 @@ import ResultsStat2 from "../../assets/images/listedkit/Results-Stat-2.png"
 
 import LessonsLearned from "../../assets/images/listedkit/Lessons-Learned.png"
 
-import { Trail, withTrail } from "../blocks/Trail"
+import { Trail } from "../blocks/Trail"
 
 import CaseStudyPageWrapper from "./CaseStudyPageWrapper"
 
@@ -42,7 +40,7 @@ export default function ListedKit(props) {
                 className: "bg-listed-kit-blue",
                 heroImage: null,
                 logo: LKLogo,
-                logoWidth: "315px",
+                logoWidth: "250px",
                 imageClassName: "LK__header",
                 title: "Reimagining Real Estate Transactions with AI Document Intelligence",
                 children: <p>Prepared by Katrina Langland</p>,
@@ -56,7 +54,7 @@ export default function ListedKit(props) {
         >
             <section className="container pt-5">
                 <LoadWithTrail offset={-40} once>
-                    <img src={HeroImg} alt="" />
+                    <img src={HeroImg} alt="" className="w-100" />
                 </LoadWithTrail>
             </section>
 
@@ -66,14 +64,10 @@ export default function ListedKit(props) {
                         <h2>BACKGROUND</h2>
                         <div>
                             <p>
-                                The timely tasks required to have an adundant
-                                and healthy garden can seem endless. Many
-                                gardeners struggle to know what all they need to
-                                do in order to keep their plants from dying. Not
-                                to mention, traditional gardening methods, such
-                                as garden center plant tags, left a lot of
-                                questions unanswered so that caring for plants
-                                felt like a guessing game.
+                                ListedKit's AI Contract Reader was developed to
+                                address a time-consuming pain point among real
+                                estate Transaction Coordinators (TCs): manual
+                                data entry.
                             </p>
                             <p className="text-bold">
                                 By implementing a machine learning model that
@@ -116,11 +110,8 @@ export default function ListedKit(props) {
                         <div className="col-md-11 mx-auto mb-5 mb-md-0 d-flex text-left flex-column justify-content-center align-items-start">
                             <h2 className="">PROBLEM</h2>
                             <div>
-                                Gardeners struggled to keep their plants alive
-                                due to the absence of tools that made plant
-                                information easy to understand and refer back
-                                to. Transaction Coordinators spend an average of
-                                45 minutes reviewing and entering data from real
+                                Transaction Coordinators spend an average of 45
+                                minutes reviewing and entering data from real
                                 estate contracts to process new transactions.
                                 They wanted a solution that could:
                                 <ul>
@@ -142,13 +133,11 @@ export default function ListedKit(props) {
                             <h2 className="">SOLUTION</h2>
                             <div>
                                 <p>
-                                    A mobile app that helps users easily create
-                                    a garden maintenance plan for their
-                                    garden.We recognized a significant
-                                    opportunity to use AI/ML capabilities to
-                                    read and extract key details from contracts.
-                                    This feature reduced time spent on data
-                                    entry by approximately 59%.
+                                    We recognized a significant opportunity to
+                                    use AI/ML capabilities to read and extract
+                                    key details from contracts. This feature
+                                    reduced time spent on data entry by
+                                    approximately 59%.
                                 </p>
                             </div>
                         </div>
@@ -183,7 +172,7 @@ export default function ListedKit(props) {
 
             <section className="container pt-5 d-flex justify-content-center">
                 <LoadWithTrail offset={-40} once>
-                    <img src={UserStoryMapping} alt="" />
+                    <img src={UserStoryMapping} alt="" className="w-100"/>
                 </LoadWithTrail>
             </section>
 
@@ -411,8 +400,7 @@ export default function ListedKit(props) {
                     <div className="col-md-11 mx-auto mb-5">
                         <h3>
                             Challenge #2: Creating an Enjoyable and Reliable
-                            Review ProcessChallenge #2: Designing for a 2-Minute
-                            AI Processing Time
+                            Review Process
                         </h3>
                         <p>
                             TCs needed a simple way to verify the AI's extracted

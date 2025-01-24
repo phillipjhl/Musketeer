@@ -37,7 +37,7 @@ export default function CoWello(props) {
                 className: "bg-cowello-green",
                 heroImage: null,
                 logo: CoWelloLogo,
-                logoWidth: "315px",
+                logoWidth: "250px",
                 imageClassName: "LK__header",
                 title: "Revamping Onboarding to Increase User Activation",
                 children: <p>Prepared by Katrina Langland</p>,
@@ -51,7 +51,7 @@ export default function CoWello(props) {
         >
             <section className="container pt-5">
                 <LoadWithTrail offset={-40} once>
-                    <img src={HeroImg} alt="" class="w-100" />
+                    <img src={HeroImg} alt="" className="w-100" />
                 </LoadWithTrail>
             </section>
 
