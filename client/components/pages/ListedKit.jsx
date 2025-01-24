@@ -111,7 +111,7 @@ export default function ListedKit(props) {
                     </div>
                 </div>
 
-                <div className="row my-lg">
+                <div className="row my-lg bg-lk-blue-grey py-5">
                     <div className="row col-md-6 mb-5 mb-md-0 p-0">
                         <div className="col-md-11 mx-auto mb-5 mb-md-0 d-flex text-left flex-column justify-content-center align-items-start">
                             <h2 className="">PROBLEM</h2>
@@ -181,7 +181,7 @@ export default function ListedKit(props) {
                 </div>
             </section>
 
-            <section className="container pt-5">
+            <section className="container pt-5 d-flex justify-content-center">
                 <LoadWithTrail offset={-40} once>
                     <img src={UserStoryMapping} alt="" />
                 </LoadWithTrail>
@@ -202,7 +202,7 @@ export default function ListedKit(props) {
 
             <section className="container pt-5">
                 <div className="row">
-                    <div className="col-md-11 mx-auto mb-5 row">
+                    <div className="col-md-11 mx-auto mb-5 row p-0">
                         <div className="col-12 col-md-6 mx-auto">
                             <h3>Discovery Interviews</h3>
                             <p>
@@ -239,7 +239,7 @@ export default function ListedKit(props) {
                         </div>
                     </div>
 
-                    <div className="col-md-11 mx-auto mb-5 row">
+                    <div className="col-md-11 mx-auto mb-5 row p-0">
                         <div className="col-12 col-md-6 mx-auto">
                             <h3>Usability Testing</h3>
                             <p>
