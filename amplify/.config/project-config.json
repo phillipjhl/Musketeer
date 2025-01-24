@@ -2,8 +2,8 @@
   "providers": [
     "awscloudformation"
   ],
-  "projectName": "Katrina's Portfolio",
-  "version": "3.0",
+  "projectName": "KatrinasPortfolio",
+  "version": "3.1",
   "frontend": "javascript",
   "javascript": {
     "framework": "react",

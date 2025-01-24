@@ -1,22 +1,22 @@
-var mailgunLoader = require("mailgun-js");
+const formData = require("form-data")
+const Mailgun = require("mailgun.js")
 
 // To Do:
 // use templates and other configurations to build this further
 
-const key = process.env.MAILGUN_API_KEY;
-const domain = process.env.MAILGUN_DOMAIN;
+const key = process.env.MAILGUN_API_KEY
+const domain = process.env.MAILGUN_DOMAIN
 
-let mailgun = mailgunLoader({ apiKey: key, domain: domain });
+const mailgun = new Mailgun(formData)
+const client = mailgun.client({ username: "api", key: key })
 
 function sendEmail(to, from, subject, content) {
-  let data = {
-    from,
-    to,
-    subject,
-    html: content
-  };
-  //returns a promise
-  return mailgun.messages().send(data);
+    return client.messages.create(domain, {
+        from: from,
+        to: to,
+        subject: subject,
+        text: content,
+    })
 }
 
-module.exports = { sendEmail };
+module.exports = { sendEmail }

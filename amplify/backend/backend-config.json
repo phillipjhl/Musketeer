@@ -1,25 +1,43 @@
 {
-	"function": {
-		"katrinaportfoliolambda": {
-			"build": true,
-			"providerPlugin": "awscloudformation",
-			"service": "Lambda"
-		}
-	},
-	"api": {
-		"musketeerapi": {
-			"service": "API Gateway",
-			"providerPlugin": "awscloudformation",
-			"dependsOn": [
-				{
-					"category": "function",
-					"resourceName": "katrinaportfoliolambda",
-					"attributes": [
-						"Name",
-						"Arn"
-					]
-				}
-			]
-		}
-	}
+  "api": {
+    "musketeerapi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "katrinaportfoliolambda"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "katrinaportfoliolambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_katrinaportfoliolambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "katrinaportfoliolambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_katrinaportfoliolambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "katrinaportfoliolambda"
+        }
+      ]
+    }
+  }
 }
