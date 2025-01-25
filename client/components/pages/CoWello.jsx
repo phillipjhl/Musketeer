@@ -44,10 +44,10 @@ export default function CoWello(props) {
             }}
             bottomBannerMessage={
                 <h2>
-                    Check out the CoWello <br /> Activation Case Study
+                    Check out the ListedKit <br /> Case Study
                 </h2>
             }
-            bottomBannerLink={"/cowello"}
+            bottomBannerLink={"/listedkit"}
         >
             <section className="container pt-5">
                 <LoadWithTrail offset={-40} once>
@@ -253,12 +253,6 @@ export default function CoWello(props) {
             <section className="container pt-5">
                 <div className="col-md-11 mx-auto">
                     <h2>UNDERSTANDING OUR USERS</h2>
-                    <p>
-                        Real estate transaction coordination is not a
-                        one-size-fits-all process. ListedKit’s users fall into
-                        two main personas, each with different workflows and
-                        customization needs:
-                    </p>
                 </div>
 
                 <div className="col-md-11 mx-auto mb-5">

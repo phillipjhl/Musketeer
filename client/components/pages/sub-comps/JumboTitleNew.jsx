@@ -8,7 +8,6 @@ export default function JumboTitleNew(props) {
   return (
     <div className="jumbotron-textbox text-center">
       <Trail>
-        <img src={KLogo} alt="" width={81} className="mb-md" />
         <p className="jumbotron-subtitle text-uppercase text-bold mb-4">
           {props.subtitleTop}
         </p>

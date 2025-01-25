@@ -44,10 +44,8 @@ export default function AboutPage(props) {
             <div className="col-12 row py-5">
               <div className="col-md-4 px-md-5 text-md-right px-3">
                 <h1>
-                  Latest and <br />
-                  Greatest
+                 Favorite Things 
                 </h1>
-                <p>AS OF FALL 2020</p>
               </div>
               <div className="col-md-8 row px-md-5 border-left border-dark">
                 <div className="col-md-6 p-0">
@@ -68,6 +66,7 @@ export default function AboutPage(props) {
                 </div>
                 <div className="col-md-6 p-0">
                   <h4>SHOWS</h4>
+                  <p>Severance</p>
                   <p>The Mandolorian</p>
                   <p>The Good Place</p>
                 </div>
