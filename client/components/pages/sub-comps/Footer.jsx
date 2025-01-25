@@ -1,9 +1,8 @@
 import React from "react";
-// import WhiteLogo from "../assets/images/logos/Sub-Logo.svg";
 import { Link } from "react-router-dom";
-// import Resume from "../assets/documents/KatrinaLanglandResume.pdf";
 
 export default function Footer(props) {
+  let currentYear = new Date().getFullYear();
   return (
     <footer
       id="footer"
@@ -45,7 +44,7 @@ export default function Footer(props) {
             </a>
           </nav>
           <small className="d-flex mt-4 text-center align-items-center justify-content-center">
-            © Katrina Langland 2021 | All Rights Reserved
+            {`© Katrina Langland ${currentYear} | All Rights Reserved`}
           </small>
         </div>
       </div>

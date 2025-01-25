@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import AuthButton from "../../auth/authButton";
 import UserContext from "../../../services/context";
 import MessageBanner from "../../utilities/message";
-import Resume from "../../../assets/documents/Katrina-Langland-Resume.pdf";
+import Resume from "../../../assets/documents/KatrinaLanglandResume2025.pdf";
 
 export function NavBarLink(props) {
   return (
@@ -44,6 +44,8 @@ class NavBar extends Component {
         dropdown: {
           linksConfig: [
             { route: "/home", label: "Home" },
+            { route: "/listedkit", label: "ListedKit" },
+            { route: "/cowello", label: "CoWello" },
             { route: "/gro", label: "GRO" },
             { route: "/groceryapp", label: "Grocery App" },
             { route: "/runr", label: "RUNR" },

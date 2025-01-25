@@ -35,12 +35,14 @@ app.post("/contact", (req, res, next) => {
     `${process.env.CONTACT_EMAIL}`,
     `${req.body.name} ${req.body.email}`,
     `${req.body.subject || "Contacting You"}`,
-    messageBody
+    messageBody || "No message provided"
   )
     .then(response => {
+      console.log("response", response);
       res.status(201).json({ response });
     })
     .catch(err => {
+      console.error("error", err);
       res.sendStatus(500);
       next(err);
     });

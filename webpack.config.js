@@ -22,6 +22,12 @@ module.exports = {
     publicPath: ASSET_PATH
   },
   mode: "development",
+  devServer: {
+    contentBase: CLIENT_DEST,
+   	publicPath: ASSET_PATH,
+    historyApiFallback: true,
+    hot: true
+  },
   devtool: process.env.NODE_ENV === "production" ? "source-map" : "inline-source-map",
   optimization: {
     minimizer: [new TerserJSPlugin({})],
@@ -113,7 +119,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [".js", ".jsx"]
+    extensions: [".mjs", ".js", ".jsx"]
   },
   plugins: [
     new HtmlWebPackPlugin({

@@ -99,9 +99,9 @@
 }
 
 @each $color in $theme-colors {
-  .bg-#{$color}.--opaque {
-    opacity: 0.9;
-  }
+  /* .bg-#{$color}.--opaque { */
+  /*   opacity: 0.9; */
+  /* } */
 }
 
 .opaque--8 {
